@@ -1,0 +1,2149 @@
+Archive member included to satisfy reference by file (symbol)
+
+.\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (I2C_MPU6050_Start)
+.\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+                              .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o) (I2C_MPU6050_I2CInit)
+.\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+                              .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o) (I2C_MPU6050_mstrStatus)
+.\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (SERIAL_Start)
+.\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+                              .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o) (SERIAL_UartInit)
+.\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+                              .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o) (I2C_MPU6050_sda_Read)
+.\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+                              .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o) (I2C_MPU6050_scl_Write)
+.\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                              .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o (CySysClkWriteImoFreq)
+.\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyBootAsmGnu.o)
+                              .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o) (CyDelayCycles)
+.\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+                              .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o) (I2C_MPU6050_I2C_ISR)
+.\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+                              .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o) (SERIAL_SpiUartReadRxData)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
+                              .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o) (__aeabi_uidiv)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(addsf3.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (__aeabi_fadd)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (__aeabi_fdiv)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (__aeabi_fsub)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (__aeabi_f2iz)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (__aeabi_i2f)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divdf3.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (__aeabi_ddiv)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(extendsfdf2.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (__aeabi_f2d)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(truncdfsf2.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (__aeabi_d2f)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(addsf3.o) (__clzsi2)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+                              .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o (__errno)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o (exit)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o) (_global_impure_ptr)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o (__libc_init_array)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
+                              .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o (memcpy)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o (memset)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
+                              (_printf_float)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o) (_printf_common)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+                              .\CortexM0\ARM_GCC_541\Debug\main.o (sprintf)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o) (strlen)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o) (_dtoa_r)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o) (_localeconv_r)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o) (malloc)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o) (memchr)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o) (_Balloc)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-callocr.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o) (_calloc_r)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o) (_free_r)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o) (_malloc_r)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o) (_svfprintf_r)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o) (strcmp)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o) (memmove)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o) (_realloc_r)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o) (errno)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o) (_malloc_usable_size_r)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o) (__gnu_thumb1_case_uqi)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o) (__aeabi_idiv)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpdf2.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o) (__aeabi_dcmpeq)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(adddf3.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o) (__aeabi_dadd)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqdf2.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpdf2.o) (__eqdf2)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gedf2.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpdf2.o) (__gedf2)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(ledf2.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpdf2.o) (__ledf2)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(muldf3.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o) (__aeabi_dmul)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subdf3.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o) (__aeabi_dsub)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(unorddf2.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o) (__aeabi_dcmpun)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixdfsi.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o) (__aeabi_d2iz)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsidf.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o) (__aeabi_i2d)
+d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsidf.o)
+                              d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o) (__aeabi_ui2d)
+
+Allocating common symbols
+Common symbol       size              file
+
+I2C_MPU6050_mstrWrBufIndexTmp
+                    0x4               .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+errno               0x4               d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+I2C_MPU6050_state   0x1               .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+I2C_MPU6050_mstrRdBufIndex
+                    0x4               .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+I2C_MPU6050_mstrWrBufSize
+                    0x4               .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+I2C_MPU6050_mstrControl
+                    0x1               .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+I2C_MPU6050_mstrWrBufIndex
+                    0x4               .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+buffer              0x16              .\CortexM0\ARM_GCC_541\Debug\main.o
+I2C_MPU6050_mstrWrBufPtr
+                    0x4               .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+I2C_MPU6050_mstrRdBufSize
+                    0x4               .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+devAddr             0x1               .\CortexM0\ARM_GCC_541\Debug\main.o
+I2C_MPU6050_mstrStatus
+                    0x2               .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+I2C_MPU6050_mstrRdBufPtr
+                    0x4               .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+ .data          0x00000000        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .text          0x00000000       0x78 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.extab     0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.exidx     0x00000000        0x8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.I2C_MPU6050_I2CAddress
+                0x00000000       0x20 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getAuxVDDIOLevel
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setAuxVDDIOLevel
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getRate
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setRate
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getExternalFrameSync
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setExternalFrameSync
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getDLPFMode
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setDLPFMode
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getFullScaleGyroRange
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getAccelXSelfTest
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setAccelXSelfTest
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getAccelYSelfTest
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setAccelYSelfTest
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getAccelZSelfTest
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setAccelZSelfTest
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getFullScaleAccelRange
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getDHPFMode
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setDHPFMode
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getFreefallDetectionThreshold
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setFreefallDetectionThreshold
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getFreefallDetectionDuration
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setFreefallDetectionDuration
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getMotionDetectionThreshold
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setMotionDetectionThreshold
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getMotionDetectionDuration
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setMotionDetectionDuration
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getZeroMotionDetectionThreshold
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setZeroMotionDetectionThreshold
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getZeroMotionDetectionDuration
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setZeroMotionDetectionDuration
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getTempFIFOEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setTempFIFOEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getXGyroFIFOEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setXGyroFIFOEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getYGyroFIFOEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setYGyroFIFOEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getZGyroFIFOEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setZGyroFIFOEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getAccelFIFOEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setAccelFIFOEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave2FIFOEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlave2FIFOEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave1FIFOEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlave1FIFOEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave0FIFOEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlave0FIFOEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getMultiMasterEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setMultiMasterEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getWaitForExternalSensorEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setWaitForExternalSensorEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave3FIFOEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlave3FIFOEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlaveReadWriteTransitionEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlaveReadWriteTransitionEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getMasterClockSpeed
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setMasterClockSpeed
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlaveAddress
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlaveAddress
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlaveRegister
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlaveRegister
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlaveEnabled
+                0x00000000       0x50 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlaveEnabled
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlaveWordByteSwap
+                0x00000000       0x50 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlaveWordByteSwap
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlaveWriteMode
+                0x00000000       0x50 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlaveWriteMode
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlaveWordGroupOffset
+                0x00000000       0x50 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlaveWordGroupOffset
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlaveDataLength
+                0x00000000       0x4c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlaveDataLength
+                0x00000000       0x4c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave4Address
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlave4Address
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave4Register
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlave4Register
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlave4OutputByte
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave4Enabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlave4Enabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave4InterruptEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlave4InterruptEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave4WriteMode
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlave4WriteMode
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave4MasterDelay
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlave4MasterDelay
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlate4InputByte
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getPassthroughStatus
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave4IsDone
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getLostArbitration
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave4Nack
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave3Nack
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave2Nack
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave1Nack
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlave0Nack
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getInterruptMode
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setInterruptMode
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getInterruptDrive
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setInterruptDrive
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getInterruptLatch
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setInterruptLatch
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getInterruptLatchClear
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setInterruptLatchClear
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getFSyncInterruptLevel
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setFSyncInterruptLevel
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getFSyncInterruptEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setFSyncInterruptEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getI2CBypassEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setI2CBypassEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getClockOutputEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setClockOutputEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntEnabled
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setIntEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntFreefallEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setIntFreefallEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntMotionEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setIntMotionEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntZeroMotionEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setIntZeroMotionEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntFIFOBufferOverflowEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setIntFIFOBufferOverflowEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntI2CMasterEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setIntI2CMasterEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntDataReadyEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setIntDataReadyEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntStatus
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntFreefallStatus
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntMotionStatus
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntZeroMotionStatus
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntFIFOBufferOverflowStatus
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntI2CMasterStatus
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntDataReadyStatus
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getMotion9
+                0x00000000       0xec .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getMotion9t
+                0x00000000      0x104 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getMotion6
+                0x00000000       0xb0 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getMotion6t
+                0x00000000       0xc8 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getAcceleration
+                0x00000000       0x6c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getTemperature
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getRotation
+                0x00000000       0x6c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getExternalSensorByte
+                0x00000000       0x30 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getExternalSensorWord
+                0x00000000       0x40 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getExternalSensorDWord
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getXNegMotionDetected
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getXPosMotionDetected
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getYNegMotionDetected
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getYPosMotionDetected
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getZNegMotionDetected
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getZPosMotionDetected
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getZeroMotionDetected
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlaveOutputByte
+                0x00000000       0x40 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getExternalShadowDelayEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setExternalShadowDelayEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSlaveDelayEnabled
+                0x00000000       0x44 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setSlaveDelayEnabled
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_resetGyroscopePath
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_resetAccelerometerPath
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_resetTemperaturePath
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getAccelerometerPowerOnDelay
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setAccelerometerPowerOnDelay
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getFreefallDetectionCounterDecrement
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setFreefallDetectionCounterDecrement
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getMotionDetectionCounterDecrement
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setMotionDetectionCounterDecrement
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getFIFOEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setFIFOEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getI2CMasterModeEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setI2CMasterModeEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_switchSPIEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_resetFIFO
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_resetI2CMaster
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_resetSensors
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_reset
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getSleepEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getWakeCycleEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setWakeCycleEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getTempSensorEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setTempSensorEnabled
+                0x00000000       0x30 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getClockSource
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getWakeFrequency
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setWakeFrequency
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getStandbyXAccelEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setStandbyXAccelEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getStandbyYAccelEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setStandbyYAccelEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getStandbyZAccelEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setStandbyZAccelEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getStandbyXGyroEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setStandbyXGyroEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getStandbyYGyroEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setStandbyYGyroEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getStandbyZGyroEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setStandbyZGyroEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getFIFOCount
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getFIFOByte
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getFIFOBytes
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setFIFOByte
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setDeviceID
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getOTPBankValid
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setOTPBankValid
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getXGyroOffset
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setXGyroOffset
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getYGyroOffset
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setYGyroOffset
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getZGyroOffset
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setZGyroOffset
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getXFineGain
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setXFineGain
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getYFineGain
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setYFineGain
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getZFineGain
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setZFineGain
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getXAccelOffset
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setXAccelOffset
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getYAccelOffset
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setYAccelOffset
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getZAccelOffset
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setZAccelOffset
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getXGyroOffsetUser
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setXGyroOffsetUser
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getYGyroOffsetUser
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setYGyroOffsetUser
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getZGyroOffsetUser
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setZGyroOffsetUser
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntPLLReadyEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setIntPLLReadyEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntDMPEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setIntDMPEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getDMPInt5Status
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getDMPInt4Status
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getDMPInt3Status
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getDMPInt2Status
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getDMPInt1Status
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getDMPInt0Status
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntPLLReadyStatus
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getIntDMPStatus
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getDMPEnabled
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setDMPEnabled
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_resetDMP
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setMemoryBank
+                0x00000000       0x70 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setMemoryStartAddress
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_readMemoryByte
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_writeMemoryByte
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_readMemoryBlock
+                0x00000000      0x134 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getDMPConfig1
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setDMPConfig1
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_getDMPConfig2
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setDMPConfig2
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text.MPU6050_setup_compass
+                0x00000000       0x70 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .text.I2CReadBit
+                0x00000000       0x54 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .text.I2CWriteWords
+                0x00000000       0x8c .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .text.I2CWriteWord
+                0x00000000       0x38 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.CYCONFIGCPY
+                0x00000000       0x20 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.CYCONFIGCPYCODE
+                0x00000000       0x20 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .text._exit    0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .text.I2C_MPU6050_Stop
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .text.I2C_MPU6050_SetRxFifoLevel
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .text.I2C_MPU6050_SetTxFifoLevel
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .text.I2C_MPU6050_SetCustomInterruptHandler
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .text.I2C_MPU6050_ScbModeStop
+                0x00000000       0x10 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .text.I2C_MPU6050_I2CSlaveNackGeneration
+                0x00000000       0x54 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .text.I2C_MPU6050_I2CStop
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .text.I2C_MPU6050_I2CMasterWriteBuf
+                0x00000000      0x128 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .text.I2C_MPU6050_I2CMasterReadBuf
+                0x00000000      0x138 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .text.I2C_MPU6050_I2CMasterGetReadBufSize
+                0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .text.I2C_MPU6050_I2CMasterGetWriteBufSize
+                0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .text.I2C_MPU6050_I2CMasterClearReadBuf
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .text.I2C_MPU6050_I2CMasterClearWriteBuf
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .text.I2C_MPU6050_I2CMasterStatus
+                0x00000000       0x44 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .text.I2C_MPU6050_I2CMasterClearStatus
+                0x00000000       0x30 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .text.SERIAL_Stop
+                0x00000000       0x28 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .text.SERIAL_SetRxFifoLevel
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .text.SERIAL_SetTxFifoLevel
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .text.SERIAL_ScbModeStop
+                0x00000000       0x10 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .text.SERIAL_I2CSlaveNackGeneration
+                0x00000000       0x54 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .text.SERIAL_UartStop
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .text.SERIAL_UartSetRxAddress
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .text.SERIAL_UartSetRxAddressMask
+                0x00000000       0x38 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .text.SERIAL_UartGetChar
+                0x00000000       0x40 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .text.SERIAL_UartGetByte
+                0x00000000       0x50 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .text.SERIAL_UartPutCRLF
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .text.SERIAL_UartSendBreakBlocking
+                0x00000000       0x7c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .text.I2C_MPU6050_sda_SetDriveMode
+                0x00000000       0x30 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .text.I2C_MPU6050_sda_Write
+                0x00000000       0x50 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .text.I2C_MPU6050_sda_ReadDataReg
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .text.I2C_MPU6050_sda_SetInterruptMode
+                0x00000000       0x44 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .text.I2C_MPU6050_sda_ClearInterrupt
+                0x00000000       0x30 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .text.I2C_MPU6050_scl_SetDriveMode
+                0x00000000       0x30 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .text.I2C_MPU6050_scl_ReadDataReg
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .text.I2C_MPU6050_scl_SetInterruptMode
+                0x00000000       0x44 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .text.I2C_MPU6050_scl_ClearInterrupt
+                0x00000000       0x30 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .bss           0x00000000       0x18 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysClkImoStart
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysClkImoStop
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysClkWriteHfclkDirect
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysEnablePumpClock
+                0x00000000       0x50 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysClkGetSysclkSource
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysClkWriteSysclkDiv
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysLvdEnable
+                0x00000000       0x64 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysLvdDisable
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysLvdGetInterruptSource
+                0x00000000       0x18 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysLvdClearInterrupt
+                0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysGetResetReason
+                0x00000000       0x30 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CyDisableInts
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CyEnableInts
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CyIntSetSysVector
+                0x00000000       0x48 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CyIntGetSysVector
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CyIntGetVector
+                0x00000000       0x38 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CyIntGetPriority
+                0x00000000       0x58 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CyIntGetState
+                0x00000000       0x30 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CyIntSetPending
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CyIntClearPending
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySoftwareReset
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CyDelayFreq
+                0x00000000       0x84 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickStart
+                0x00000000       0x24 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickInit
+                0x00000000       0x5c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickEnable
+                0x00000000       0x20 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickStop
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickEnableInterrupt
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickDisableInterrupt
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickSetReload
+                0x00000000       0x20 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickGetReload
+                0x00000000       0x18 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickGetValue
+                0x00000000       0x18 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickGetCountFlag
+                0x00000000       0x18 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickClear
+                0x00000000       0x14 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickSetCallback
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickGetCallback
+                0x00000000       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CySysTickServiceCallbacks
+                0x00000000       0x44 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .text.CyGetUniqueId
+                0x00000000       0xc0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyBootAsmGnu.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyBootAsmGnu.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+ .text          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .data          0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .bss           0x00000000        0x0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .text.SERIAL_SpiUartReadRxData
+                0x00000000       0x20 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .text.SERIAL_SpiUartGetRxBufferSize
+                0x00000000       0x20 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .text.SERIAL_SpiUartClearRxBuffer
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .text.SERIAL_SpiUartPutArray
+                0x00000000       0x34 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .text.SERIAL_SpiUartGetTxBufferSize
+                0x00000000       0x20 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .text.SERIAL_SpiUartClearTxBuffer
+                0x00000000       0x2c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .text.SERIAL_SpiUartDisableIntRx
+                0x00000000       0x20 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .text.SERIAL_SpiUartDisableIntTx
+                0x00000000       0x20 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(addsf3.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(addsf3.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divdf3.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divdf3.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(extendsfdf2.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(extendsfdf2.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(truncdfsf2.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(truncdfsf2.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .text.exit     0x00000000       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x00000000        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+ .text._sprintf_r
+                0x00000000       0x40 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .text._setlocale_r
+                0x00000000       0x40 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .text.__locale_charset
+                0x00000000        0x8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .text.__locale_mb_cur_max
+                0x00000000        0xc d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .text.__locale_msgcharset
+                0x00000000        0x8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .text.__locale_cjk_lang
+                0x00000000        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .text.setlocale
+                0x00000000       0x14 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .text.localeconv
+                0x00000000        0x8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .data.lc_message_charset
+                0x00000000       0x20 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .bss._PathLocale
+                0x00000000        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .bss.__nlocale_changed
+                0x00000000        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .bss.__mlocale_changed
+                0x00000000        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .data.lc_ctype_charset
+                0x00000000       0x20 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .data.__mb_cur_max
+                0x00000000        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
+ .text.free     0x00000000       0x14 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .text.__s2b    0x00000000       0x7c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .text.__ulp    0x00000000       0x48 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .text.__b2d    0x00000000       0x98 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .text.__ratio  0x00000000       0x50 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .text._mprec_log10
+                0x00000000       0x34 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .text.__copybits
+                0x00000000       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .text.__any_on
+                0x00000000       0x42 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .rodata.__mprec_tinytens
+                0x00000000       0x28 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-callocr.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-callocr.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-callocr.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .text.__ssprint_r
+                0x00000000      0x100 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+ .text          0x00000000       0x14 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x00000000       0x1a d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x00000000       0xcc d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpdf2.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpdf2.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(adddf3.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(adddf3.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqdf2.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqdf2.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gedf2.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gedf2.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(ledf2.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(ledf2.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(muldf3.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(muldf3.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subdf3.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subdf3.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(unorddf2.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(unorddf2.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixdfsi.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixdfsi.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsidf.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsidf.o)
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsidf.o)
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsidf.o)
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
+ .text          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+ .data          0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+ .bss           0x00000000        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+rom              0x00000000         0x00008000         xr
+ram              0x20000000         0x00001000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+START GROUP
+LOAD .\CortexM0\ARM_GCC_541\Debug\main.o
+LOAD .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+LOAD .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+LOAD .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+LOAD .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+LOAD .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+LOAD .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a
+LOAD D:\PSOC\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM0\ARM_GCC_541\Debug\CyComponentLibrary.a
+END GROUP
+START GROUP
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a
+END GROUP
+START GROUP
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a
+END GROUP
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+START GROUP
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc.a
+LOAD d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libnosys.a
+END GROUP
+                0x00000000                CY_APPL_ORIGIN = 0x0
+                0x00000080                CY_FLASH_ROW_SIZE = 0x80
+                0x00000001                CY_APPL_NUM = 0x1
+                0x00000001                CY_APPL_MAX = 0x1
+                0x00000040                CY_METADATA_SIZE = 0x40
+                0x00000000                CY_APPL_LOADABLE = 0x0
+                0x00000000                CY_CHECKSUM_EXCLUDE_SIZE = ALIGN (0x0, CY_FLASH_ROW_SIZE)
+                0x00000000                CY_APP_FOR_STACK_AND_COPIER = 0x0
+                [!provide]                PROVIDE (__cy_heap_start, _end)
+                0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
+                0x20001000                PROVIDE (__cy_stack, (ORIGIN (ram) + LENGTH (ram)))
+                [!provide]                PROVIDE (__cy_heap_end, (__cy_stack - 0x400))
+
+.cybootloader   0x00000000        0x0
+ *(.cybootloader)
+                0x00000000                appl1_start = CY_APPL_ORIGIN?CY_APPL_ORIGIN:ALIGN (CY_FLASH_ROW_SIZE)
+                0x00003f80                appl2_start = (appl1_start + ALIGN ((((LENGTH (rom) - appl1_start) - (0x2 * CY_FLASH_ROW_SIZE)) / 0x2), CY_FLASH_ROW_SIZE))
+                0x00000000                appl_start = (CY_APPL_NUM == 0x1)?appl1_start:appl2_start
+                0x00000001                cy_project_type_bootloader = (appl_start == 0x0)?0x1:0x0
+                0x00000000                cy_project_type_app_for_stack_and_copier = (CY_APP_FOR_STACK_AND_COPIER == 0x1)?0x1:0x0
+
+.text           0x00000000     0x6dc0
+ CREATE_OBJECT_SYMBOLS
+                0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
+ *(.romvectors)
+ .romvectors    0x00000000       0x10 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00000000                RomVectors
+                0x00000001                ASSERT ((. != __cy_interrupt_vector), No interrupt vector)
+                0x00000001                ASSERT (CY_APPL_ORIGIN?(SIZEOF (.cybootloader) <= CY_APPL_ORIGIN):0x1, Wrong image location)
+                0x00000010                PROVIDE (__cy_reset, Reset)
+ *(.text.Reset)
+ .text.Reset    0x00000010        0x8 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00000010                Reset
+                0x00000001                ASSERT ((. != __cy_reset), No reset code)
+ *(.psocinit)
+ .psocinit      0x00000018      0x18c .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                0x000000a4                cyfitter_cfg
+                0x000001a4                . = MAX (., 0x100)
+ *(.text .text.* .gnu.linkonce.t.*)
+ .text          0x000001a4       0x60 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .text.main     0x00000204      0x5cc .\CortexM0\ARM_GCC_541\Debug\main.o
+                0x00000204                main
+ .text.MPU6050_init
+                0x000007d0       0x14 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x000007d0                MPU6050_init
+ .text.MPU6050_initialize
+                0x000007e4       0x24 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x000007e4                MPU6050_initialize
+ .text.MPU6050_testConnection
+                0x00000808       0x18 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x00000808                MPU6050_testConnection
+ .text.MPU6050_setFullScaleGyroRange
+                0x00000820       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x00000820                MPU6050_setFullScaleGyroRange
+ .text.MPU6050_setFullScaleAccelRange
+                0x0000084c       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x0000084c                MPU6050_setFullScaleAccelRange
+ .text.MPU6050_getAccelerationX
+                0x00000878       0x58 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x00000878                MPU6050_getAccelerationX
+ .text.MPU6050_getAccelerationY
+                0x000008d0       0x58 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x000008d0                MPU6050_getAccelerationY
+ .text.MPU6050_getAccelerationZ
+                0x00000928       0x58 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x00000928                MPU6050_getAccelerationZ
+ .text.MPU6050_getRotationX
+                0x00000980       0x58 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x00000980                MPU6050_getRotationX
+ .text.MPU6050_getRotationY
+                0x000009d8       0x58 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x000009d8                MPU6050_getRotationY
+ .text.MPU6050_getRotationZ
+                0x00000a30       0x58 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x00000a30                MPU6050_getRotationZ
+ .text.MPU6050_setSleepEnabled
+                0x00000a88       0x28 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x00000a88                MPU6050_setSleepEnabled
+ .text.MPU6050_setClockSource
+                0x00000ab0       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x00000ab0                MPU6050_setClockSource
+ .text.MPU6050_getDeviceID
+                0x00000adc       0x2c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                0x00000adc                MPU6050_getDeviceID
+ .text.I2CReadBytes
+                0x00000b08       0x94 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+                0x00000b08                I2CReadBytes
+ .text.I2CReadByte
+                0x00000b9c       0x30 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+                0x00000b9c                I2CReadByte
+ .text.I2CReadBits
+                0x00000bcc       0x8c .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+                0x00000bcc                I2CReadBits
+ .text.I2CWriteBytes
+                0x00000c58       0x78 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+                0x00000c58                I2CWriteBytes
+ .text.I2CWriteByte
+                0x00000cd0       0x38 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+                0x00000cd0                I2CWriteByte
+ .text.I2CWriteBits
+                0x00000d08       0xd8 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+                0x00000d08                I2CWriteBits
+ .text.I2CWriteBit
+                0x00000de0       0x9c .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+                0x00000de0                I2CWriteBit
+ .text.CYMEMZERO
+                0x00000e7c       0x20 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.AnalogSetDefault
+                0x00000e9c        0xc .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .text.IntDefaultHandler
+                0x00000ea8       0x14 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00000ea8                IntDefaultHandler
+ .text._sbrk    0x00000ebc       0x54 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00000ebc                _sbrk
+ .text.Start_c  0x00000f10       0x98 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00000f10                Start_c
+ .text.initialize_psoc
+                0x00000fa8       0x64 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00000fa8                initialize_psoc
+ .text.I2C_MPU6050_Init
+                0x0000100c       0x10 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+                0x0000100c                I2C_MPU6050_Init
+ .text.I2C_MPU6050_Enable
+                0x0000101c       0x24 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+                0x0000101c                I2C_MPU6050_Enable
+ .text.I2C_MPU6050_Start
+                0x00001040       0x24 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+                0x00001040                I2C_MPU6050_Start
+ .text.I2C_MPU6050_ScbEnableIntr
+                0x00001064       0x10 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .text.I2C_MPU6050_ScbModePostEnable
+                0x00001074        0xc .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .text.I2C_MPU6050_I2CInit
+                0x00001080       0xe8 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+                0x00001080                I2C_MPU6050_I2CInit
+ .text.I2C_MPU6050_I2CFwBlockReset
+                0x00001168       0xa8 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+                0x00001168                I2C_MPU6050_I2CFwBlockReset
+ .text.I2C_MPU6050_I2CMasterSendStart
+                0x00001210       0xf4 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+                0x00001210                I2C_MPU6050_I2CMasterSendStart
+ .text.I2C_MPU6050_I2CMasterSendRestart
+                0x00001304       0xa0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+                0x00001304                I2C_MPU6050_I2CMasterSendRestart
+ .text.I2C_MPU6050_I2CMasterSendStop
+                0x000013a4       0x84 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+                0x000013a4                I2C_MPU6050_I2CMasterSendStop
+ .text.I2C_MPU6050_I2CMasterWriteByte
+                0x00001428       0x74 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+                0x00001428                I2C_MPU6050_I2CMasterWriteByte
+ .text.I2C_MPU6050_I2CMasterReadByte
+                0x0000149c       0xb4 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+                0x0000149c                I2C_MPU6050_I2CMasterReadByte
+ .text.I2C_MPU6050_I2CReStartGeneration
+                0x00001550      0x104 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+                0x00001550                I2C_MPU6050_I2CReStartGeneration
+ .text.I2C_MPU6050_I2CMasterHandleStatus
+                0x00001654      0x104 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .text.I2C_MPU6050_I2CMasterWaitOneUnit
+                0x00001758       0x4c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .text.SERIAL_Init
+                0x000017a4       0x10 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+                0x000017a4                SERIAL_Init
+ .text.SERIAL_Enable
+                0x000017b4       0x24 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+                0x000017b4                SERIAL_Enable
+ .text.SERIAL_Start
+                0x000017d8       0x24 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+                0x000017d8                SERIAL_Start
+ .text.SERIAL_ScbEnableIntr
+                0x000017fc        0xc .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .text.SERIAL_ScbModePostEnable
+                0x00001808       0x10 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .text.SERIAL_UartInit
+                0x00001818       0xbc .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+                0x00001818                SERIAL_UartInit
+ .text.SERIAL_UartPostEnable
+                0x000018d4       0x30 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+                0x000018d4                SERIAL_UartPostEnable
+ .text.SERIAL_UartPutString
+                0x00001904       0x38 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+                0x00001904                SERIAL_UartPutString
+ .text.I2C_MPU6050_sda_Read
+                0x0000193c       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+                0x0000193c                I2C_MPU6050_sda_Read
+ .text.I2C_MPU6050_scl_Write
+                0x00001958       0x50 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+                0x00001958                I2C_MPU6050_scl_Write
+ .text.I2C_MPU6050_scl_Read
+                0x000019a8       0x1c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+                0x000019a8                I2C_MPU6050_scl_Read
+ .text.CySysClkWriteImoFreq
+                0x000019c4      0x1ec .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                0x000019c4                CySysClkWriteImoFreq
+ .text.CyIntSetVector
+                0x00001bb0       0x4c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                0x00001bb0                CyIntSetVector
+ .text.CyIntSetPriority
+                0x00001bfc       0xa8 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                0x00001bfc                CyIntSetPriority
+ .text.CyIntEnable
+                0x00001ca4       0x2c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                0x00001ca4                CyIntEnable
+ .text.CyIntDisable
+                0x00001cd0       0x2c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                0x00001cd0                CyIntDisable
+ .text.CyHalt   0x00001cfc       0x18 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                0x00001cfc                CyHalt
+ .text.CyDelay  0x00001d14       0x4c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                0x00001d14                CyDelay
+ .text.CyDelayUs
+                0x00001d60       0x28 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                0x00001d60                CyDelayUs
+ .text          0x00001d88       0x24 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyBootAsmGnu.o)
+                0x00001d88                CyDelayCycles
+                0x00001d9c                CyEnterCriticalSection
+                0x00001da4                CyExitCriticalSection
+ .text.I2C_MPU6050_I2C_ISR
+                0x00001dac      0x450 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+                0x00001dac                I2C_MPU6050_I2C_ISR
+ .text.SERIAL_SpiUartWriteTxData
+                0x000021fc       0x2c .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+                0x000021fc                SERIAL_SpiUartWriteTxData
+ .text          0x00002228      0x114 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
+                0x00002228                __aeabi_uidiv
+                0x00002228                __udivsi3
+                0x00002334                __aeabi_uidivmod
+ .text          0x0000233c        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x0000233c                __aeabi_idiv0
+                0x0000233c                __aeabi_ldiv0
+ .text          0x00002340      0x2ec d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(addsf3.o)
+                0x00002340                __aeabi_fadd
+ .text          0x0000262c      0x234 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+                0x0000262c                __aeabi_fdiv
+ .text          0x00002860      0x30c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
+                0x00002860                __aeabi_fsub
+ .text          0x00002b6c       0x44 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
+                0x00002b6c                __aeabi_f2iz
+ .text          0x00002bb0       0x90 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
+                0x00002bb0                __aeabi_i2f
+ .text          0x00002c40      0x62c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divdf3.o)
+                0x00002c40                __aeabi_ddiv
+ .text          0x0000326c       0xa8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(extendsfdf2.o)
+                0x0000326c                __aeabi_f2d
+ .text          0x00003314      0x118 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(truncdfsf2.o)
+                0x00003314                __aeabi_d2f
+ .text          0x0000342c       0x3c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
+                0x0000342c                __clzsi2
+ .text.__errno  0x00003468        0xc d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+                0x00003468                __errno
+ .text.__libc_init_array
+                0x00003474       0x4c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+                0x00003474                __libc_init_array
+ .text.memcpy   0x000034c0       0x12 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
+                0x000034c0                memcpy
+ .text.memset   0x000034d2       0x10 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+                0x000034d2                memset
+ .text.__cvt    0x000034e2       0xca d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
+                0x000034e2                __cvt
+ .text.__exponent
+                0x000035ac       0x62 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
+                0x000035ac                __exponent
+ *fill*         0x0000360e        0x2 
+ .text._printf_float
+                0x00003610      0x4a0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
+                0x00003610                _printf_float
+ .text._printf_common
+                0x00003ab0       0xdc d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00003ab0                _printf_common
+ .text._printf_i
+                0x00003b8c      0x244 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00003b8c                _printf_i
+ .text.sprintf  0x00003dd0       0x44 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+                0x00003dd0                siprintf
+                0x00003dd0                sprintf
+ .text          0x00003e14        0xe d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
+                0x00003e14                strlen
+ .text.quorem   0x00003e22      0x10c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o)
+ *fill*         0x00003f2e        0x2 
+ .text._dtoa_r  0x00003f30      0xb8c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o)
+                0x00003f30                _dtoa_r
+ .text._localeconv_r
+                0x00004abc        0x8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+                0x00004abc                _localeconv_r
+ .text.malloc   0x00004ac4       0x14 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
+                0x00004ac4                malloc
+ .text.memchr   0x00004ad8       0x16 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
+                0x00004ad8                memchr
+ .text._Balloc  0x00004aee       0x70 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x00004aee                _Balloc
+ .text._Bfree   0x00004b5e       0x32 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x00004b5e                _Bfree
+ .text.__multadd
+                0x00004b90       0x7a d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x00004b90                __multadd
+ .text.__hi0bits
+                0x00004c0a       0x36 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x00004c0a                __hi0bits
+ .text.__lo0bits
+                0x00004c40       0x5e d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x00004c40                __lo0bits
+ .text.__i2b    0x00004c9e       0x12 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x00004c9e                __i2b
+ .text.__multiply
+                0x00004cb0      0x112 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x00004cb0                __multiply
+ *fill*         0x00004dc2        0x2 
+ .text.__pow5mult
+                0x00004dc4       0xa8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x00004dc4                __pow5mult
+ .text.__lshift
+                0x00004e6c       0xa4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x00004e6c                __lshift
+ .text.__mcmp   0x00004f10       0x36 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x00004f10                __mcmp
+ .text.__mdiff  0x00004f46       0xd6 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x00004f46                __mdiff
+ .text.__d2b    0x0000501c       0xa8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x0000501c                __d2b
+ .text._calloc_r
+                0x000050c4       0x1c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-callocr.o)
+                0x000050c4                _calloc_r
+ .text._free_r  0x000050e0       0x98 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+                0x000050e0                _free_r
+ .text._malloc_r
+                0x00005178       0xc0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x00005178                _malloc_r
+ .text.__ssputs_r
+                0x00005238       0xc4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x00005238                __ssputs_r
+ .text._svfprintf_r
+                0x000052fc      0x1fc d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x000052fc                _svfiprintf_r
+                0x000052fc                _svfprintf_r
+ .text._sbrk_r  0x000054f8       0x24 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+                0x000054f8                _sbrk_r
+ .text.memmove  0x0000551c       0x2a d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+                0x0000551c                memmove
+ .text.__malloc_lock
+                0x00005546        0x2 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+                0x00005546                __malloc_lock
+ .text.__malloc_unlock
+                0x00005548        0x2 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+                0x00005548                __malloc_unlock
+ .text._realloc_r
+                0x0000554a       0x4c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
+                0x0000554a                _realloc_r
+ .text._malloc_usable_size_r
+                0x00005596       0x16 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+                0x00005596                _malloc_usable_size_r
+ .text          0x000055ac       0x14 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+                0x000055ac                __gnu_thumb1_case_uqi
+ .text          0x000055c0      0x1d4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
+                0x000055c0                __divsi3
+                0x000055c0                __aeabi_idiv
+                0x0000578c                __aeabi_idivmod
+ .text          0x00005794       0x7c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpdf2.o)
+                0x00005794                __aeabi_cdrcmple
+                0x000057a4                __aeabi_cdcmple
+                0x000057a4                __aeabi_cdcmpeq
+                0x000057b4                __aeabi_dcmpeq
+                0x000057c0                __aeabi_dcmplt
+                0x000057d4                __aeabi_dcmple
+                0x000057e8                __aeabi_dcmpgt
+                0x000057fc                __aeabi_dcmpge
+ .text          0x00005810      0x658 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(adddf3.o)
+                0x00005810                __aeabi_dadd
+ .text          0x00005e68       0x80 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqdf2.o)
+                0x00005e68                __nedf2
+                0x00005e68                __eqdf2
+ .text          0x00005ee8       0xc8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gedf2.o)
+                0x00005ee8                __gedf2
+                0x00005ee8                __gtdf2
+ .text          0x00005fb0       0xd4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(ledf2.o)
+                0x00005fb0                __ledf2
+                0x00005fb0                __ltdf2
+ .text          0x00006084      0x4f4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(muldf3.o)
+                0x00006084                __aeabi_dmul
+ .text          0x00006578      0x6a8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subdf3.o)
+                0x00006578                __aeabi_dsub
+ .text          0x00006c20       0x40 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(unorddf2.o)
+                0x00006c20                __aeabi_dcmpun
+ .text          0x00006c60       0x6c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixdfsi.o)
+                0x00006c60                __aeabi_d2iz
+ .text          0x00006ccc       0x84 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsidf.o)
+                0x00006ccc                __aeabi_i2d
+ .text          0x00006d50       0x70 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsidf.o)
+                0x00006d50                __aeabi_ui2d
+ *(.plt)
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00006dc0        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00006dc0        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00006dc0        0x0 linker stubs
+ *(.bootloader)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+ *(.gcc_except_table)
+
+.v4_bx          0x00006dc0        0x0
+ .v4_bx         0x00006dc0        0x0 linker stubs
+
+.iplt           0x00006dc0        0x0
+ .iplt          0x00006dc0        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame       0x00006dc0        0x4
+ *(.eh_frame)
+ .eh_frame      0x00006dc0        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .eh_frame      0x00006dc0        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
+                [!provide]                PROVIDE (__exidx_start, .)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00006dc4                __exidx_end = .
+
+.rodata         0x00006dc8      0x488
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x00006dc8      0x1b8 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .rodata        0x00006f80        0xc .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .rodata        0x00006f8c       0x2e .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                0x00006f8c                cyImoFreqMhz2Reg
+ *fill*         0x00006fba        0x2 
+ .rodata        0x00006fbc       0x80 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+ .rodata        0x0000703c       0x40 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divdf3.o)
+ .rodata.str1.1
+                0x0000707c        0x2 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .rodata.str1.1
+                0x0000707e       0x12 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
+ .rodata.str1.1
+                0x00007090       0x22 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .rodata.str1.1
+                0x000070b2        0xd d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o)
+                                  0xf (size before relaxing)
+ .rodata.str1.1
+                0x000070bf        0x8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+                                  0xb (size before relaxing)
+ *fill*         0x000070c7        0x1 
+ .rodata.__mprec_tens
+                0x000070c8       0xc8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x000070c8                __mprec_tens
+ .rodata.p05.5408
+                0x00007190        0xc d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ *fill*         0x0000719c        0x4 
+ .rodata.__mprec_bigtens
+                0x000071a0       0x28 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+                0x000071a0                __mprec_bigtens
+ .rodata.str1.1
+                0x000071c8       0x11 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ *fill*         0x000071d9        0x3 
+ .rodata        0x000071dc       0x40 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(muldf3.o)
+                0x0000721c                . = ALIGN (0x4)
+ *(.init)
+ .init          0x0000721c        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+                0x0000721c                _init
+ .init          0x00007220        0x8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+                0x00007228                . = ALIGN (0x4)
+                0x00007228                __preinit_array_start = .
+ *(.preinit_array)
+                0x00007228                __preinit_array_end = .
+                0x00007228                . = ALIGN (0x4)
+                0x00007228                __init_array_start = .
+ *(SORT(.init_array.*))
+ *(.init_array)
+ .init_array    0x00007228        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .init_array    0x0000722c        0x4 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x00007230                __init_array_end = .
+                0x00007230                . = ALIGN (0x4)
+ *(.fini)
+ .fini          0x00007230        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+                0x00007230                _fini
+ .fini          0x00007234        0x8 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+                0x0000723c                . = ALIGN (0x4)
+                0x0000723c                __fini_array_start = .
+ *(.fini_array)
+ .fini_array    0x0000723c        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x00007240                __fini_array_end = .
+                0x00007240                . = ALIGN (0x4)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *crtend.o(.ctors)
+                0x00007240                . = ALIGN (0x4)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *crtend.o(.dtors)
+                0x00007240                . = ALIGN (0x4)
+                0x00007240                __cy_regions = .
+                0x00007240        0x4 LONG 0x7250 __cy_region_init_ram
+                0x00007244        0x4 LONG 0x200000c8 __cy_region_start_data
+                0x00007248        0x4 LONG 0xb8 __cy_region_init_size_ram
+                0x0000724c        0x4 LONG 0x70 __cy_region_zero_size_ram
+                0x00007250                __cy_regions_end = .
+                0x00007250                . = ALIGN (0x8)
+                0x00007250                _etext = .
+
+.cy_checksum_exclude
+                0x00007250        0x0
+ *(.cy_checksum_exclude)
+
+.ramvectors     0x20000000       0xc0
+                0x20000000                __cy_region_start_ram = .
+ *(.ramvectors)
+ .ramvectors    0x20000000       0xc0 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                0x20000000                CyRamVectors
+
+.noinit         0x200000c0        0x4
+ *(.noinit)
+ .noinit        0x200000c0        0x4 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+
+.data           0x200000c8       0xb8 load address 0x00007250
+                0x200000c8                __cy_region_start_data = .
+ *(.jcr)
+ .jcr           0x200000c8        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .jcr           0x200000c8        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
+ *(.got.plt)
+ *(.got)
+ *(.shdata)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x200000cc        0x4 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .data          0x200000d0       0x14 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                0x200000d0                cydelayFreqHz
+                0x200000d4                cydelayFreqKhz
+                0x200000d8                cydelayFreqMhz
+                0x200000dc                cydelay32kMs
+                0x200000e0                CySysClkPumpConfig
+ .data.impure_data
+                0x200000e4       0x60 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x20000144        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+                0x20000144                _impure_ptr
+ .data.lconv    0x20000148       0x38 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+                0x20000180                . = ALIGN (0x8)
+ *(.ram)
+                0x20000180                _edata = .
+
+.igot.plt       0x20000180        0x0 load address 0x00007308
+ .igot.plt      0x20000180        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+
+.bss            0x20000180       0x70 load address 0x00007308
+                0x20000180                PROVIDE (__bss_start__, .)
+ *(.shbss)
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x20000180       0x1c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .bss           0x2000019c        0x8 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+                0x2000019c                I2C_MPU6050_initVar
+                0x200001a0                I2C_MPU6050_customIntrHandler
+ .bss           0x200001a4        0x4 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+                0x200001a4                SERIAL_initVar
+                0x200001a6                SERIAL_IntrTxMask
+ .bss.__malloc_sbrk_start
+                0x200001a8        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x200001a8                __malloc_sbrk_start
+ .bss.__malloc_free_list
+                0x200001ac        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+                0x200001ac                __malloc_free_list
+ *(COMMON)
+ COMMON         0x200001b0       0x17 .\CortexM0\ARM_GCC_541\Debug\main.o
+                0x200001b0                buffer
+                0x200001c6                devAddr
+ COMMON         0x200001c7        0x1 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+                0x200001c7                I2C_MPU6050_state
+ COMMON         0x200001c8       0x24 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+                0x200001c8                I2C_MPU6050_mstrWrBufIndexTmp
+                0x200001cc                I2C_MPU6050_mstrRdBufIndex
+                0x200001d0                I2C_MPU6050_mstrWrBufSize
+                0x200001d4                I2C_MPU6050_mstrControl
+                0x200001d8                I2C_MPU6050_mstrWrBufIndex
+                0x200001dc                I2C_MPU6050_mstrWrBufPtr
+                0x200001e0                I2C_MPU6050_mstrRdBufSize
+                0x200001e4                I2C_MPU6050_mstrStatus
+                0x200001e8                I2C_MPU6050_mstrRdBufPtr
+ COMMON         0x200001ec        0x4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+                0x200001ec                errno
+                0x200001f0                . = ALIGN (0x8)
+ *(.ram.b)
+                0x200001f0                _end = .
+                0x200001f0                __end = .
+                0x200001f0                PROVIDE (end, .)
+                0x200001f0                PROVIDE (__bss_end__, .)
+                0x00007250                __cy_region_init_ram = LOADADDR (.data)
+                0x000000b8                __cy_region_init_size_ram = (_edata - ADDR (.data))
+                0x00000070                __cy_region_zero_size_ram = (_end - _edata)
+
+.heap           0x200001f0      0x200 load address 0x00007308
+                0x200001f0                . = _end
+                0x200003f0                . = (. + 0x200)
+ *fill*         0x200001f0      0x200 
+                0x200003f0                __cy_heap_limit = .
+
+.stack          0x20000c00      0x400
+                0x20000c00                __cy_stack_limit = .
+                0x20001000                . = (. + 0x400)
+ *fill*         0x20000c00      0x400 
+                0x00000001                ASSERT ((__cy_stack_limit >= __cy_heap_limit), region RAM overflowed with stack)
+                0x00000000                cy_checksum_exclude_size = (CY_APPL_LOADABLE == 0x1)?SIZEOF (.cy_checksum_exclude):0x0
+                0x00000001                ASSERT ((cy_checksum_exclude_size <= CY_CHECKSUM_EXCLUDE_SIZE), CY_BOOT: Section .cy_checksum_exclude size exceedes specified limit.)
+                0x00007fc0                cyloadermeta_start = (cy_project_type_bootloader || cy_project_type_app_for_stack_and_copier)?(LENGTH (rom) - CY_METADATA_SIZE):0xf0000000
+
+.cyloadermeta
+ *(.cyloadermeta)
+                0x00007fc0                cyloadablemeta_start = cy_project_type_app_for_stack_and_copier?((LENGTH (rom) - CY_FLASH_ROW_SIZE) - CY_METADATA_SIZE):((LENGTH (rom) - (CY_FLASH_ROW_SIZE * (CY_APPL_NUM - 0x1))) - CY_METADATA_SIZE)
+
+.cyloadablemeta
+ *(.cyloadablemeta)
+
+.cyflashprotect
+                0x90400000       0x20
+ *(.cyflashprotect)
+ .cyflashprotect
+                0x90400000       0x20 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+                0x90400000                cy_meta_flashprotect
+
+.cymeta         0x90500000        0xc
+ *(.cymeta)
+ .cymeta        0x90500000        0xc .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+                0x90500000                cy_metadata
+
+.cychipprotect  0x90600000        0x1
+ *(.cychipprotect)
+ .cychipprotect
+                0x90600000        0x1 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+                0x90600000                cy_meta_chipprotect
+
+.rel.dyn        0x00007308        0x0 load address 0x90600004
+ .rel.iplt      0x00007308        0x0 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x00000000      0xe20
+ *(.debug_aranges)
+ .debug_aranges
+                0x00000000       0x20 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_aranges
+                0x00000020      0x838 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .debug_aranges
+                0x00000858       0x68 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .debug_aranges
+                0x000008c0       0x48 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_aranges
+                0x00000908       0x18 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_aranges
+                0x00000920       0x48 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_aranges
+                0x00000968       0x70 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .debug_aranges
+                0x000009d8       0x30 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .debug_aranges
+                0x00000a08       0x98 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .debug_aranges
+                0x00000aa0       0x68 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .debug_aranges
+                0x00000b08       0x68 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .debug_aranges
+                0x00000b70       0x48 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .debug_aranges
+                0x00000bb8       0x48 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .debug_aranges
+                0x00000c00      0x180 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .debug_aranges
+                0x00000d80       0x20 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyBootAsmGnu.o)
+ .debug_aranges
+                0x00000da0       0x20 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+ .debug_aranges
+                0x00000dc0       0x60 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x00000000     0x4d82
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x00000000      0x257 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_info    0x00000257     0x227c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .debug_info    0x000024d3      0x419 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .debug_info    0x000028ec      0x258 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_info    0x00002b44       0xf8 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_info    0x00002c3c      0x312 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_info    0x00002f4e      0x1fd .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .debug_info    0x0000314b      0x135 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .debug_info    0x00003280      0x61e .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .debug_info    0x0000389e      0x1dc .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .debug_info    0x00003a7a      0x27b .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .debug_info    0x00003cf5      0x19a .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .debug_info    0x00003e8f      0x19a .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .debug_info    0x00004029      0x8ef .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .debug_info    0x00004918       0xc0 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyBootAsmGnu.o)
+ .debug_info    0x000049d8      0x192 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+ .debug_info    0x00004b6a      0x218 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+
+.debug_abbrev   0x00000000      0xfe6
+ *(.debug_abbrev)
+ .debug_abbrev  0x00000000       0xac .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_abbrev  0x000000ac      0x1a4 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .debug_abbrev  0x00000250       0x9f .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .debug_abbrev  0x000002ef      0x136 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_abbrev  0x00000425       0x5d .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_abbrev  0x00000482      0x1c8 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_abbrev  0x0000064a       0xf3 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .debug_abbrev  0x0000073d       0x90 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .debug_abbrev  0x000007cd      0x162 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .debug_abbrev  0x0000092f       0xe3 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .debug_abbrev  0x00000a12       0xfd .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .debug_abbrev  0x00000b0f       0xaa .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .debug_abbrev  0x00000bb9       0xaa .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .debug_abbrev  0x00000c63      0x1a7 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .debug_abbrev  0x00000e0a       0x14 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00000e1e       0x88 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+ .debug_abbrev  0x00000ea6      0x140 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+
+.debug_line     0x00000000     0x2dbd
+ *(.debug_line)
+ .debug_line    0x00000000      0x22e .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_line    0x0000022e     0x14a4 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .debug_line    0x000016d2      0x1e8 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .debug_line    0x000018ba      0x14f .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_line    0x00001a09      0x113 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .debug_line    0x00001b1c      0x1b8 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_line    0x00001cd4      0x143 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .debug_line    0x00001e17       0xc8 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .debug_line    0x00001edf      0x301 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .debug_line    0x000021e0      0x126 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .debug_line    0x00002306      0x163 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .debug_line    0x00002469       0xc7 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .debug_line    0x00002530       0xc7 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .debug_line    0x000025f7      0x47a .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .debug_line    0x00002a71       0x69 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyBootAsmGnu.o)
+ .debug_line    0x00002ada      0x1be .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+ .debug_line    0x00002c98      0x125 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+
+.debug_frame    0x00000000     0x3c0c
+ *(.debug_frame)
+ .debug_frame   0x00000000       0x44 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_frame   0x00000044     0x1ec4 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .debug_frame   0x00001f08      0x180 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .debug_frame   0x00002088       0xc8 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_frame   0x00002150       0xc8 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_frame   0x00002218      0x150 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .debug_frame   0x00002368       0x64 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .debug_frame   0x000023cc      0x200 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .debug_frame   0x000025cc      0x130 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .debug_frame   0x000026fc      0x144 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .debug_frame   0x00002840       0xc8 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .debug_frame   0x00002908       0xc8 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .debug_frame   0x000029d0      0x588 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .debug_frame   0x00002f58       0x30 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+ .debug_frame   0x00002f88      0x128 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .debug_frame   0x000030b0       0x20 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
+ .debug_frame   0x000030d0       0x30 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(addsf3.o)
+ .debug_frame   0x00003100       0x3c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+ .debug_frame   0x0000313c       0x30 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
+ .debug_frame   0x0000316c       0x20 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
+ .debug_frame   0x0000318c       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
+ .debug_frame   0x000031b8       0x3c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divdf3.o)
+ .debug_frame   0x000031f4       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(extendsfdf2.o)
+ .debug_frame   0x00003220       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(truncdfsf2.o)
+ .debug_frame   0x0000324c       0x20 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x0000326c       0x28 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x00003294       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x000032c0       0x28 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000032e8       0x20 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00003308       0x74 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
+ .debug_frame   0x0000337c       0x54 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x000033d0       0x50 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+ .debug_frame   0x00003420       0x54 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o)
+ .debug_frame   0x00003474       0xa4 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .debug_frame   0x00003518       0x40 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
+ .debug_frame   0x00003558       0x20 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x00003578      0x238 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .debug_frame   0x000037b0       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-callocr.o)
+ .debug_frame   0x000037dc       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00003808       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00003834       0x74 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x000038a8       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x000038d4       0x20 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+ .debug_frame   0x000038f4       0x28 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x0000391c       0x30 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000394c       0x30 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x0000397c       0x48 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+ .debug_frame   0x000039c4       0x20 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x000039e4       0x20 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
+ .debug_frame   0x00003a04       0x3c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(adddf3.o)
+ .debug_frame   0x00003a40       0x38 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqdf2.o)
+ .debug_frame   0x00003a78       0x38 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gedf2.o)
+ .debug_frame   0x00003ab0       0x38 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(ledf2.o)
+ .debug_frame   0x00003ae8       0x3c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(muldf3.o)
+ .debug_frame   0x00003b24       0x38 d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subdf3.o)
+ .debug_frame   0x00003b5c       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(unorddf2.o)
+ .debug_frame   0x00003b88       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixdfsi.o)
+ .debug_frame   0x00003bb4       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsidf.o)
+ .debug_frame   0x00003be0       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsidf.o)
+
+.debug_str      0x00000000     0x3243
+ *(.debug_str)
+ .debug_str     0x00000000      0x1da .\CortexM0\ARM_GCC_541\Debug\main.o
+                                0x22a (size before relaxing)
+ .debug_str     0x000001da     0x1d5c .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+                               0x1ed0 (size before relaxing)
+ .debug_str     0x00001f36       0xb1 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+                                0x257 (size before relaxing)
+ .debug_str     0x00001fe7       0xb7 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+                                0x23b (size before relaxing)
+ .debug_str     0x0000209e       0x59 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+                                0x1f8 (size before relaxing)
+ .debug_str     0x000020f7      0x121 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+                                0x2c4 (size before relaxing)
+ .debug_str     0x00002218      0x188 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+                                0x312 (size before relaxing)
+ .debug_str     0x000023a0       0xcc .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+                                0x257 (size before relaxing)
+ .debug_str     0x0000246c      0x365 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+                                0x55b (size before relaxing)
+ .debug_str     0x000027d1       0xff .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+                                0x2a6 (size before relaxing)
+ .debug_str     0x000028d0      0x160 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+                                0x2ff (size before relaxing)
+ .debug_str     0x00002a30       0xe8 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+                                0x272 (size before relaxing)
+ .debug_str     0x00002b18       0xcd .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+                                0x272 (size before relaxing)
+ .debug_str     0x00002be5      0x4c5 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+                                0x67f (size before relaxing)
+ .debug_str     0x000030aa       0x57 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+                                0x308 (size before relaxing)
+ .debug_str     0x00003101      0x142 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+                                0x2d8 (size before relaxing)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_ranges   0x00000000      0xcf8
+ *(.debug_ranges)
+ .debug_ranges  0x00000000       0x10 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .debug_ranges  0x00000010      0x828 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .debug_ranges  0x00000838       0x58 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .debug_ranges  0x00000890       0x38 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .debug_ranges  0x000008c8       0x38 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .debug_ranges  0x00000900       0x60 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .debug_ranges  0x00000960       0x20 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .debug_ranges  0x00000980       0x88 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .debug_ranges  0x00000a08       0x58 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .debug_ranges  0x00000a60       0x58 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .debug_ranges  0x00000ab8       0x38 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .debug_ranges  0x00000af0       0x38 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .debug_ranges  0x00000b28      0x170 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .debug_ranges  0x00000c98       0x10 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+ .debug_ranges  0x00000ca8       0x50 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+
+.comment        0x00000000       0x6e
+ .comment       0x00000000       0x6e .\CortexM0\ARM_GCC_541\Debug\main.o
+                                 0x6f (size before relaxing)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+ .comment       0x0000006e       0x6f .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+.ARM.attributes
+                0x00000000       0x28
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x1e d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+ .ARM.attributes
+                0x0000001e       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+ .ARM.attributes
+                0x0000004a       0x1b d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.attributes
+                0x00000065       0x31 .\CortexM0\ARM_GCC_541\Debug\main.o
+ .ARM.attributes
+                0x00000096       0x31 .\CortexM0\ARM_GCC_541\Debug\mpu6050.o
+ .ARM.attributes
+                0x000000c7       0x31 .\CortexM0\ARM_GCC_541\Debug\i2cFunctions.o
+ .ARM.attributes
+                0x000000f8       0x31 .\CortexM0\ARM_GCC_541\Debug\cyfitter_cfg.o
+ .ARM.attributes
+                0x00000129       0x31 .\CortexM0\ARM_GCC_541\Debug\cymetadata.o
+ .ARM.attributes
+                0x0000015a       0x31 .\CortexM0\ARM_GCC_541\Debug\Cm0Start.o
+ .ARM.attributes
+                0x0000018b       0x31 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050.o)
+ .ARM.attributes
+                0x000001bc       0x31 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C.o)
+ .ARM.attributes
+                0x000001ed       0x31 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_MASTER.o)
+ .ARM.attributes
+                0x0000021e       0x31 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL.o)
+ .ARM.attributes
+                0x0000024f       0x31 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_UART.o)
+ .ARM.attributes
+                0x00000280       0x31 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_sda.o)
+ .ARM.attributes
+                0x000002b1       0x31 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_scl.o)
+ .ARM.attributes
+                0x000002e2       0x31 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyLib.o)
+ .ARM.attributes
+                0x00000313       0x21 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(CyBootAsmGnu.o)
+ .ARM.attributes
+                0x00000334       0x31 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(I2C_MPU6050_I2C_INT.o)
+ .ARM.attributes
+                0x00000365       0x31 .\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.a(SERIAL_SPI_UART.o)
+ .ARM.attributes
+                0x00000396       0x1e d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000003b4       0x1e d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x000003d2       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(addsf3.o)
+ .ARM.attributes
+                0x000003fe       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divsf3.o)
+ .ARM.attributes
+                0x0000042a       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subsf3.o)
+ .ARM.attributes
+                0x00000456       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixsfsi.o)
+ .ARM.attributes
+                0x00000482       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsisf.o)
+ .ARM.attributes
+                0x000004ae       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(divdf3.o)
+ .ARM.attributes
+                0x000004da       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(extendsfdf2.o)
+ .ARM.attributes
+                0x00000506       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(truncdfsf2.o)
+ .ARM.attributes
+                0x00000532       0x1e d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
+ .ARM.attributes
+                0x00000550       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-errno.o)
+ .ARM.attributes
+                0x0000057c       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x000005a8       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000005d4       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000600       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x0000062c       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000658       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_float.o)
+ .ARM.attributes
+                0x00000684       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .ARM.attributes
+                0x000006b0       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sprintf.o)
+ .ARM.attributes
+                0x000006dc       0x1c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x000006f8       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-dtoa.o)
+ .ARM.attributes
+                0x00000724       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-locale.o)
+ .ARM.attributes
+                0x00000750       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-malloc.o)
+ .ARM.attributes
+                0x0000077c       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memchr-stub.o)
+ .ARM.attributes
+                0x000007a8       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mprec.o)
+ .ARM.attributes
+                0x000007d4       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-callocr.o)
+ .ARM.attributes
+                0x00000800       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-freer.o)
+ .ARM.attributes
+                0x0000082c       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-mallocr.o)
+ .ARM.attributes
+                0x00000858       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-svfprintf.o)
+ .ARM.attributes
+                0x00000884       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x000008b0       0x1c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x000008cc       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x000008f8       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x00000924       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-reallocr.o)
+ .ARM.attributes
+                0x00000950       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-reent.o)
+ .ARM.attributes
+                0x0000097c       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libg_nano.a(lib_a-nano-msizer.o)
+ .ARM.attributes
+                0x000009a8       0x1e d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_thumb1_case_uqi.o)
+ .ARM.attributes
+                0x000009c6       0x1e d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x000009e4       0x1e d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000a02       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(adddf3.o)
+ .ARM.attributes
+                0x00000a2e       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(eqdf2.o)
+ .ARM.attributes
+                0x00000a5a       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(gedf2.o)
+ .ARM.attributes
+                0x00000a86       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(ledf2.o)
+ .ARM.attributes
+                0x00000ab2       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(muldf3.o)
+ .ARM.attributes
+                0x00000ade       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(subdf3.o)
+ .ARM.attributes
+                0x00000b0a       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(unorddf2.o)
+ .ARM.attributes
+                0x00000b36       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(fixdfsi.o)
+ .ARM.attributes
+                0x00000b62       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatsidf.o)
+ .ARM.attributes
+                0x00000b8e       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(floatunsidf.o)
+ .ARM.attributes
+                0x00000bba       0x2c d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
+ .ARM.attributes
+                0x00000be6       0x1e d:/psoc/psoc creator/4.1/psoc creator/import/gnu/arm/5.4.1/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+
+/DISCARD/
+ *(.note.GNU-stack)
+OUTPUT(C:\Users\Sebas\Desktop\Drone_Sensor_juistewaarden.cydsn\CortexM0\ARM_GCC_541\Debug\Drone_Sensor_juistewaarden.elf elf32-littlearm)

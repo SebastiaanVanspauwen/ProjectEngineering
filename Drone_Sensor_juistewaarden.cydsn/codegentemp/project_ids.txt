@@ -1,0 +1,6 @@
+C:\Users\Sebas\Desktop\Drone_Sensor_juistewaarden.cydsn\Drone_Sensor_juistewaarden.cyprj|248d0f92-aebe-486b-af54-04bf9e2a7280
+D:\PSOC\PSoC Creator\4.1\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e71be95c-637a-4cf7-ba90-2f7b560524a5
+C:\Users\Sebas\Documents\PSoC Creator\4.1\Downloads ( 4.1).cylib\Downloads ( 4.1).cyprj|2d328fff-ff71-43d7-bb3e-0449e2d03348
+D:\PSOC\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|ca0c00e4-0a31-4f12-aaa4-49ec2e388cc2
+D:\PSOC\PSoC Creator\4.1\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|5935309d-2c61-45ee-91eb-20a74faa8559
+D:\PSOC\PSoC Creator\4.1\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b92b8708-c390-488d-b386-dc091dd4eff2

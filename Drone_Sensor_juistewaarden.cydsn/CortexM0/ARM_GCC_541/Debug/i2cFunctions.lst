@@ -1,0 +1,2024 @@
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"i2cFunctions.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.I2CReadBytes,"ax",%progbits
+  20              		.align	2
+  21              		.global	I2CReadBytes
+  22              		.code	16
+  23              		.thumb_func
+  24              		.type	I2CReadBytes, %function
+  25              	I2CReadBytes:
+  26              	.LFB32:
+  27              		.file 1 "i2cFunctions.c"
+   1:i2cFunctions.c **** /* ========================================
+   2:i2cFunctions.c ****  *
+   3:i2cFunctions.c ****  * Copyright Samuel Walsh, 2014
+   4:i2cFunctions.c ****  * All Rights Reserved
+   5:i2cFunctions.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:i2cFunctions.c ****  *
+   7:i2cFunctions.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:i2cFunctions.c ****  * WHICH IS THE PROPERTY OF Samuel Walsh.
+   9:i2cFunctions.c ****  *
+  10:i2cFunctions.c ****  * ========================================
+  11:i2cFunctions.c **** */
+  12:i2cFunctions.c **** 
+  13:i2cFunctions.c **** /* [] END OF FILE */
+  14:i2cFunctions.c **** 
+  15:i2cFunctions.c **** #include <project.h>
+  16:i2cFunctions.c **** 
+  17:i2cFunctions.c **** 
+  18:i2cFunctions.c **** void I2CReadBytes(uint8_t devAddr, uint8_t regAddr, uint8_t length, uint8_t *value) {
+  28              		.loc 1 18 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 16
+  31              		@ frame_needed = 1, uses_anonymous_args = 0
+  32 0000 90B5     		push	{r4, r7, lr}
+  33              		.cfi_def_cfa_offset 12
+  34              		.cfi_offset 4, -12
+  35              		.cfi_offset 7, -8
+  36              		.cfi_offset 14, -4
+  37 0002 85B0     		sub	sp, sp, #20
+  38              		.cfi_def_cfa_offset 32
+  39 0004 00AF     		add	r7, sp, #0
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 2
+
+
+  40              		.cfi_def_cfa_register 7
+  41 0006 0400     		movs	r4, r0
+  42 0008 0800     		movs	r0, r1
+  43 000a 1100     		movs	r1, r2
+  44 000c 3B60     		str	r3, [r7]
+  45 000e FB1D     		adds	r3, r7, #7
+  46 0010 221C     		adds	r2, r4, #0
+  47 0012 1A70     		strb	r2, [r3]
+  48 0014 BB1D     		adds	r3, r7, #6
+  49 0016 021C     		adds	r2, r0, #0
+  50 0018 1A70     		strb	r2, [r3]
+  51 001a 7B1D     		adds	r3, r7, #5
+  52 001c 0A1C     		adds	r2, r1, #0
+  53 001e 1A70     		strb	r2, [r3]
+  19:i2cFunctions.c **** 	uint8_t i=0;
+  54              		.loc 1 19 0
+  55 0020 0F23     		movs	r3, #15
+  56 0022 FB18     		adds	r3, r7, r3
+  57 0024 0022     		movs	r2, #0
+  58 0026 1A70     		strb	r2, [r3]
+  20:i2cFunctions.c **** 	I2C_MPU6050_I2CMasterSendStart(devAddr, I2C_MPU6050_I2C_WRITE_XFER_MODE,0);
+  59              		.loc 1 20 0
+  60 0028 FB1D     		adds	r3, r7, #7
+  61 002a 1B78     		ldrb	r3, [r3]
+  62 002c 0022     		movs	r2, #0
+  63 002e 0021     		movs	r1, #0
+  64 0030 1800     		movs	r0, r3
+  65 0032 FFF7FEFF 		bl	I2C_MPU6050_I2CMasterSendStart
+  21:i2cFunctions.c **** 	I2C_MPU6050_I2CMasterWriteByte(regAddr,0);
+  66              		.loc 1 21 0
+  67 0036 BB1D     		adds	r3, r7, #6
+  68 0038 1B78     		ldrb	r3, [r3]
+  69 003a 0021     		movs	r1, #0
+  70 003c 1800     		movs	r0, r3
+  71 003e FFF7FEFF 		bl	I2C_MPU6050_I2CMasterWriteByte
+  22:i2cFunctions.c **** 	I2C_MPU6050_I2CMasterSendRestart(devAddr, I2C_MPU6050_I2C_READ_XFER_MODE,0);
+  72              		.loc 1 22 0
+  73 0042 FB1D     		adds	r3, r7, #7
+  74 0044 1B78     		ldrb	r3, [r3]
+  75 0046 0022     		movs	r2, #0
+  76 0048 0121     		movs	r1, #1
+  77 004a 1800     		movs	r0, r3
+  78 004c FFF7FEFF 		bl	I2C_MPU6050_I2CMasterSendRestart
+  23:i2cFunctions.c **** 	while (i++ < (length-1)) {
+  79              		.loc 1 23 0
+  80 0050 05E0     		b	.L2
+  81              	.L3:
+  24:i2cFunctions.c **** 		I2C_MPU6050_I2CMasterReadByte(I2C_MPU6050_I2C_ACK_DATA,value,0);
+  82              		.loc 1 24 0
+  83 0052 3B68     		ldr	r3, [r7]
+  84 0054 0022     		movs	r2, #0
+  85 0056 1900     		movs	r1, r3
+  86 0058 0020     		movs	r0, #0
+  87 005a FFF7FEFF 		bl	I2C_MPU6050_I2CMasterReadByte
+  88              	.L2:
+  23:i2cFunctions.c **** 	while (i++ < (length-1)) {
+  89              		.loc 1 23 0
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 3
+
+
+  90 005e 0F23     		movs	r3, #15
+  91 0060 FB18     		adds	r3, r7, r3
+  92 0062 1B78     		ldrb	r3, [r3]
+  93 0064 0F22     		movs	r2, #15
+  94 0066 BA18     		adds	r2, r7, r2
+  95 0068 591C     		adds	r1, r3, #1
+  96 006a 1170     		strb	r1, [r2]
+  97 006c 1A00     		movs	r2, r3
+  98 006e 7B1D     		adds	r3, r7, #5
+  99 0070 1B78     		ldrb	r3, [r3]
+ 100 0072 013B     		subs	r3, r3, #1
+ 101 0074 9A42     		cmp	r2, r3
+ 102 0076 ECDB     		blt	.L3
+  25:i2cFunctions.c **** 	}
+  26:i2cFunctions.c **** 	I2C_MPU6050_I2CMasterReadByte(I2C_MPU6050_I2C_NAK_DATA,value,0);
+ 103              		.loc 1 26 0
+ 104 0078 3B68     		ldr	r3, [r7]
+ 105 007a 0022     		movs	r2, #0
+ 106 007c 1900     		movs	r1, r3
+ 107 007e 0120     		movs	r0, #1
+ 108 0080 FFF7FEFF 		bl	I2C_MPU6050_I2CMasterReadByte
+  27:i2cFunctions.c **** 	I2C_MPU6050_I2CMasterSendStop(0);	
+ 109              		.loc 1 27 0
+ 110 0084 0020     		movs	r0, #0
+ 111 0086 FFF7FEFF 		bl	I2C_MPU6050_I2CMasterSendStop
+  28:i2cFunctions.c **** }
+ 112              		.loc 1 28 0
+ 113 008a C046     		nop
+ 114 008c BD46     		mov	sp, r7
+ 115 008e 05B0     		add	sp, sp, #20
+ 116              		@ sp needed
+ 117 0090 90BD     		pop	{r4, r7, pc}
+ 118              		.cfi_endproc
+ 119              	.LFE32:
+ 120              		.size	I2CReadBytes, .-I2CReadBytes
+ 121 0092 C046     		.section	.text.I2CReadByte,"ax",%progbits
+ 122              		.align	2
+ 123              		.global	I2CReadByte
+ 124              		.code	16
+ 125              		.thumb_func
+ 126              		.type	I2CReadByte, %function
+ 127              	I2CReadByte:
+ 128              	.LFB33:
+  29:i2cFunctions.c **** 
+  30:i2cFunctions.c **** void I2CReadByte(uint8_t devAddr, uint8_t regAddr, uint8_t *value) {
+ 129              		.loc 1 30 0
+ 130              		.cfi_startproc
+ 131              		@ args = 0, pretend = 0, frame = 8
+ 132              		@ frame_needed = 1, uses_anonymous_args = 0
+ 133 0000 80B5     		push	{r7, lr}
+ 134              		.cfi_def_cfa_offset 8
+ 135              		.cfi_offset 7, -8
+ 136              		.cfi_offset 14, -4
+ 137 0002 82B0     		sub	sp, sp, #8
+ 138              		.cfi_def_cfa_offset 16
+ 139 0004 00AF     		add	r7, sp, #0
+ 140              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 4
+
+
+ 141 0006 3A60     		str	r2, [r7]
+ 142 0008 FB1D     		adds	r3, r7, #7
+ 143 000a 021C     		adds	r2, r0, #0
+ 144 000c 1A70     		strb	r2, [r3]
+ 145 000e BB1D     		adds	r3, r7, #6
+ 146 0010 0A1C     		adds	r2, r1, #0
+ 147 0012 1A70     		strb	r2, [r3]
+  31:i2cFunctions.c **** 	I2CReadBytes(devAddr, regAddr, 1, value);
+ 148              		.loc 1 31 0
+ 149 0014 3A68     		ldr	r2, [r7]
+ 150 0016 BB1D     		adds	r3, r7, #6
+ 151 0018 1978     		ldrb	r1, [r3]
+ 152 001a FB1D     		adds	r3, r7, #7
+ 153 001c 1878     		ldrb	r0, [r3]
+ 154 001e 1300     		movs	r3, r2
+ 155 0020 0122     		movs	r2, #1
+ 156 0022 FFF7FEFF 		bl	I2CReadBytes
+  32:i2cFunctions.c **** }
+ 157              		.loc 1 32 0
+ 158 0026 C046     		nop
+ 159 0028 BD46     		mov	sp, r7
+ 160 002a 02B0     		add	sp, sp, #8
+ 161              		@ sp needed
+ 162 002c 80BD     		pop	{r7, pc}
+ 163              		.cfi_endproc
+ 164              	.LFE33:
+ 165              		.size	I2CReadByte, .-I2CReadByte
+ 166 002e C046     		.section	.text.I2CReadBits,"ax",%progbits
+ 167              		.align	2
+ 168              		.global	I2CReadBits
+ 169              		.code	16
+ 170              		.thumb_func
+ 171              		.type	I2CReadBits, %function
+ 172              	I2CReadBits:
+ 173              	.LFB34:
+  33:i2cFunctions.c **** 
+  34:i2cFunctions.c **** void I2CReadBits(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint8_t *value
+ 174              		.loc 1 34 0
+ 175              		.cfi_startproc
+ 176              		@ args = 4, pretend = 0, frame = 16
+ 177              		@ frame_needed = 1, uses_anonymous_args = 0
+ 178 0000 B0B5     		push	{r4, r5, r7, lr}
+ 179              		.cfi_def_cfa_offset 16
+ 180              		.cfi_offset 4, -16
+ 181              		.cfi_offset 5, -12
+ 182              		.cfi_offset 7, -8
+ 183              		.cfi_offset 14, -4
+ 184 0002 84B0     		sub	sp, sp, #16
+ 185              		.cfi_def_cfa_offset 32
+ 186 0004 00AF     		add	r7, sp, #0
+ 187              		.cfi_def_cfa_register 7
+ 188 0006 0500     		movs	r5, r0
+ 189 0008 0C00     		movs	r4, r1
+ 190 000a 1000     		movs	r0, r2
+ 191 000c 1900     		movs	r1, r3
+ 192 000e FB1D     		adds	r3, r7, #7
+ 193 0010 2A1C     		adds	r2, r5, #0
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 5
+
+
+ 194 0012 1A70     		strb	r2, [r3]
+ 195 0014 BB1D     		adds	r3, r7, #6
+ 196 0016 221C     		adds	r2, r4, #0
+ 197 0018 1A70     		strb	r2, [r3]
+ 198 001a 7B1D     		adds	r3, r7, #5
+ 199 001c 021C     		adds	r2, r0, #0
+ 200 001e 1A70     		strb	r2, [r3]
+ 201 0020 3B1D     		adds	r3, r7, #4
+ 202 0022 0A1C     		adds	r2, r1, #0
+ 203 0024 1A70     		strb	r2, [r3]
+  35:i2cFunctions.c ****    	uint8_t mask = ((1 << length) - 1) << (bitStart - length + 1);
+ 204              		.loc 1 35 0
+ 205 0026 3B1D     		adds	r3, r7, #4
+ 206 0028 1B78     		ldrb	r3, [r3]
+ 207 002a 0122     		movs	r2, #1
+ 208 002c 9A40     		lsls	r2, r2, r3
+ 209 002e 1300     		movs	r3, r2
+ 210 0030 5A1E     		subs	r2, r3, #1
+ 211 0032 7B1D     		adds	r3, r7, #5
+ 212 0034 1978     		ldrb	r1, [r3]
+ 213 0036 3B1D     		adds	r3, r7, #4
+ 214 0038 1B78     		ldrb	r3, [r3]
+ 215 003a CB1A     		subs	r3, r1, r3
+ 216 003c 0133     		adds	r3, r3, #1
+ 217 003e 9A40     		lsls	r2, r2, r3
+ 218 0040 0F23     		movs	r3, #15
+ 219 0042 FB18     		adds	r3, r7, r3
+ 220 0044 1A70     		strb	r2, [r3]
+  36:i2cFunctions.c ****     I2CReadByte(devAddr, regAddr, value);
+ 221              		.loc 1 36 0
+ 222 0046 3A6A     		ldr	r2, [r7, #32]
+ 223 0048 BB1D     		adds	r3, r7, #6
+ 224 004a 1978     		ldrb	r1, [r3]
+ 225 004c FB1D     		adds	r3, r7, #7
+ 226 004e 1B78     		ldrb	r3, [r3]
+ 227 0050 1800     		movs	r0, r3
+ 228 0052 FFF7FEFF 		bl	I2CReadByte
+  37:i2cFunctions.c ****     *value &= mask;
+ 229              		.loc 1 37 0
+ 230 0056 3B6A     		ldr	r3, [r7, #32]
+ 231 0058 1B78     		ldrb	r3, [r3]
+ 232 005a 0F22     		movs	r2, #15
+ 233 005c BA18     		adds	r2, r7, r2
+ 234 005e 1278     		ldrb	r2, [r2]
+ 235 0060 1340     		ands	r3, r2
+ 236 0062 DAB2     		uxtb	r2, r3
+ 237 0064 3B6A     		ldr	r3, [r7, #32]
+ 238 0066 1A70     		strb	r2, [r3]
+  38:i2cFunctions.c ****     *value >>= (bitStart - length + 1);
+ 239              		.loc 1 38 0
+ 240 0068 3B6A     		ldr	r3, [r7, #32]
+ 241 006a 1B78     		ldrb	r3, [r3]
+ 242 006c 1900     		movs	r1, r3
+ 243 006e 7B1D     		adds	r3, r7, #5
+ 244 0070 1A78     		ldrb	r2, [r3]
+ 245 0072 3B1D     		adds	r3, r7, #4
+ 246 0074 1B78     		ldrb	r3, [r3]
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 6
+
+
+ 247 0076 D31A     		subs	r3, r2, r3
+ 248 0078 0133     		adds	r3, r3, #1
+ 249 007a 1941     		asrs	r1, r1, r3
+ 250 007c 0B00     		movs	r3, r1
+ 251 007e DAB2     		uxtb	r2, r3
+ 252 0080 3B6A     		ldr	r3, [r7, #32]
+ 253 0082 1A70     		strb	r2, [r3]
+  39:i2cFunctions.c **** }
+ 254              		.loc 1 39 0
+ 255 0084 C046     		nop
+ 256 0086 BD46     		mov	sp, r7
+ 257 0088 04B0     		add	sp, sp, #16
+ 258              		@ sp needed
+ 259 008a B0BD     		pop	{r4, r5, r7, pc}
+ 260              		.cfi_endproc
+ 261              	.LFE34:
+ 262              		.size	I2CReadBits, .-I2CReadBits
+ 263              		.section	.text.I2CReadBit,"ax",%progbits
+ 264              		.align	2
+ 265              		.global	I2CReadBit
+ 266              		.code	16
+ 267              		.thumb_func
+ 268              		.type	I2CReadBit, %function
+ 269              	I2CReadBit:
+ 270              	.LFB35:
+  40:i2cFunctions.c **** 
+  41:i2cFunctions.c **** void I2CReadBit(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint8_t *value) {
+ 271              		.loc 1 41 0
+ 272              		.cfi_startproc
+ 273              		@ args = 0, pretend = 0, frame = 8
+ 274              		@ frame_needed = 1, uses_anonymous_args = 0
+ 275 0000 90B5     		push	{r4, r7, lr}
+ 276              		.cfi_def_cfa_offset 12
+ 277              		.cfi_offset 4, -12
+ 278              		.cfi_offset 7, -8
+ 279              		.cfi_offset 14, -4
+ 280 0002 83B0     		sub	sp, sp, #12
+ 281              		.cfi_def_cfa_offset 24
+ 282 0004 00AF     		add	r7, sp, #0
+ 283              		.cfi_def_cfa_register 7
+ 284 0006 0400     		movs	r4, r0
+ 285 0008 0800     		movs	r0, r1
+ 286 000a 1100     		movs	r1, r2
+ 287 000c 3B60     		str	r3, [r7]
+ 288 000e FB1D     		adds	r3, r7, #7
+ 289 0010 221C     		adds	r2, r4, #0
+ 290 0012 1A70     		strb	r2, [r3]
+ 291 0014 BB1D     		adds	r3, r7, #6
+ 292 0016 021C     		adds	r2, r0, #0
+ 293 0018 1A70     		strb	r2, [r3]
+ 294 001a 7B1D     		adds	r3, r7, #5
+ 295 001c 0A1C     		adds	r2, r1, #0
+ 296 001e 1A70     		strb	r2, [r3]
+  42:i2cFunctions.c **** 	I2CReadByte(devAddr, regAddr, value);
+ 297              		.loc 1 42 0
+ 298 0020 3A68     		ldr	r2, [r7]
+ 299 0022 BB1D     		adds	r3, r7, #6
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 7
+
+
+ 300 0024 1978     		ldrb	r1, [r3]
+ 301 0026 FB1D     		adds	r3, r7, #7
+ 302 0028 1B78     		ldrb	r3, [r3]
+ 303 002a 1800     		movs	r0, r3
+ 304 002c FFF7FEFF 		bl	I2CReadByte
+  43:i2cFunctions.c **** 	*value = *value & (1 << bitNum);
+ 305              		.loc 1 43 0
+ 306 0030 3B68     		ldr	r3, [r7]
+ 307 0032 1B78     		ldrb	r3, [r3]
+ 308 0034 5BB2     		sxtb	r3, r3
+ 309 0036 7A1D     		adds	r2, r7, #5
+ 310 0038 1278     		ldrb	r2, [r2]
+ 311 003a 0121     		movs	r1, #1
+ 312 003c 9140     		lsls	r1, r1, r2
+ 313 003e 0A00     		movs	r2, r1
+ 314 0040 52B2     		sxtb	r2, r2
+ 315 0042 1340     		ands	r3, r2
+ 316 0044 5BB2     		sxtb	r3, r3
+ 317 0046 DAB2     		uxtb	r2, r3
+ 318 0048 3B68     		ldr	r3, [r7]
+ 319 004a 1A70     		strb	r2, [r3]
+  44:i2cFunctions.c **** }
+ 320              		.loc 1 44 0
+ 321 004c C046     		nop
+ 322 004e BD46     		mov	sp, r7
+ 323 0050 03B0     		add	sp, sp, #12
+ 324              		@ sp needed
+ 325 0052 90BD     		pop	{r4, r7, pc}
+ 326              		.cfi_endproc
+ 327              	.LFE35:
+ 328              		.size	I2CReadBit, .-I2CReadBit
+ 329              		.section	.text.I2CWriteBytes,"ax",%progbits
+ 330              		.align	2
+ 331              		.global	I2CWriteBytes
+ 332              		.code	16
+ 333              		.thumb_func
+ 334              		.type	I2CWriteBytes, %function
+ 335              	I2CWriteBytes:
+ 336              	.LFB36:
+  45:i2cFunctions.c **** 	
+  46:i2cFunctions.c **** void I2CWriteBytes(uint8_t devAddr, uint8_t regAddr, uint8_t length, uint8_t *value) {
+ 337              		.loc 1 46 0
+ 338              		.cfi_startproc
+ 339              		@ args = 0, pretend = 0, frame = 16
+ 340              		@ frame_needed = 1, uses_anonymous_args = 0
+ 341 0000 90B5     		push	{r4, r7, lr}
+ 342              		.cfi_def_cfa_offset 12
+ 343              		.cfi_offset 4, -12
+ 344              		.cfi_offset 7, -8
+ 345              		.cfi_offset 14, -4
+ 346 0002 85B0     		sub	sp, sp, #20
+ 347              		.cfi_def_cfa_offset 32
+ 348 0004 00AF     		add	r7, sp, #0
+ 349              		.cfi_def_cfa_register 7
+ 350 0006 0400     		movs	r4, r0
+ 351 0008 0800     		movs	r0, r1
+ 352 000a 1100     		movs	r1, r2
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 8
+
+
+ 353 000c 3B60     		str	r3, [r7]
+ 354 000e FB1D     		adds	r3, r7, #7
+ 355 0010 221C     		adds	r2, r4, #0
+ 356 0012 1A70     		strb	r2, [r3]
+ 357 0014 BB1D     		adds	r3, r7, #6
+ 358 0016 021C     		adds	r2, r0, #0
+ 359 0018 1A70     		strb	r2, [r3]
+ 360 001a 7B1D     		adds	r3, r7, #5
+ 361 001c 0A1C     		adds	r2, r1, #0
+ 362 001e 1A70     		strb	r2, [r3]
+  47:i2cFunctions.c **** 	uint8_t i=0;
+ 363              		.loc 1 47 0
+ 364 0020 0F23     		movs	r3, #15
+ 365 0022 FB18     		adds	r3, r7, r3
+ 366 0024 0022     		movs	r2, #0
+ 367 0026 1A70     		strb	r2, [r3]
+  48:i2cFunctions.c **** 	I2C_MPU6050_I2CMasterSendStart(devAddr, I2C_MPU6050_I2C_WRITE_XFER_MODE,0);
+ 368              		.loc 1 48 0
+ 369 0028 FB1D     		adds	r3, r7, #7
+ 370 002a 1B78     		ldrb	r3, [r3]
+ 371 002c 0022     		movs	r2, #0
+ 372 002e 0021     		movs	r1, #0
+ 373 0030 1800     		movs	r0, r3
+ 374 0032 FFF7FEFF 		bl	I2C_MPU6050_I2CMasterSendStart
+  49:i2cFunctions.c **** 	I2C_MPU6050_I2CMasterWriteByte(regAddr,0);
+ 375              		.loc 1 49 0
+ 376 0036 BB1D     		adds	r3, r7, #6
+ 377 0038 1B78     		ldrb	r3, [r3]
+ 378 003a 0021     		movs	r1, #0
+ 379 003c 1800     		movs	r0, r3
+ 380 003e FFF7FEFF 		bl	I2C_MPU6050_I2CMasterWriteByte
+  50:i2cFunctions.c **** 	while (i++ < length) {
+ 381              		.loc 1 50 0
+ 382 0042 07E0     		b	.L8
+ 383              	.L9:
+  51:i2cFunctions.c **** 		I2C_MPU6050_I2CMasterWriteByte(*value++,0);
+ 384              		.loc 1 51 0
+ 385 0044 3B68     		ldr	r3, [r7]
+ 386 0046 5A1C     		adds	r2, r3, #1
+ 387 0048 3A60     		str	r2, [r7]
+ 388 004a 1B78     		ldrb	r3, [r3]
+ 389 004c 0021     		movs	r1, #0
+ 390 004e 1800     		movs	r0, r3
+ 391 0050 FFF7FEFF 		bl	I2C_MPU6050_I2CMasterWriteByte
+ 392              	.L8:
+  50:i2cFunctions.c **** 	while (i++ < length) {
+ 393              		.loc 1 50 0
+ 394 0054 0F23     		movs	r3, #15
+ 395 0056 FB18     		adds	r3, r7, r3
+ 396 0058 1B78     		ldrb	r3, [r3]
+ 397 005a 0F22     		movs	r2, #15
+ 398 005c BA18     		adds	r2, r7, r2
+ 399 005e 591C     		adds	r1, r3, #1
+ 400 0060 1170     		strb	r1, [r2]
+ 401 0062 7A1D     		adds	r2, r7, #5
+ 402 0064 1278     		ldrb	r2, [r2]
+ 403 0066 9A42     		cmp	r2, r3
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 9
+
+
+ 404 0068 ECD8     		bhi	.L9
+  52:i2cFunctions.c **** 	}
+  53:i2cFunctions.c **** 	I2C_MPU6050_I2CMasterSendStop(0);	
+ 405              		.loc 1 53 0
+ 406 006a 0020     		movs	r0, #0
+ 407 006c FFF7FEFF 		bl	I2C_MPU6050_I2CMasterSendStop
+  54:i2cFunctions.c **** }
+ 408              		.loc 1 54 0
+ 409 0070 C046     		nop
+ 410 0072 BD46     		mov	sp, r7
+ 411 0074 05B0     		add	sp, sp, #20
+ 412              		@ sp needed
+ 413 0076 90BD     		pop	{r4, r7, pc}
+ 414              		.cfi_endproc
+ 415              	.LFE36:
+ 416              		.size	I2CWriteBytes, .-I2CWriteBytes
+ 417              		.section	.text.I2CWriteByte,"ax",%progbits
+ 418              		.align	2
+ 419              		.global	I2CWriteByte
+ 420              		.code	16
+ 421              		.thumb_func
+ 422              		.type	I2CWriteByte, %function
+ 423              	I2CWriteByte:
+ 424              	.LFB37:
+  55:i2cFunctions.c **** 
+  56:i2cFunctions.c **** void I2CWriteByte(uint8_t devAddr, uint8_t regAddr, uint8_t value) {
+ 425              		.loc 1 56 0
+ 426              		.cfi_startproc
+ 427              		@ args = 0, pretend = 0, frame = 8
+ 428              		@ frame_needed = 1, uses_anonymous_args = 0
+ 429 0000 90B5     		push	{r4, r7, lr}
+ 430              		.cfi_def_cfa_offset 12
+ 431              		.cfi_offset 4, -12
+ 432              		.cfi_offset 7, -8
+ 433              		.cfi_offset 14, -4
+ 434 0002 83B0     		sub	sp, sp, #12
+ 435              		.cfi_def_cfa_offset 24
+ 436 0004 00AF     		add	r7, sp, #0
+ 437              		.cfi_def_cfa_register 7
+ 438 0006 0400     		movs	r4, r0
+ 439 0008 0800     		movs	r0, r1
+ 440 000a 1100     		movs	r1, r2
+ 441 000c FB1D     		adds	r3, r7, #7
+ 442 000e 221C     		adds	r2, r4, #0
+ 443 0010 1A70     		strb	r2, [r3]
+ 444 0012 BB1D     		adds	r3, r7, #6
+ 445 0014 021C     		adds	r2, r0, #0
+ 446 0016 1A70     		strb	r2, [r3]
+ 447 0018 7B1D     		adds	r3, r7, #5
+ 448 001a 0A1C     		adds	r2, r1, #0
+ 449 001c 1A70     		strb	r2, [r3]
+  57:i2cFunctions.c **** 	I2CWriteBytes(devAddr, regAddr, 1, &value);
+ 450              		.loc 1 57 0
+ 451 001e 7A1D     		adds	r2, r7, #5
+ 452 0020 BB1D     		adds	r3, r7, #6
+ 453 0022 1978     		ldrb	r1, [r3]
+ 454 0024 FB1D     		adds	r3, r7, #7
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 10
+
+
+ 455 0026 1878     		ldrb	r0, [r3]
+ 456 0028 1300     		movs	r3, r2
+ 457 002a 0122     		movs	r2, #1
+ 458 002c FFF7FEFF 		bl	I2CWriteBytes
+  58:i2cFunctions.c **** }
+ 459              		.loc 1 58 0
+ 460 0030 C046     		nop
+ 461 0032 BD46     		mov	sp, r7
+ 462 0034 03B0     		add	sp, sp, #12
+ 463              		@ sp needed
+ 464 0036 90BD     		pop	{r4, r7, pc}
+ 465              		.cfi_endproc
+ 466              	.LFE37:
+ 467              		.size	I2CWriteByte, .-I2CWriteByte
+ 468              		.section	.text.I2CWriteBits,"ax",%progbits
+ 469              		.align	2
+ 470              		.global	I2CWriteBits
+ 471              		.code	16
+ 472              		.thumb_func
+ 473              		.type	I2CWriteBits, %function
+ 474              	I2CWriteBits:
+ 475              	.LFB38:
+  59:i2cFunctions.c **** 
+  60:i2cFunctions.c **** void I2CWriteBits(uint8_t devAddr, uint8_t regAddr, uint8_t bitStart, uint8_t length, uint8_t value
+ 476              		.loc 1 60 0
+ 477              		.cfi_startproc
+ 478              		@ args = 4, pretend = 0, frame = 16
+ 479              		@ frame_needed = 1, uses_anonymous_args = 0
+ 480 0000 B0B5     		push	{r4, r5, r7, lr}
+ 481              		.cfi_def_cfa_offset 16
+ 482              		.cfi_offset 4, -16
+ 483              		.cfi_offset 5, -12
+ 484              		.cfi_offset 7, -8
+ 485              		.cfi_offset 14, -4
+ 486 0002 84B0     		sub	sp, sp, #16
+ 487              		.cfi_def_cfa_offset 32
+ 488 0004 00AF     		add	r7, sp, #0
+ 489              		.cfi_def_cfa_register 7
+ 490 0006 0500     		movs	r5, r0
+ 491 0008 0C00     		movs	r4, r1
+ 492 000a 1000     		movs	r0, r2
+ 493 000c 1900     		movs	r1, r3
+ 494 000e FB1D     		adds	r3, r7, #7
+ 495 0010 2A1C     		adds	r2, r5, #0
+ 496 0012 1A70     		strb	r2, [r3]
+ 497 0014 BB1D     		adds	r3, r7, #6
+ 498 0016 221C     		adds	r2, r4, #0
+ 499 0018 1A70     		strb	r2, [r3]
+ 500 001a 7B1D     		adds	r3, r7, #5
+ 501 001c 021C     		adds	r2, r0, #0
+ 502 001e 1A70     		strb	r2, [r3]
+ 503 0020 3B1D     		adds	r3, r7, #4
+ 504 0022 0A1C     		adds	r2, r1, #0
+ 505 0024 1A70     		strb	r2, [r3]
+  61:i2cFunctions.c **** 	uint8_t b;
+  62:i2cFunctions.c **** 	uint8_t mask = ((1 << length) - 1) << (bitStart - length + 1);
+ 506              		.loc 1 62 0
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 11
+
+
+ 507 0026 3B1D     		adds	r3, r7, #4
+ 508 0028 1B78     		ldrb	r3, [r3]
+ 509 002a 0122     		movs	r2, #1
+ 510 002c 9A40     		lsls	r2, r2, r3
+ 511 002e 1300     		movs	r3, r2
+ 512 0030 5A1E     		subs	r2, r3, #1
+ 513 0032 7B1D     		adds	r3, r7, #5
+ 514 0034 1978     		ldrb	r1, [r3]
+ 515 0036 3B1D     		adds	r3, r7, #4
+ 516 0038 1B78     		ldrb	r3, [r3]
+ 517 003a CB1A     		subs	r3, r1, r3
+ 518 003c 0133     		adds	r3, r3, #1
+ 519 003e 9A40     		lsls	r2, r2, r3
+ 520 0040 0F23     		movs	r3, #15
+ 521 0042 FB18     		adds	r3, r7, r3
+ 522 0044 1A70     		strb	r2, [r3]
+  63:i2cFunctions.c **** 	I2CReadByte(devAddr, regAddr, &b);
+ 523              		.loc 1 63 0
+ 524 0046 0E23     		movs	r3, #14
+ 525 0048 FA18     		adds	r2, r7, r3
+ 526 004a BB1D     		adds	r3, r7, #6
+ 527 004c 1978     		ldrb	r1, [r3]
+ 528 004e FB1D     		adds	r3, r7, #7
+ 529 0050 1B78     		ldrb	r3, [r3]
+ 530 0052 1800     		movs	r0, r3
+ 531 0054 FFF7FEFF 		bl	I2CReadByte
+  64:i2cFunctions.c **** 	value <<= (bitStart - length + 1);
+ 532              		.loc 1 64 0
+ 533 0058 2023     		movs	r3, #32
+ 534 005a FB18     		adds	r3, r7, r3
+ 535 005c 1A78     		ldrb	r2, [r3]
+ 536 005e 7B1D     		adds	r3, r7, #5
+ 537 0060 1978     		ldrb	r1, [r3]
+ 538 0062 3B1D     		adds	r3, r7, #4
+ 539 0064 1B78     		ldrb	r3, [r3]
+ 540 0066 CB1A     		subs	r3, r1, r3
+ 541 0068 0133     		adds	r3, r3, #1
+ 542 006a 9A40     		lsls	r2, r2, r3
+ 543 006c 2023     		movs	r3, #32
+ 544 006e FB18     		adds	r3, r7, r3
+ 545 0070 1A70     		strb	r2, [r3]
+  65:i2cFunctions.c **** 	value &= mask;
+ 546              		.loc 1 65 0
+ 547 0072 2023     		movs	r3, #32
+ 548 0074 F918     		adds	r1, r7, r3
+ 549 0076 2023     		movs	r3, #32
+ 550 0078 FB18     		adds	r3, r7, r3
+ 551 007a 0F22     		movs	r2, #15
+ 552 007c BA18     		adds	r2, r7, r2
+ 553 007e 1B78     		ldrb	r3, [r3]
+ 554 0080 1278     		ldrb	r2, [r2]
+ 555 0082 1340     		ands	r3, r2
+ 556 0084 0B70     		strb	r3, [r1]
+  66:i2cFunctions.c **** 	b &= ~(mask);
+ 557              		.loc 1 66 0
+ 558 0086 0F23     		movs	r3, #15
+ 559 0088 FB18     		adds	r3, r7, r3
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 12
+
+
+ 560 008a 1B78     		ldrb	r3, [r3]
+ 561 008c 5BB2     		sxtb	r3, r3
+ 562 008e DB43     		mvns	r3, r3
+ 563 0090 5BB2     		sxtb	r3, r3
+ 564 0092 0E22     		movs	r2, #14
+ 565 0094 BA18     		adds	r2, r7, r2
+ 566 0096 1278     		ldrb	r2, [r2]
+ 567 0098 52B2     		sxtb	r2, r2
+ 568 009a 1340     		ands	r3, r2
+ 569 009c 5BB2     		sxtb	r3, r3
+ 570 009e DAB2     		uxtb	r2, r3
+ 571 00a0 0E23     		movs	r3, #14
+ 572 00a2 FB18     		adds	r3, r7, r3
+ 573 00a4 1A70     		strb	r2, [r3]
+  67:i2cFunctions.c **** 	b |= value;
+ 574              		.loc 1 67 0
+ 575 00a6 0E23     		movs	r3, #14
+ 576 00a8 FB18     		adds	r3, r7, r3
+ 577 00aa 1A78     		ldrb	r2, [r3]
+ 578 00ac 2023     		movs	r3, #32
+ 579 00ae FB18     		adds	r3, r7, r3
+ 580 00b0 1B78     		ldrb	r3, [r3]
+ 581 00b2 1343     		orrs	r3, r2
+ 582 00b4 DAB2     		uxtb	r2, r3
+ 583 00b6 0E23     		movs	r3, #14
+ 584 00b8 FB18     		adds	r3, r7, r3
+ 585 00ba 1A70     		strb	r2, [r3]
+  68:i2cFunctions.c **** 	I2CWriteByte(devAddr, regAddr, b);	
+ 586              		.loc 1 68 0
+ 587 00bc 0E23     		movs	r3, #14
+ 588 00be FB18     		adds	r3, r7, r3
+ 589 00c0 1A78     		ldrb	r2, [r3]
+ 590 00c2 BB1D     		adds	r3, r7, #6
+ 591 00c4 1978     		ldrb	r1, [r3]
+ 592 00c6 FB1D     		adds	r3, r7, #7
+ 593 00c8 1B78     		ldrb	r3, [r3]
+ 594 00ca 1800     		movs	r0, r3
+ 595 00cc FFF7FEFF 		bl	I2CWriteByte
+  69:i2cFunctions.c **** }
+ 596              		.loc 1 69 0
+ 597 00d0 C046     		nop
+ 598 00d2 BD46     		mov	sp, r7
+ 599 00d4 04B0     		add	sp, sp, #16
+ 600              		@ sp needed
+ 601 00d6 B0BD     		pop	{r4, r5, r7, pc}
+ 602              		.cfi_endproc
+ 603              	.LFE38:
+ 604              		.size	I2CWriteBits, .-I2CWriteBits
+ 605              		.section	.text.I2CWriteBit,"ax",%progbits
+ 606              		.align	2
+ 607              		.global	I2CWriteBit
+ 608              		.code	16
+ 609              		.thumb_func
+ 610              		.type	I2CWriteBit, %function
+ 611              	I2CWriteBit:
+ 612              	.LFB39:
+  70:i2cFunctions.c **** 
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 13
+
+
+  71:i2cFunctions.c **** void I2CWriteBit(uint8_t devAddr, uint8_t regAddr, uint8_t bitNum, uint8_t value) {
+ 613              		.loc 1 71 0
+ 614              		.cfi_startproc
+ 615              		@ args = 0, pretend = 0, frame = 16
+ 616              		@ frame_needed = 1, uses_anonymous_args = 0
+ 617 0000 B0B5     		push	{r4, r5, r7, lr}
+ 618              		.cfi_def_cfa_offset 16
+ 619              		.cfi_offset 4, -16
+ 620              		.cfi_offset 5, -12
+ 621              		.cfi_offset 7, -8
+ 622              		.cfi_offset 14, -4
+ 623 0002 84B0     		sub	sp, sp, #16
+ 624              		.cfi_def_cfa_offset 32
+ 625 0004 00AF     		add	r7, sp, #0
+ 626              		.cfi_def_cfa_register 7
+ 627 0006 0500     		movs	r5, r0
+ 628 0008 0C00     		movs	r4, r1
+ 629 000a 1000     		movs	r0, r2
+ 630 000c 1900     		movs	r1, r3
+ 631 000e FB1D     		adds	r3, r7, #7
+ 632 0010 2A1C     		adds	r2, r5, #0
+ 633 0012 1A70     		strb	r2, [r3]
+ 634 0014 BB1D     		adds	r3, r7, #6
+ 635 0016 221C     		adds	r2, r4, #0
+ 636 0018 1A70     		strb	r2, [r3]
+ 637 001a 7B1D     		adds	r3, r7, #5
+ 638 001c 021C     		adds	r2, r0, #0
+ 639 001e 1A70     		strb	r2, [r3]
+ 640 0020 3B1D     		adds	r3, r7, #4
+ 641 0022 0A1C     		adds	r2, r1, #0
+ 642 0024 1A70     		strb	r2, [r3]
+  72:i2cFunctions.c **** 	uint8_t b;
+  73:i2cFunctions.c **** 	I2CReadByte(devAddr, regAddr, &b);
+ 643              		.loc 1 73 0
+ 644 0026 0F23     		movs	r3, #15
+ 645 0028 FA18     		adds	r2, r7, r3
+ 646 002a BB1D     		adds	r3, r7, #6
+ 647 002c 1978     		ldrb	r1, [r3]
+ 648 002e FB1D     		adds	r3, r7, #7
+ 649 0030 1B78     		ldrb	r3, [r3]
+ 650 0032 1800     		movs	r0, r3
+ 651 0034 FFF7FEFF 		bl	I2CReadByte
+  74:i2cFunctions.c **** 	b = (value != 0) ? (b | (1 << bitNum)) : (b & ~(1 << bitNum));
+ 652              		.loc 1 74 0
+ 653 0038 3B1D     		adds	r3, r7, #4
+ 654 003a 1B78     		ldrb	r3, [r3]
+ 655 003c 002B     		cmp	r3, #0
+ 656 003e 0DD0     		beq	.L13
+ 657              		.loc 1 74 0 is_stmt 0 discriminator 1
+ 658 0040 7B1D     		adds	r3, r7, #5
+ 659 0042 1B78     		ldrb	r3, [r3]
+ 660 0044 0122     		movs	r2, #1
+ 661 0046 9A40     		lsls	r2, r2, r3
+ 662 0048 1300     		movs	r3, r2
+ 663 004a 5AB2     		sxtb	r2, r3
+ 664 004c 0F23     		movs	r3, #15
+ 665 004e FB18     		adds	r3, r7, r3
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 14
+
+
+ 666 0050 1B78     		ldrb	r3, [r3]
+ 667 0052 5BB2     		sxtb	r3, r3
+ 668 0054 1343     		orrs	r3, r2
+ 669 0056 5BB2     		sxtb	r3, r3
+ 670 0058 DBB2     		uxtb	r3, r3
+ 671 005a 0EE0     		b	.L14
+ 672              	.L13:
+ 673              		.loc 1 74 0 discriminator 2
+ 674 005c 7B1D     		adds	r3, r7, #5
+ 675 005e 1B78     		ldrb	r3, [r3]
+ 676 0060 0122     		movs	r2, #1
+ 677 0062 9A40     		lsls	r2, r2, r3
+ 678 0064 1300     		movs	r3, r2
+ 679 0066 5BB2     		sxtb	r3, r3
+ 680 0068 DB43     		mvns	r3, r3
+ 681 006a 5BB2     		sxtb	r3, r3
+ 682 006c 0F22     		movs	r2, #15
+ 683 006e BA18     		adds	r2, r7, r2
+ 684 0070 1278     		ldrb	r2, [r2]
+ 685 0072 52B2     		sxtb	r2, r2
+ 686 0074 1340     		ands	r3, r2
+ 687 0076 5BB2     		sxtb	r3, r3
+ 688 0078 DBB2     		uxtb	r3, r3
+ 689              	.L14:
+ 690              		.loc 1 74 0 discriminator 4
+ 691 007a 0F22     		movs	r2, #15
+ 692 007c BA18     		adds	r2, r7, r2
+ 693 007e 1370     		strb	r3, [r2]
+  75:i2cFunctions.c **** 	I2CWriteByte(devAddr, regAddr, b);
+ 694              		.loc 1 75 0 is_stmt 1 discriminator 4
+ 695 0080 0F23     		movs	r3, #15
+ 696 0082 FB18     		adds	r3, r7, r3
+ 697 0084 1A78     		ldrb	r2, [r3]
+ 698 0086 BB1D     		adds	r3, r7, #6
+ 699 0088 1978     		ldrb	r1, [r3]
+ 700 008a FB1D     		adds	r3, r7, #7
+ 701 008c 1B78     		ldrb	r3, [r3]
+ 702 008e 1800     		movs	r0, r3
+ 703 0090 FFF7FEFF 		bl	I2CWriteByte
+  76:i2cFunctions.c **** }
+ 704              		.loc 1 76 0 discriminator 4
+ 705 0094 C046     		nop
+ 706 0096 BD46     		mov	sp, r7
+ 707 0098 04B0     		add	sp, sp, #16
+ 708              		@ sp needed
+ 709 009a B0BD     		pop	{r4, r5, r7, pc}
+ 710              		.cfi_endproc
+ 711              	.LFE39:
+ 712              		.size	I2CWriteBit, .-I2CWriteBit
+ 713              		.section	.text.I2CWriteWords,"ax",%progbits
+ 714              		.align	2
+ 715              		.global	I2CWriteWords
+ 716              		.code	16
+ 717              		.thumb_func
+ 718              		.type	I2CWriteWords, %function
+ 719              	I2CWriteWords:
+ 720              	.LFB40:
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 15
+
+
+  77:i2cFunctions.c **** 
+  78:i2cFunctions.c **** void I2CWriteWords(uint8_t devAddr, uint8_t regAddr, uint8_t length, uint16_t *value) {
+ 721              		.loc 1 78 0
+ 722              		.cfi_startproc
+ 723              		@ args = 0, pretend = 0, frame = 16
+ 724              		@ frame_needed = 1, uses_anonymous_args = 0
+ 725 0000 90B5     		push	{r4, r7, lr}
+ 726              		.cfi_def_cfa_offset 12
+ 727              		.cfi_offset 4, -12
+ 728              		.cfi_offset 7, -8
+ 729              		.cfi_offset 14, -4
+ 730 0002 85B0     		sub	sp, sp, #20
+ 731              		.cfi_def_cfa_offset 32
+ 732 0004 00AF     		add	r7, sp, #0
+ 733              		.cfi_def_cfa_register 7
+ 734 0006 0400     		movs	r4, r0
+ 735 0008 0800     		movs	r0, r1
+ 736 000a 1100     		movs	r1, r2
+ 737 000c 3B60     		str	r3, [r7]
+ 738 000e FB1D     		adds	r3, r7, #7
+ 739 0010 221C     		adds	r2, r4, #0
+ 740 0012 1A70     		strb	r2, [r3]
+ 741 0014 BB1D     		adds	r3, r7, #6
+ 742 0016 021C     		adds	r2, r0, #0
+ 743 0018 1A70     		strb	r2, [r3]
+ 744 001a 7B1D     		adds	r3, r7, #5
+ 745 001c 0A1C     		adds	r2, r1, #0
+ 746 001e 1A70     		strb	r2, [r3]
+  79:i2cFunctions.c **** 	uint8_t i=0;
+ 747              		.loc 1 79 0
+ 748 0020 0F23     		movs	r3, #15
+ 749 0022 FB18     		adds	r3, r7, r3
+ 750 0024 0022     		movs	r2, #0
+ 751 0026 1A70     		strb	r2, [r3]
+  80:i2cFunctions.c **** 	I2C_MPU6050_I2CMasterSendStart(devAddr, I2C_MPU6050_I2C_WRITE_XFER_MODE,0);
+ 752              		.loc 1 80 0
+ 753 0028 FB1D     		adds	r3, r7, #7
+ 754 002a 1B78     		ldrb	r3, [r3]
+ 755 002c 0022     		movs	r2, #0
+ 756 002e 0021     		movs	r1, #0
+ 757 0030 1800     		movs	r0, r3
+ 758 0032 FFF7FEFF 		bl	I2C_MPU6050_I2CMasterSendStart
+  81:i2cFunctions.c **** 	I2C_MPU6050_I2CMasterWriteByte(regAddr,0);
+ 759              		.loc 1 81 0
+ 760 0036 BB1D     		adds	r3, r7, #6
+ 761 0038 1B78     		ldrb	r3, [r3]
+ 762 003a 0021     		movs	r1, #0
+ 763 003c 1800     		movs	r0, r3
+ 764 003e FFF7FEFF 		bl	I2C_MPU6050_I2CMasterWriteByte
+  82:i2cFunctions.c **** 	while (i++ < length) {
+ 765              		.loc 1 82 0
+ 766 0042 10E0     		b	.L16
+ 767              	.L17:
+  83:i2cFunctions.c **** 		I2C_MPU6050_I2CMasterWriteByte(((uint8_t)*value) >> 8,0);
+ 768              		.loc 1 83 0
+ 769 0044 3B68     		ldr	r3, [r7]
+ 770 0046 1B88     		ldrh	r3, [r3]
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 16
+
+
+ 771 0048 DBB2     		uxtb	r3, r3
+ 772 004a 1B12     		asrs	r3, r3, #8
+ 773 004c 0021     		movs	r1, #0
+ 774 004e 1800     		movs	r0, r3
+ 775 0050 FFF7FEFF 		bl	I2C_MPU6050_I2CMasterWriteByte
+  84:i2cFunctions.c **** 		I2C_MPU6050_I2CMasterWriteByte((uint8_t)*value++,0);
+ 776              		.loc 1 84 0
+ 777 0054 3B68     		ldr	r3, [r7]
+ 778 0056 9A1C     		adds	r2, r3, #2
+ 779 0058 3A60     		str	r2, [r7]
+ 780 005a 1B88     		ldrh	r3, [r3]
+ 781 005c DBB2     		uxtb	r3, r3
+ 782 005e 0021     		movs	r1, #0
+ 783 0060 1800     		movs	r0, r3
+ 784 0062 FFF7FEFF 		bl	I2C_MPU6050_I2CMasterWriteByte
+ 785              	.L16:
+  82:i2cFunctions.c **** 	while (i++ < length) {
+ 786              		.loc 1 82 0
+ 787 0066 0F23     		movs	r3, #15
+ 788 0068 FB18     		adds	r3, r7, r3
+ 789 006a 1B78     		ldrb	r3, [r3]
+ 790 006c 0F22     		movs	r2, #15
+ 791 006e BA18     		adds	r2, r7, r2
+ 792 0070 591C     		adds	r1, r3, #1
+ 793 0072 1170     		strb	r1, [r2]
+ 794 0074 7A1D     		adds	r2, r7, #5
+ 795 0076 1278     		ldrb	r2, [r2]
+ 796 0078 9A42     		cmp	r2, r3
+ 797 007a E3D8     		bhi	.L17
+  85:i2cFunctions.c **** 	}
+  86:i2cFunctions.c **** 	I2C_MPU6050_I2CMasterSendStop(0);		
+ 798              		.loc 1 86 0
+ 799 007c 0020     		movs	r0, #0
+ 800 007e FFF7FEFF 		bl	I2C_MPU6050_I2CMasterSendStop
+  87:i2cFunctions.c **** }
+ 801              		.loc 1 87 0
+ 802 0082 C046     		nop
+ 803 0084 BD46     		mov	sp, r7
+ 804 0086 05B0     		add	sp, sp, #20
+ 805              		@ sp needed
+ 806 0088 90BD     		pop	{r4, r7, pc}
+ 807              		.cfi_endproc
+ 808              	.LFE40:
+ 809              		.size	I2CWriteWords, .-I2CWriteWords
+ 810 008a C046     		.section	.text.I2CWriteWord,"ax",%progbits
+ 811              		.align	2
+ 812              		.global	I2CWriteWord
+ 813              		.code	16
+ 814              		.thumb_func
+ 815              		.type	I2CWriteWord, %function
+ 816              	I2CWriteWord:
+ 817              	.LFB41:
+  88:i2cFunctions.c **** 
+  89:i2cFunctions.c **** void I2CWriteWord(uint8_t devAddr, uint8_t regAddr, uint16_t value) {
+ 818              		.loc 1 89 0
+ 819              		.cfi_startproc
+ 820              		@ args = 0, pretend = 0, frame = 8
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 17
+
+
+ 821              		@ frame_needed = 1, uses_anonymous_args = 0
+ 822 0000 90B5     		push	{r4, r7, lr}
+ 823              		.cfi_def_cfa_offset 12
+ 824              		.cfi_offset 4, -12
+ 825              		.cfi_offset 7, -8
+ 826              		.cfi_offset 14, -4
+ 827 0002 83B0     		sub	sp, sp, #12
+ 828              		.cfi_def_cfa_offset 24
+ 829 0004 00AF     		add	r7, sp, #0
+ 830              		.cfi_def_cfa_register 7
+ 831 0006 0400     		movs	r4, r0
+ 832 0008 0800     		movs	r0, r1
+ 833 000a 1100     		movs	r1, r2
+ 834 000c FB1D     		adds	r3, r7, #7
+ 835 000e 221C     		adds	r2, r4, #0
+ 836 0010 1A70     		strb	r2, [r3]
+ 837 0012 BB1D     		adds	r3, r7, #6
+ 838 0014 021C     		adds	r2, r0, #0
+ 839 0016 1A70     		strb	r2, [r3]
+ 840 0018 3B1D     		adds	r3, r7, #4
+ 841 001a 0A1C     		adds	r2, r1, #0
+ 842 001c 1A80     		strh	r2, [r3]
+  90:i2cFunctions.c **** 	I2CWriteWords(devAddr, regAddr, 1, &value);
+ 843              		.loc 1 90 0
+ 844 001e 3A1D     		adds	r2, r7, #4
+ 845 0020 BB1D     		adds	r3, r7, #6
+ 846 0022 1978     		ldrb	r1, [r3]
+ 847 0024 FB1D     		adds	r3, r7, #7
+ 848 0026 1878     		ldrb	r0, [r3]
+ 849 0028 1300     		movs	r3, r2
+ 850 002a 0122     		movs	r2, #1
+ 851 002c FFF7FEFF 		bl	I2CWriteWords
+  91:i2cFunctions.c **** }...
+ 852              		.loc 1 91 0
+ 853 0030 C046     		nop
+ 854 0032 BD46     		mov	sp, r7
+ 855 0034 03B0     		add	sp, sp, #12
+ 856              		@ sp needed
+ 857 0036 90BD     		pop	{r4, r7, pc}
+ 858              		.cfi_endproc
+ 859              	.LFE41:
+ 860              		.size	I2CWriteWord, .-I2CWriteWord
+ 861              		.text
+ 862              	.Letext0:
+ 863              		.file 2 "d:\\psoc\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-eabi\\includ
+ 864              		.file 3 "d:\\psoc\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-eabi\\includ
+ 865              		.section	.debug_info,"",%progbits
+ 866              	.Ldebug_info0:
+ 867 0000 15040000 		.4byte	0x415
+ 868 0004 0400     		.2byte	0x4
+ 869 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 870 000a 04       		.byte	0x4
+ 871 000b 01       		.uleb128 0x1
+ 872 000c C8000000 		.4byte	.LASF34
+ 873 0010 0C       		.byte	0xc
+ 874 0011 BE010000 		.4byte	.LASF35
+ 875 0015 1E000000 		.4byte	.LASF36
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 18
+
+
+ 876 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 877 001d 00000000 		.4byte	0
+ 878 0021 00000000 		.4byte	.Ldebug_line0
+ 879 0025 02       		.uleb128 0x2
+ 880 0026 01       		.byte	0x1
+ 881 0027 06       		.byte	0x6
+ 882 0028 30020000 		.4byte	.LASF0
+ 883 002c 03       		.uleb128 0x3
+ 884 002d 00000000 		.4byte	.LASF3
+ 885 0031 02       		.byte	0x2
+ 886 0032 1D       		.byte	0x1d
+ 887 0033 37000000 		.4byte	0x37
+ 888 0037 02       		.uleb128 0x2
+ 889 0038 01       		.byte	0x1
+ 890 0039 08       		.byte	0x8
+ 891 003a 68000000 		.4byte	.LASF1
+ 892 003e 02       		.uleb128 0x2
+ 893 003f 02       		.byte	0x2
+ 894 0040 05       		.byte	0x5
+ 895 0041 EC010000 		.4byte	.LASF2
+ 896 0045 03       		.uleb128 0x3
+ 897 0046 56010000 		.4byte	.LASF4
+ 898 004a 02       		.byte	0x2
+ 899 004b 2B       		.byte	0x2b
+ 900 004c 50000000 		.4byte	0x50
+ 901 0050 02       		.uleb128 0x2
+ 902 0051 02       		.byte	0x2
+ 903 0052 07       		.byte	0x7
+ 904 0053 A8000000 		.4byte	.LASF5
+ 905 0057 02       		.uleb128 0x2
+ 906 0058 04       		.byte	0x4
+ 907 0059 05       		.byte	0x5
+ 908 005a 15020000 		.4byte	.LASF6
+ 909 005e 02       		.uleb128 0x2
+ 910 005f 04       		.byte	0x4
+ 911 0060 07       		.byte	0x7
+ 912 0061 96000000 		.4byte	.LASF7
+ 913 0065 02       		.uleb128 0x2
+ 914 0066 08       		.byte	0x8
+ 915 0067 05       		.byte	0x5
+ 916 0068 CD010000 		.4byte	.LASF8
+ 917 006c 02       		.uleb128 0x2
+ 918 006d 08       		.byte	0x8
+ 919 006e 07       		.byte	0x7
+ 920 006f 8A010000 		.4byte	.LASF9
+ 921 0073 04       		.uleb128 0x4
+ 922 0074 04       		.byte	0x4
+ 923 0075 05       		.byte	0x5
+ 924 0076 696E7400 		.ascii	"int\000"
+ 925 007a 02       		.uleb128 0x2
+ 926 007b 04       		.byte	0x4
+ 927 007c 07       		.byte	0x7
+ 928 007d 7D010000 		.4byte	.LASF10
+ 929 0081 03       		.uleb128 0x3
+ 930 0082 A1010000 		.4byte	.LASF11
+ 931 0086 03       		.byte	0x3
+ 932 0087 18       		.byte	0x18
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 19
+
+
+ 933 0088 2C000000 		.4byte	0x2c
+ 934 008c 03       		.uleb128 0x3
+ 935 008d FE010000 		.4byte	.LASF12
+ 936 0091 03       		.byte	0x3
+ 937 0092 24       		.byte	0x24
+ 938 0093 45000000 		.4byte	0x45
+ 939 0097 02       		.uleb128 0x2
+ 940 0098 04       		.byte	0x4
+ 941 0099 04       		.byte	0x4
+ 942 009a 62000000 		.4byte	.LASF13
+ 943 009e 02       		.uleb128 0x2
+ 944 009f 08       		.byte	0x8
+ 945 00a0 04       		.byte	0x4
+ 946 00a1 61010000 		.4byte	.LASF14
+ 947 00a5 02       		.uleb128 0x2
+ 948 00a6 01       		.byte	0x1
+ 949 00a7 08       		.byte	0x8
+ 950 00a8 1E020000 		.4byte	.LASF15
+ 951 00ac 02       		.uleb128 0x2
+ 952 00ad 08       		.byte	0x8
+ 953 00ae 04       		.byte	0x4
+ 954 00af A9010000 		.4byte	.LASF16
+ 955 00b3 02       		.uleb128 0x2
+ 956 00b4 04       		.byte	0x4
+ 957 00b5 07       		.byte	0x7
+ 958 00b6 B5010000 		.4byte	.LASF17
+ 959 00ba 05       		.uleb128 0x5
+ 960 00bb 23020000 		.4byte	.LASF22
+ 961 00bf 01       		.byte	0x1
+ 962 00c0 12       		.byte	0x12
+ 963 00c1 00000000 		.4byte	.LFB32
+ 964 00c5 92000000 		.4byte	.LFE32-.LFB32
+ 965 00c9 01       		.uleb128 0x1
+ 966 00ca 9C       		.byte	0x9c
+ 967 00cb 14010000 		.4byte	0x114
+ 968 00cf 06       		.uleb128 0x6
+ 969 00d0 F6010000 		.4byte	.LASF18
+ 970 00d4 01       		.byte	0x1
+ 971 00d5 12       		.byte	0x12
+ 972 00d6 81000000 		.4byte	0x81
+ 973 00da 02       		.uleb128 0x2
+ 974 00db 91       		.byte	0x91
+ 975 00dc 67       		.sleb128 -25
+ 976 00dd 06       		.uleb128 0x6
+ 977 00de 8E000000 		.4byte	.LASF19
+ 978 00e2 01       		.byte	0x1
+ 979 00e3 12       		.byte	0x12
+ 980 00e4 81000000 		.4byte	0x81
+ 981 00e8 02       		.uleb128 0x2
+ 982 00e9 91       		.byte	0x91
+ 983 00ea 66       		.sleb128 -26
+ 984 00eb 06       		.uleb128 0x6
+ 985 00ec 50020000 		.4byte	.LASF20
+ 986 00f0 01       		.byte	0x1
+ 987 00f1 12       		.byte	0x12
+ 988 00f2 81000000 		.4byte	0x81
+ 989 00f6 02       		.uleb128 0x2
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 20
+
+
+ 990 00f7 91       		.byte	0x91
+ 991 00f8 65       		.sleb128 -27
+ 992 00f9 06       		.uleb128 0x6
+ 993 00fa 18000000 		.4byte	.LASF21
+ 994 00fe 01       		.byte	0x1
+ 995 00ff 12       		.byte	0x12
+ 996 0100 14010000 		.4byte	0x114
+ 997 0104 02       		.uleb128 0x2
+ 998 0105 91       		.byte	0x91
+ 999 0106 60       		.sleb128 -32
+ 1000 0107 07       		.uleb128 0x7
+ 1001 0108 6900     		.ascii	"i\000"
+ 1002 010a 01       		.byte	0x1
+ 1003 010b 13       		.byte	0x13
+ 1004 010c 81000000 		.4byte	0x81
+ 1005 0110 02       		.uleb128 0x2
+ 1006 0111 91       		.byte	0x91
+ 1007 0112 6F       		.sleb128 -17
+ 1008 0113 00       		.byte	0
+ 1009 0114 08       		.uleb128 0x8
+ 1010 0115 04       		.byte	0x4
+ 1011 0116 81000000 		.4byte	0x81
+ 1012 011a 05       		.uleb128 0x5
+ 1013 011b 56000000 		.4byte	.LASF23
+ 1014 011f 01       		.byte	0x1
+ 1015 0120 1E       		.byte	0x1e
+ 1016 0121 00000000 		.4byte	.LFB33
+ 1017 0125 2E000000 		.4byte	.LFE33-.LFB33
+ 1018 0129 01       		.uleb128 0x1
+ 1019 012a 9C       		.byte	0x9c
+ 1020 012b 5A010000 		.4byte	0x15a
+ 1021 012f 06       		.uleb128 0x6
+ 1022 0130 F6010000 		.4byte	.LASF18
+ 1023 0134 01       		.byte	0x1
+ 1024 0135 1E       		.byte	0x1e
+ 1025 0136 81000000 		.4byte	0x81
+ 1026 013a 02       		.uleb128 0x2
+ 1027 013b 91       		.byte	0x91
+ 1028 013c 77       		.sleb128 -9
+ 1029 013d 06       		.uleb128 0x6
+ 1030 013e 8E000000 		.4byte	.LASF19
+ 1031 0142 01       		.byte	0x1
+ 1032 0143 1E       		.byte	0x1e
+ 1033 0144 81000000 		.4byte	0x81
+ 1034 0148 02       		.uleb128 0x2
+ 1035 0149 91       		.byte	0x91
+ 1036 014a 76       		.sleb128 -10
+ 1037 014b 06       		.uleb128 0x6
+ 1038 014c 18000000 		.4byte	.LASF21
+ 1039 0150 01       		.byte	0x1
+ 1040 0151 1E       		.byte	0x1e
+ 1041 0152 14010000 		.4byte	0x114
+ 1042 0156 02       		.uleb128 0x2
+ 1043 0157 91       		.byte	0x91
+ 1044 0158 70       		.sleb128 -16
+ 1045 0159 00       		.byte	0
+ 1046 015a 05       		.uleb128 0x5
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 21
+
+
+ 1047 015b E0010000 		.4byte	.LASF24
+ 1048 015f 01       		.byte	0x1
+ 1049 0160 22       		.byte	0x22
+ 1050 0161 00000000 		.4byte	.LFB34
+ 1051 0165 8C000000 		.4byte	.LFE34-.LFB34
+ 1052 0169 01       		.uleb128 0x1
+ 1053 016a 9C       		.byte	0x9c
+ 1054 016b C4010000 		.4byte	0x1c4
+ 1055 016f 06       		.uleb128 0x6
+ 1056 0170 F6010000 		.4byte	.LASF18
+ 1057 0174 01       		.byte	0x1
+ 1058 0175 22       		.byte	0x22
+ 1059 0176 81000000 		.4byte	0x81
+ 1060 017a 02       		.uleb128 0x2
+ 1061 017b 91       		.byte	0x91
+ 1062 017c 67       		.sleb128 -25
+ 1063 017d 06       		.uleb128 0x6
+ 1064 017e 8E000000 		.4byte	.LASF19
+ 1065 0182 01       		.byte	0x1
+ 1066 0183 22       		.byte	0x22
+ 1067 0184 81000000 		.4byte	0x81
+ 1068 0188 02       		.uleb128 0x2
+ 1069 0189 91       		.byte	0x91
+ 1070 018a 66       		.sleb128 -26
+ 1071 018b 06       		.uleb128 0x6
+ 1072 018c 68010000 		.4byte	.LASF25
+ 1073 0190 01       		.byte	0x1
+ 1074 0191 22       		.byte	0x22
+ 1075 0192 81000000 		.4byte	0x81
+ 1076 0196 02       		.uleb128 0x2
+ 1077 0197 91       		.byte	0x91
+ 1078 0198 65       		.sleb128 -27
+ 1079 0199 06       		.uleb128 0x6
+ 1080 019a 50020000 		.4byte	.LASF20
+ 1081 019e 01       		.byte	0x1
+ 1082 019f 22       		.byte	0x22
+ 1083 01a0 81000000 		.4byte	0x81
+ 1084 01a4 02       		.uleb128 0x2
+ 1085 01a5 91       		.byte	0x91
+ 1086 01a6 64       		.sleb128 -28
+ 1087 01a7 06       		.uleb128 0x6
+ 1088 01a8 18000000 		.4byte	.LASF21
+ 1089 01ac 01       		.byte	0x1
+ 1090 01ad 22       		.byte	0x22
+ 1091 01ae 14010000 		.4byte	0x114
+ 1092 01b2 02       		.uleb128 0x2
+ 1093 01b3 91       		.byte	0x91
+ 1094 01b4 00       		.sleb128 0
+ 1095 01b5 09       		.uleb128 0x9
+ 1096 01b6 DB010000 		.4byte	.LASF26
+ 1097 01ba 01       		.byte	0x1
+ 1098 01bb 23       		.byte	0x23
+ 1099 01bc 81000000 		.4byte	0x81
+ 1100 01c0 02       		.uleb128 0x2
+ 1101 01c1 91       		.byte	0x91
+ 1102 01c2 6F       		.sleb128 -17
+ 1103 01c3 00       		.byte	0
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 22
+
+
+ 1104 01c4 05       		.uleb128 0x5
+ 1105 01c5 83000000 		.4byte	.LASF27
+ 1106 01c9 01       		.byte	0x1
+ 1107 01ca 29       		.byte	0x29
+ 1108 01cb 00000000 		.4byte	.LFB35
+ 1109 01cf 54000000 		.4byte	.LFE35-.LFB35
+ 1110 01d3 01       		.uleb128 0x1
+ 1111 01d4 9C       		.byte	0x9c
+ 1112 01d5 12020000 		.4byte	0x212
+ 1113 01d9 06       		.uleb128 0x6
+ 1114 01da F6010000 		.4byte	.LASF18
+ 1115 01de 01       		.byte	0x1
+ 1116 01df 29       		.byte	0x29
+ 1117 01e0 81000000 		.4byte	0x81
+ 1118 01e4 02       		.uleb128 0x2
+ 1119 01e5 91       		.byte	0x91
+ 1120 01e6 6F       		.sleb128 -17
+ 1121 01e7 06       		.uleb128 0x6
+ 1122 01e8 8E000000 		.4byte	.LASF19
+ 1123 01ec 01       		.byte	0x1
+ 1124 01ed 29       		.byte	0x29
+ 1125 01ee 81000000 		.4byte	0x81
+ 1126 01f2 02       		.uleb128 0x2
+ 1127 01f3 91       		.byte	0x91
+ 1128 01f4 6E       		.sleb128 -18
+ 1129 01f5 06       		.uleb128 0x6
+ 1130 01f6 49020000 		.4byte	.LASF28
+ 1131 01fa 01       		.byte	0x1
+ 1132 01fb 29       		.byte	0x29
+ 1133 01fc 81000000 		.4byte	0x81
+ 1134 0200 02       		.uleb128 0x2
+ 1135 0201 91       		.byte	0x91
+ 1136 0202 6D       		.sleb128 -19
+ 1137 0203 06       		.uleb128 0x6
+ 1138 0204 18000000 		.4byte	.LASF21
+ 1139 0208 01       		.byte	0x1
+ 1140 0209 29       		.byte	0x29
+ 1141 020a 14010000 		.4byte	0x114
+ 1142 020e 02       		.uleb128 0x2
+ 1143 020f 91       		.byte	0x91
+ 1144 0210 68       		.sleb128 -24
+ 1145 0211 00       		.byte	0
+ 1146 0212 05       		.uleb128 0x5
+ 1147 0213 0A000000 		.4byte	.LASF29
+ 1148 0217 01       		.byte	0x1
+ 1149 0218 2E       		.byte	0x2e
+ 1150 0219 00000000 		.4byte	.LFB36
+ 1151 021d 78000000 		.4byte	.LFE36-.LFB36
+ 1152 0221 01       		.uleb128 0x1
+ 1153 0222 9C       		.byte	0x9c
+ 1154 0223 6C020000 		.4byte	0x26c
+ 1155 0227 06       		.uleb128 0x6
+ 1156 0228 F6010000 		.4byte	.LASF18
+ 1157 022c 01       		.byte	0x1
+ 1158 022d 2E       		.byte	0x2e
+ 1159 022e 81000000 		.4byte	0x81
+ 1160 0232 02       		.uleb128 0x2
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 23
+
+
+ 1161 0233 91       		.byte	0x91
+ 1162 0234 67       		.sleb128 -25
+ 1163 0235 06       		.uleb128 0x6
+ 1164 0236 8E000000 		.4byte	.LASF19
+ 1165 023a 01       		.byte	0x1
+ 1166 023b 2E       		.byte	0x2e
+ 1167 023c 81000000 		.4byte	0x81
+ 1168 0240 02       		.uleb128 0x2
+ 1169 0241 91       		.byte	0x91
+ 1170 0242 66       		.sleb128 -26
+ 1171 0243 06       		.uleb128 0x6
+ 1172 0244 50020000 		.4byte	.LASF20
+ 1173 0248 01       		.byte	0x1
+ 1174 0249 2E       		.byte	0x2e
+ 1175 024a 81000000 		.4byte	0x81
+ 1176 024e 02       		.uleb128 0x2
+ 1177 024f 91       		.byte	0x91
+ 1178 0250 65       		.sleb128 -27
+ 1179 0251 06       		.uleb128 0x6
+ 1180 0252 18000000 		.4byte	.LASF21
+ 1181 0256 01       		.byte	0x1
+ 1182 0257 2E       		.byte	0x2e
+ 1183 0258 14010000 		.4byte	0x114
+ 1184 025c 02       		.uleb128 0x2
+ 1185 025d 91       		.byte	0x91
+ 1186 025e 60       		.sleb128 -32
+ 1187 025f 07       		.uleb128 0x7
+ 1188 0260 6900     		.ascii	"i\000"
+ 1189 0262 01       		.byte	0x1
+ 1190 0263 2F       		.byte	0x2f
+ 1191 0264 81000000 		.4byte	0x81
+ 1192 0268 02       		.uleb128 0x2
+ 1193 0269 91       		.byte	0x91
+ 1194 026a 6F       		.sleb128 -17
+ 1195 026b 00       		.byte	0
+ 1196 026c 05       		.uleb128 0x5
+ 1197 026d BB000000 		.4byte	.LASF30
+ 1198 0271 01       		.byte	0x1
+ 1199 0272 38       		.byte	0x38
+ 1200 0273 00000000 		.4byte	.LFB37
+ 1201 0277 38000000 		.4byte	.LFE37-.LFB37
+ 1202 027b 01       		.uleb128 0x1
+ 1203 027c 9C       		.byte	0x9c
+ 1204 027d AC020000 		.4byte	0x2ac
+ 1205 0281 06       		.uleb128 0x6
+ 1206 0282 F6010000 		.4byte	.LASF18
+ 1207 0286 01       		.byte	0x1
+ 1208 0287 38       		.byte	0x38
+ 1209 0288 81000000 		.4byte	0x81
+ 1210 028c 02       		.uleb128 0x2
+ 1211 028d 91       		.byte	0x91
+ 1212 028e 6F       		.sleb128 -17
+ 1213 028f 06       		.uleb128 0x6
+ 1214 0290 8E000000 		.4byte	.LASF19
+ 1215 0294 01       		.byte	0x1
+ 1216 0295 38       		.byte	0x38
+ 1217 0296 81000000 		.4byte	0x81
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 24
+
+
+ 1218 029a 02       		.uleb128 0x2
+ 1219 029b 91       		.byte	0x91
+ 1220 029c 6E       		.sleb128 -18
+ 1221 029d 06       		.uleb128 0x6
+ 1222 029e 18000000 		.4byte	.LASF21
+ 1223 02a2 01       		.byte	0x1
+ 1224 02a3 38       		.byte	0x38
+ 1225 02a4 81000000 		.4byte	0x81
+ 1226 02a8 02       		.uleb128 0x2
+ 1227 02a9 91       		.byte	0x91
+ 1228 02aa 6D       		.sleb128 -19
+ 1229 02ab 00       		.byte	0
+ 1230 02ac 05       		.uleb128 0x5
+ 1231 02ad 3C020000 		.4byte	.LASF31
+ 1232 02b1 01       		.byte	0x1
+ 1233 02b2 3C       		.byte	0x3c
+ 1234 02b3 00000000 		.4byte	.LFB38
+ 1235 02b7 D8000000 		.4byte	.LFE38-.LFB38
+ 1236 02bb 01       		.uleb128 0x1
+ 1237 02bc 9C       		.byte	0x9c
+ 1238 02bd 22030000 		.4byte	0x322
+ 1239 02c1 06       		.uleb128 0x6
+ 1240 02c2 F6010000 		.4byte	.LASF18
+ 1241 02c6 01       		.byte	0x1
+ 1242 02c7 3C       		.byte	0x3c
+ 1243 02c8 81000000 		.4byte	0x81
+ 1244 02cc 02       		.uleb128 0x2
+ 1245 02cd 91       		.byte	0x91
+ 1246 02ce 67       		.sleb128 -25
+ 1247 02cf 06       		.uleb128 0x6
+ 1248 02d0 8E000000 		.4byte	.LASF19
+ 1249 02d4 01       		.byte	0x1
+ 1250 02d5 3C       		.byte	0x3c
+ 1251 02d6 81000000 		.4byte	0x81
+ 1252 02da 02       		.uleb128 0x2
+ 1253 02db 91       		.byte	0x91
+ 1254 02dc 66       		.sleb128 -26
+ 1255 02dd 06       		.uleb128 0x6
+ 1256 02de 68010000 		.4byte	.LASF25
+ 1257 02e2 01       		.byte	0x1
+ 1258 02e3 3C       		.byte	0x3c
+ 1259 02e4 81000000 		.4byte	0x81
+ 1260 02e8 02       		.uleb128 0x2
+ 1261 02e9 91       		.byte	0x91
+ 1262 02ea 65       		.sleb128 -27
+ 1263 02eb 06       		.uleb128 0x6
+ 1264 02ec 50020000 		.4byte	.LASF20
+ 1265 02f0 01       		.byte	0x1
+ 1266 02f1 3C       		.byte	0x3c
+ 1267 02f2 81000000 		.4byte	0x81
+ 1268 02f6 02       		.uleb128 0x2
+ 1269 02f7 91       		.byte	0x91
+ 1270 02f8 64       		.sleb128 -28
+ 1271 02f9 06       		.uleb128 0x6
+ 1272 02fa 18000000 		.4byte	.LASF21
+ 1273 02fe 01       		.byte	0x1
+ 1274 02ff 3C       		.byte	0x3c
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 25
+
+
+ 1275 0300 81000000 		.4byte	0x81
+ 1276 0304 02       		.uleb128 0x2
+ 1277 0305 91       		.byte	0x91
+ 1278 0306 00       		.sleb128 0
+ 1279 0307 07       		.uleb128 0x7
+ 1280 0308 6200     		.ascii	"b\000"
+ 1281 030a 01       		.byte	0x1
+ 1282 030b 3D       		.byte	0x3d
+ 1283 030c 81000000 		.4byte	0x81
+ 1284 0310 02       		.uleb128 0x2
+ 1285 0311 91       		.byte	0x91
+ 1286 0312 6E       		.sleb128 -18
+ 1287 0313 09       		.uleb128 0x9
+ 1288 0314 DB010000 		.4byte	.LASF26
+ 1289 0318 01       		.byte	0x1
+ 1290 0319 3E       		.byte	0x3e
+ 1291 031a 81000000 		.4byte	0x81
+ 1292 031e 02       		.uleb128 0x2
+ 1293 031f 91       		.byte	0x91
+ 1294 0320 6F       		.sleb128 -17
+ 1295 0321 00       		.byte	0
+ 1296 0322 05       		.uleb128 0x5
+ 1297 0323 71010000 		.4byte	.LASF32
+ 1298 0327 01       		.byte	0x1
+ 1299 0328 47       		.byte	0x47
+ 1300 0329 00000000 		.4byte	.LFB39
+ 1301 032d 9C000000 		.4byte	.LFE39-.LFB39
+ 1302 0331 01       		.uleb128 0x1
+ 1303 0332 9C       		.byte	0x9c
+ 1304 0333 7C030000 		.4byte	0x37c
+ 1305 0337 06       		.uleb128 0x6
+ 1306 0338 F6010000 		.4byte	.LASF18
+ 1307 033c 01       		.byte	0x1
+ 1308 033d 47       		.byte	0x47
+ 1309 033e 81000000 		.4byte	0x81
+ 1310 0342 02       		.uleb128 0x2
+ 1311 0343 91       		.byte	0x91
+ 1312 0344 67       		.sleb128 -25
+ 1313 0345 06       		.uleb128 0x6
+ 1314 0346 8E000000 		.4byte	.LASF19
+ 1315 034a 01       		.byte	0x1
+ 1316 034b 47       		.byte	0x47
+ 1317 034c 81000000 		.4byte	0x81
+ 1318 0350 02       		.uleb128 0x2
+ 1319 0351 91       		.byte	0x91
+ 1320 0352 66       		.sleb128 -26
+ 1321 0353 06       		.uleb128 0x6
+ 1322 0354 49020000 		.4byte	.LASF28
+ 1323 0358 01       		.byte	0x1
+ 1324 0359 47       		.byte	0x47
+ 1325 035a 81000000 		.4byte	0x81
+ 1326 035e 02       		.uleb128 0x2
+ 1327 035f 91       		.byte	0x91
+ 1328 0360 65       		.sleb128 -27
+ 1329 0361 06       		.uleb128 0x6
+ 1330 0362 18000000 		.4byte	.LASF21
+ 1331 0366 01       		.byte	0x1
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 26
+
+
+ 1332 0367 47       		.byte	0x47
+ 1333 0368 81000000 		.4byte	0x81
+ 1334 036c 02       		.uleb128 0x2
+ 1335 036d 91       		.byte	0x91
+ 1336 036e 64       		.sleb128 -28
+ 1337 036f 07       		.uleb128 0x7
+ 1338 0370 6200     		.ascii	"b\000"
+ 1339 0372 01       		.byte	0x1
+ 1340 0373 48       		.byte	0x48
+ 1341 0374 81000000 		.4byte	0x81
+ 1342 0378 02       		.uleb128 0x2
+ 1343 0379 91       		.byte	0x91
+ 1344 037a 6F       		.sleb128 -17
+ 1345 037b 00       		.byte	0
+ 1346 037c 05       		.uleb128 0x5
+ 1347 037d 07020000 		.4byte	.LASF33
+ 1348 0381 01       		.byte	0x1
+ 1349 0382 4E       		.byte	0x4e
+ 1350 0383 00000000 		.4byte	.LFB40
+ 1351 0387 8A000000 		.4byte	.LFE40-.LFB40
+ 1352 038b 01       		.uleb128 0x1
+ 1353 038c 9C       		.byte	0x9c
+ 1354 038d D6030000 		.4byte	0x3d6
+ 1355 0391 06       		.uleb128 0x6
+ 1356 0392 F6010000 		.4byte	.LASF18
+ 1357 0396 01       		.byte	0x1
+ 1358 0397 4E       		.byte	0x4e
+ 1359 0398 81000000 		.4byte	0x81
+ 1360 039c 02       		.uleb128 0x2
+ 1361 039d 91       		.byte	0x91
+ 1362 039e 67       		.sleb128 -25
+ 1363 039f 06       		.uleb128 0x6
+ 1364 03a0 8E000000 		.4byte	.LASF19
+ 1365 03a4 01       		.byte	0x1
+ 1366 03a5 4E       		.byte	0x4e
+ 1367 03a6 81000000 		.4byte	0x81
+ 1368 03aa 02       		.uleb128 0x2
+ 1369 03ab 91       		.byte	0x91
+ 1370 03ac 66       		.sleb128 -26
+ 1371 03ad 06       		.uleb128 0x6
+ 1372 03ae 50020000 		.4byte	.LASF20
+ 1373 03b2 01       		.byte	0x1
+ 1374 03b3 4E       		.byte	0x4e
+ 1375 03b4 81000000 		.4byte	0x81
+ 1376 03b8 02       		.uleb128 0x2
+ 1377 03b9 91       		.byte	0x91
+ 1378 03ba 65       		.sleb128 -27
+ 1379 03bb 06       		.uleb128 0x6
+ 1380 03bc 18000000 		.4byte	.LASF21
+ 1381 03c0 01       		.byte	0x1
+ 1382 03c1 4E       		.byte	0x4e
+ 1383 03c2 D6030000 		.4byte	0x3d6
+ 1384 03c6 02       		.uleb128 0x2
+ 1385 03c7 91       		.byte	0x91
+ 1386 03c8 60       		.sleb128 -32
+ 1387 03c9 07       		.uleb128 0x7
+ 1388 03ca 6900     		.ascii	"i\000"
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 27
+
+
+ 1389 03cc 01       		.byte	0x1
+ 1390 03cd 4F       		.byte	0x4f
+ 1391 03ce 81000000 		.4byte	0x81
+ 1392 03d2 02       		.uleb128 0x2
+ 1393 03d3 91       		.byte	0x91
+ 1394 03d4 6F       		.sleb128 -17
+ 1395 03d5 00       		.byte	0
+ 1396 03d6 08       		.uleb128 0x8
+ 1397 03d7 04       		.byte	0x4
+ 1398 03d8 8C000000 		.4byte	0x8c
+ 1399 03dc 0A       		.uleb128 0xa
+ 1400 03dd 76000000 		.4byte	.LASF37
+ 1401 03e1 01       		.byte	0x1
+ 1402 03e2 59       		.byte	0x59
+ 1403 03e3 00000000 		.4byte	.LFB41
+ 1404 03e7 38000000 		.4byte	.LFE41-.LFB41
+ 1405 03eb 01       		.uleb128 0x1
+ 1406 03ec 9C       		.byte	0x9c
+ 1407 03ed 06       		.uleb128 0x6
+ 1408 03ee F6010000 		.4byte	.LASF18
+ 1409 03f2 01       		.byte	0x1
+ 1410 03f3 59       		.byte	0x59
+ 1411 03f4 81000000 		.4byte	0x81
+ 1412 03f8 02       		.uleb128 0x2
+ 1413 03f9 91       		.byte	0x91
+ 1414 03fa 6F       		.sleb128 -17
+ 1415 03fb 06       		.uleb128 0x6
+ 1416 03fc 8E000000 		.4byte	.LASF19
+ 1417 0400 01       		.byte	0x1
+ 1418 0401 59       		.byte	0x59
+ 1419 0402 81000000 		.4byte	0x81
+ 1420 0406 02       		.uleb128 0x2
+ 1421 0407 91       		.byte	0x91
+ 1422 0408 6E       		.sleb128 -18
+ 1423 0409 06       		.uleb128 0x6
+ 1424 040a 18000000 		.4byte	.LASF21
+ 1425 040e 01       		.byte	0x1
+ 1426 040f 59       		.byte	0x59
+ 1427 0410 8C000000 		.4byte	0x8c
+ 1428 0414 02       		.uleb128 0x2
+ 1429 0415 91       		.byte	0x91
+ 1430 0416 6C       		.sleb128 -20
+ 1431 0417 00       		.byte	0
+ 1432 0418 00       		.byte	0
+ 1433              		.section	.debug_abbrev,"",%progbits
+ 1434              	.Ldebug_abbrev0:
+ 1435 0000 01       		.uleb128 0x1
+ 1436 0001 11       		.uleb128 0x11
+ 1437 0002 01       		.byte	0x1
+ 1438 0003 25       		.uleb128 0x25
+ 1439 0004 0E       		.uleb128 0xe
+ 1440 0005 13       		.uleb128 0x13
+ 1441 0006 0B       		.uleb128 0xb
+ 1442 0007 03       		.uleb128 0x3
+ 1443 0008 0E       		.uleb128 0xe
+ 1444 0009 1B       		.uleb128 0x1b
+ 1445 000a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 28
+
+
+ 1446 000b 55       		.uleb128 0x55
+ 1447 000c 17       		.uleb128 0x17
+ 1448 000d 11       		.uleb128 0x11
+ 1449 000e 01       		.uleb128 0x1
+ 1450 000f 10       		.uleb128 0x10
+ 1451 0010 17       		.uleb128 0x17
+ 1452 0011 00       		.byte	0
+ 1453 0012 00       		.byte	0
+ 1454 0013 02       		.uleb128 0x2
+ 1455 0014 24       		.uleb128 0x24
+ 1456 0015 00       		.byte	0
+ 1457 0016 0B       		.uleb128 0xb
+ 1458 0017 0B       		.uleb128 0xb
+ 1459 0018 3E       		.uleb128 0x3e
+ 1460 0019 0B       		.uleb128 0xb
+ 1461 001a 03       		.uleb128 0x3
+ 1462 001b 0E       		.uleb128 0xe
+ 1463 001c 00       		.byte	0
+ 1464 001d 00       		.byte	0
+ 1465 001e 03       		.uleb128 0x3
+ 1466 001f 16       		.uleb128 0x16
+ 1467 0020 00       		.byte	0
+ 1468 0021 03       		.uleb128 0x3
+ 1469 0022 0E       		.uleb128 0xe
+ 1470 0023 3A       		.uleb128 0x3a
+ 1471 0024 0B       		.uleb128 0xb
+ 1472 0025 3B       		.uleb128 0x3b
+ 1473 0026 0B       		.uleb128 0xb
+ 1474 0027 49       		.uleb128 0x49
+ 1475 0028 13       		.uleb128 0x13
+ 1476 0029 00       		.byte	0
+ 1477 002a 00       		.byte	0
+ 1478 002b 04       		.uleb128 0x4
+ 1479 002c 24       		.uleb128 0x24
+ 1480 002d 00       		.byte	0
+ 1481 002e 0B       		.uleb128 0xb
+ 1482 002f 0B       		.uleb128 0xb
+ 1483 0030 3E       		.uleb128 0x3e
+ 1484 0031 0B       		.uleb128 0xb
+ 1485 0032 03       		.uleb128 0x3
+ 1486 0033 08       		.uleb128 0x8
+ 1487 0034 00       		.byte	0
+ 1488 0035 00       		.byte	0
+ 1489 0036 05       		.uleb128 0x5
+ 1490 0037 2E       		.uleb128 0x2e
+ 1491 0038 01       		.byte	0x1
+ 1492 0039 3F       		.uleb128 0x3f
+ 1493 003a 19       		.uleb128 0x19
+ 1494 003b 03       		.uleb128 0x3
+ 1495 003c 0E       		.uleb128 0xe
+ 1496 003d 3A       		.uleb128 0x3a
+ 1497 003e 0B       		.uleb128 0xb
+ 1498 003f 3B       		.uleb128 0x3b
+ 1499 0040 0B       		.uleb128 0xb
+ 1500 0041 27       		.uleb128 0x27
+ 1501 0042 19       		.uleb128 0x19
+ 1502 0043 11       		.uleb128 0x11
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 29
+
+
+ 1503 0044 01       		.uleb128 0x1
+ 1504 0045 12       		.uleb128 0x12
+ 1505 0046 06       		.uleb128 0x6
+ 1506 0047 40       		.uleb128 0x40
+ 1507 0048 18       		.uleb128 0x18
+ 1508 0049 9642     		.uleb128 0x2116
+ 1509 004b 19       		.uleb128 0x19
+ 1510 004c 01       		.uleb128 0x1
+ 1511 004d 13       		.uleb128 0x13
+ 1512 004e 00       		.byte	0
+ 1513 004f 00       		.byte	0
+ 1514 0050 06       		.uleb128 0x6
+ 1515 0051 05       		.uleb128 0x5
+ 1516 0052 00       		.byte	0
+ 1517 0053 03       		.uleb128 0x3
+ 1518 0054 0E       		.uleb128 0xe
+ 1519 0055 3A       		.uleb128 0x3a
+ 1520 0056 0B       		.uleb128 0xb
+ 1521 0057 3B       		.uleb128 0x3b
+ 1522 0058 0B       		.uleb128 0xb
+ 1523 0059 49       		.uleb128 0x49
+ 1524 005a 13       		.uleb128 0x13
+ 1525 005b 02       		.uleb128 0x2
+ 1526 005c 18       		.uleb128 0x18
+ 1527 005d 00       		.byte	0
+ 1528 005e 00       		.byte	0
+ 1529 005f 07       		.uleb128 0x7
+ 1530 0060 34       		.uleb128 0x34
+ 1531 0061 00       		.byte	0
+ 1532 0062 03       		.uleb128 0x3
+ 1533 0063 08       		.uleb128 0x8
+ 1534 0064 3A       		.uleb128 0x3a
+ 1535 0065 0B       		.uleb128 0xb
+ 1536 0066 3B       		.uleb128 0x3b
+ 1537 0067 0B       		.uleb128 0xb
+ 1538 0068 49       		.uleb128 0x49
+ 1539 0069 13       		.uleb128 0x13
+ 1540 006a 02       		.uleb128 0x2
+ 1541 006b 18       		.uleb128 0x18
+ 1542 006c 00       		.byte	0
+ 1543 006d 00       		.byte	0
+ 1544 006e 08       		.uleb128 0x8
+ 1545 006f 0F       		.uleb128 0xf
+ 1546 0070 00       		.byte	0
+ 1547 0071 0B       		.uleb128 0xb
+ 1548 0072 0B       		.uleb128 0xb
+ 1549 0073 49       		.uleb128 0x49
+ 1550 0074 13       		.uleb128 0x13
+ 1551 0075 00       		.byte	0
+ 1552 0076 00       		.byte	0
+ 1553 0077 09       		.uleb128 0x9
+ 1554 0078 34       		.uleb128 0x34
+ 1555 0079 00       		.byte	0
+ 1556 007a 03       		.uleb128 0x3
+ 1557 007b 0E       		.uleb128 0xe
+ 1558 007c 3A       		.uleb128 0x3a
+ 1559 007d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 30
+
+
+ 1560 007e 3B       		.uleb128 0x3b
+ 1561 007f 0B       		.uleb128 0xb
+ 1562 0080 49       		.uleb128 0x49
+ 1563 0081 13       		.uleb128 0x13
+ 1564 0082 02       		.uleb128 0x2
+ 1565 0083 18       		.uleb128 0x18
+ 1566 0084 00       		.byte	0
+ 1567 0085 00       		.byte	0
+ 1568 0086 0A       		.uleb128 0xa
+ 1569 0087 2E       		.uleb128 0x2e
+ 1570 0088 01       		.byte	0x1
+ 1571 0089 3F       		.uleb128 0x3f
+ 1572 008a 19       		.uleb128 0x19
+ 1573 008b 03       		.uleb128 0x3
+ 1574 008c 0E       		.uleb128 0xe
+ 1575 008d 3A       		.uleb128 0x3a
+ 1576 008e 0B       		.uleb128 0xb
+ 1577 008f 3B       		.uleb128 0x3b
+ 1578 0090 0B       		.uleb128 0xb
+ 1579 0091 27       		.uleb128 0x27
+ 1580 0092 19       		.uleb128 0x19
+ 1581 0093 11       		.uleb128 0x11
+ 1582 0094 01       		.uleb128 0x1
+ 1583 0095 12       		.uleb128 0x12
+ 1584 0096 06       		.uleb128 0x6
+ 1585 0097 40       		.uleb128 0x40
+ 1586 0098 18       		.uleb128 0x18
+ 1587 0099 9642     		.uleb128 0x2116
+ 1588 009b 19       		.uleb128 0x19
+ 1589 009c 00       		.byte	0
+ 1590 009d 00       		.byte	0
+ 1591 009e 00       		.byte	0
+ 1592              		.section	.debug_aranges,"",%progbits
+ 1593 0000 64000000 		.4byte	0x64
+ 1594 0004 0200     		.2byte	0x2
+ 1595 0006 00000000 		.4byte	.Ldebug_info0
+ 1596 000a 04       		.byte	0x4
+ 1597 000b 00       		.byte	0
+ 1598 000c 0000     		.2byte	0
+ 1599 000e 0000     		.2byte	0
+ 1600 0010 00000000 		.4byte	.LFB32
+ 1601 0014 92000000 		.4byte	.LFE32-.LFB32
+ 1602 0018 00000000 		.4byte	.LFB33
+ 1603 001c 2E000000 		.4byte	.LFE33-.LFB33
+ 1604 0020 00000000 		.4byte	.LFB34
+ 1605 0024 8C000000 		.4byte	.LFE34-.LFB34
+ 1606 0028 00000000 		.4byte	.LFB35
+ 1607 002c 54000000 		.4byte	.LFE35-.LFB35
+ 1608 0030 00000000 		.4byte	.LFB36
+ 1609 0034 78000000 		.4byte	.LFE36-.LFB36
+ 1610 0038 00000000 		.4byte	.LFB37
+ 1611 003c 38000000 		.4byte	.LFE37-.LFB37
+ 1612 0040 00000000 		.4byte	.LFB38
+ 1613 0044 D8000000 		.4byte	.LFE38-.LFB38
+ 1614 0048 00000000 		.4byte	.LFB39
+ 1615 004c 9C000000 		.4byte	.LFE39-.LFB39
+ 1616 0050 00000000 		.4byte	.LFB40
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 31
+
+
+ 1617 0054 8A000000 		.4byte	.LFE40-.LFB40
+ 1618 0058 00000000 		.4byte	.LFB41
+ 1619 005c 38000000 		.4byte	.LFE41-.LFB41
+ 1620 0060 00000000 		.4byte	0
+ 1621 0064 00000000 		.4byte	0
+ 1622              		.section	.debug_ranges,"",%progbits
+ 1623              	.Ldebug_ranges0:
+ 1624 0000 00000000 		.4byte	.LFB32
+ 1625 0004 92000000 		.4byte	.LFE32
+ 1626 0008 00000000 		.4byte	.LFB33
+ 1627 000c 2E000000 		.4byte	.LFE33
+ 1628 0010 00000000 		.4byte	.LFB34
+ 1629 0014 8C000000 		.4byte	.LFE34
+ 1630 0018 00000000 		.4byte	.LFB35
+ 1631 001c 54000000 		.4byte	.LFE35
+ 1632 0020 00000000 		.4byte	.LFB36
+ 1633 0024 78000000 		.4byte	.LFE36
+ 1634 0028 00000000 		.4byte	.LFB37
+ 1635 002c 38000000 		.4byte	.LFE37
+ 1636 0030 00000000 		.4byte	.LFB38
+ 1637 0034 D8000000 		.4byte	.LFE38
+ 1638 0038 00000000 		.4byte	.LFB39
+ 1639 003c 9C000000 		.4byte	.LFE39
+ 1640 0040 00000000 		.4byte	.LFB40
+ 1641 0044 8A000000 		.4byte	.LFE40
+ 1642 0048 00000000 		.4byte	.LFB41
+ 1643 004c 38000000 		.4byte	.LFE41
+ 1644 0050 00000000 		.4byte	0
+ 1645 0054 00000000 		.4byte	0
+ 1646              		.section	.debug_line,"",%progbits
+ 1647              	.Ldebug_line0:
+ 1648 0000 E4010000 		.section	.debug_str,"MS",%progbits,1
+ 1648      0200F400 
+ 1648      00000201 
+ 1648      FB0E0D00 
+ 1648      01010101 
+ 1649              	.LASF3:
+ 1650 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 1650      6E74385F 
+ 1650      7400
+ 1651              	.LASF29:
+ 1652 000a 49324357 		.ascii	"I2CWriteBytes\000"
+ 1652      72697465 
+ 1652      42797465 
+ 1652      7300
+ 1653              	.LASF21:
+ 1654 0018 76616C75 		.ascii	"value\000"
+ 1654      6500
+ 1655              	.LASF36:
+ 1656 001e 433A5C55 		.ascii	"C:\\Users\\Sebas\\Desktop\\Drone_Sensor_juistewaard"
+ 1656      73657273 
+ 1656      5C536562 
+ 1656      61735C44 
+ 1656      65736B74 
+ 1657 004d 656E2E63 		.ascii	"en.cydsn\000"
+ 1657      7964736E 
+ 1657      00
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 32
+
+
+ 1658              	.LASF23:
+ 1659 0056 49324352 		.ascii	"I2CReadByte\000"
+ 1659      65616442 
+ 1659      79746500 
+ 1660              	.LASF13:
+ 1661 0062 666C6F61 		.ascii	"float\000"
+ 1661      7400
+ 1662              	.LASF1:
+ 1663 0068 756E7369 		.ascii	"unsigned char\000"
+ 1663      676E6564 
+ 1663      20636861 
+ 1663      7200
+ 1664              	.LASF37:
+ 1665 0076 49324357 		.ascii	"I2CWriteWord\000"
+ 1665      72697465 
+ 1665      576F7264 
+ 1665      00
+ 1666              	.LASF27:
+ 1667 0083 49324352 		.ascii	"I2CReadBit\000"
+ 1667      65616442 
+ 1667      697400
+ 1668              	.LASF19:
+ 1669 008e 72656741 		.ascii	"regAddr\000"
+ 1669      64647200 
+ 1670              	.LASF7:
+ 1671 0096 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1671      20756E73 
+ 1671      69676E65 
+ 1671      6420696E 
+ 1671      7400
+ 1672              	.LASF5:
+ 1673 00a8 73686F72 		.ascii	"short unsigned int\000"
+ 1673      7420756E 
+ 1673      7369676E 
+ 1673      65642069 
+ 1673      6E7400
+ 1674              	.LASF30:
+ 1675 00bb 49324357 		.ascii	"I2CWriteByte\000"
+ 1675      72697465 
+ 1675      42797465 
+ 1675      00
+ 1676              	.LASF34:
+ 1677 00c8 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1677      43313120 
+ 1677      352E342E 
+ 1677      31203230 
+ 1677      31363036 
+ 1678 00fb 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1678      20726576 
+ 1678      6973696F 
+ 1678      6E203233 
+ 1678      37373135 
+ 1679 012e 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1679      66756E63 
+ 1679      74696F6E 
+ 1679      2D736563 
+ 1679      74696F6E 
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 33
+
+
+ 1680              	.LASF4:
+ 1681 0156 5F5F7569 		.ascii	"__uint16_t\000"
+ 1681      6E743136 
+ 1681      5F7400
+ 1682              	.LASF14:
+ 1683 0161 646F7562 		.ascii	"double\000"
+ 1683      6C6500
+ 1684              	.LASF25:
+ 1685 0168 62697453 		.ascii	"bitStart\000"
+ 1685      74617274 
+ 1685      00
+ 1686              	.LASF32:
+ 1687 0171 49324357 		.ascii	"I2CWriteBit\000"
+ 1687      72697465 
+ 1687      42697400 
+ 1688              	.LASF10:
+ 1689 017d 756E7369 		.ascii	"unsigned int\000"
+ 1689      676E6564 
+ 1689      20696E74 
+ 1689      00
+ 1690              	.LASF9:
+ 1691 018a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1691      206C6F6E 
+ 1691      6720756E 
+ 1691      7369676E 
+ 1691      65642069 
+ 1692              	.LASF11:
+ 1693 01a1 75696E74 		.ascii	"uint8_t\000"
+ 1693      385F7400 
+ 1694              	.LASF16:
+ 1695 01a9 6C6F6E67 		.ascii	"long double\000"
+ 1695      20646F75 
+ 1695      626C6500 
+ 1696              	.LASF17:
+ 1697 01b5 73697A65 		.ascii	"sizetype\000"
+ 1697      74797065 
+ 1697      00
+ 1698              	.LASF35:
+ 1699 01be 69326346 		.ascii	"i2cFunctions.c\000"
+ 1699      756E6374 
+ 1699      696F6E73 
+ 1699      2E6300
+ 1700              	.LASF8:
+ 1701 01cd 6C6F6E67 		.ascii	"long long int\000"
+ 1701      206C6F6E 
+ 1701      6720696E 
+ 1701      7400
+ 1702              	.LASF26:
+ 1703 01db 6D61736B 		.ascii	"mask\000"
+ 1703      00
+ 1704              	.LASF24:
+ 1705 01e0 49324352 		.ascii	"I2CReadBits\000"
+ 1705      65616442 
+ 1705      69747300 
+ 1706              	.LASF2:
+ 1707 01ec 73686F72 		.ascii	"short int\000"
+ 1707      7420696E 
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cc7ToktO.s 			page 34
+
+
+ 1707      7400
+ 1708              	.LASF18:
+ 1709 01f6 64657641 		.ascii	"devAddr\000"
+ 1709      64647200 
+ 1710              	.LASF12:
+ 1711 01fe 75696E74 		.ascii	"uint16_t\000"
+ 1711      31365F74 
+ 1711      00
+ 1712              	.LASF33:
+ 1713 0207 49324357 		.ascii	"I2CWriteWords\000"
+ 1713      72697465 
+ 1713      576F7264 
+ 1713      7300
+ 1714              	.LASF6:
+ 1715 0215 6C6F6E67 		.ascii	"long int\000"
+ 1715      20696E74 
+ 1715      00
+ 1716              	.LASF15:
+ 1717 021e 63686172 		.ascii	"char\000"
+ 1717      00
+ 1718              	.LASF22:
+ 1719 0223 49324352 		.ascii	"I2CReadBytes\000"
+ 1719      65616442 
+ 1719      79746573 
+ 1719      00
+ 1720              	.LASF0:
+ 1721 0230 7369676E 		.ascii	"signed char\000"
+ 1721      65642063 
+ 1721      68617200 
+ 1722              	.LASF31:
+ 1723 023c 49324357 		.ascii	"I2CWriteBits\000"
+ 1723      72697465 
+ 1723      42697473 
+ 1723      00
+ 1724              	.LASF28:
+ 1725 0249 6269744E 		.ascii	"bitNum\000"
+ 1725      756D00
+ 1726              	.LASF20:
+ 1727 0250 6C656E67 		.ascii	"length\000"
+ 1727      746800
+ 1728              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

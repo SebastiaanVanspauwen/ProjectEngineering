@@ -1,0 +1,1148 @@
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"I2C_MPU6050_I2C.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.comm	I2C_MPU6050_state,1,1
+  20              		.section	.text.I2C_MPU6050_I2CInit,"ax",%progbits
+  21              		.align	2
+  22              		.global	I2C_MPU6050_I2CInit
+  23              		.code	16
+  24              		.thumb_func
+  25              		.type	I2C_MPU6050_I2CInit, %function
+  26              	I2C_MPU6050_I2CInit:
+  27              	.LFB0:
+  28              		.file 1 "Generated_Source\\PSoC4\\I2C_MPU6050_I2C.c"
+   1:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** /***************************************************************************//**
+   2:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * \file I2C_MPU6050_I2C.c
+   3:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * \version 4.0
+   4:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *
+   5:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * \brief
+   6:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *  This file provides the source code to the API for the SCB Component in
+   7:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *  I2C mode.
+   8:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *
+   9:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * Note:
+  10:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *
+  11:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *******************************************************************************
+  12:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * \copyright
+  13:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * Copyright 2013-2017, Cypress Semiconductor Corporation.  All rights reserved.
+  14:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * the software package with which this file was provided.
+  17:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *******************************************************************************/
+  18:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+  19:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** #include "I2C_MPU6050_PVT.h"
+  20:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** #include "I2C_MPU6050_I2C_PVT.h"
+  21:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+  22:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+  23:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** /***************************************
+  24:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *      I2C Private Vars
+  25:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** ***************************************/
+  26:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+  27:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** volatile uint8 I2C_MPU6050_state;  /* Current state of I2C FSM */
+  28:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+  29:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** #if(I2C_MPU6050_SCB_MODE_UNCONFIG_CONST_CFG)
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 2
+
+
+  30:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+  31:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     /***************************************
+  32:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *  Configuration Structure Initialization
+  33:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     ***************************************/
+  34:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+  35:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     /* Constant configuration of I2C */
+  36:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     const I2C_MPU6050_I2C_INIT_STRUCT I2C_MPU6050_configI2C =
+  37:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     {
+  38:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_MODE,
+  39:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_OVS_FACTOR_LOW,
+  40:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_OVS_FACTOR_HIGH,
+  41:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_MEDIAN_FILTER_ENABLE,
+  42:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_SLAVE_ADDRESS,
+  43:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_SLAVE_ADDRESS_MASK,
+  44:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_ACCEPT_ADDRESS,
+  45:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_WAKE_ENABLE,
+  46:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_BYTE_MODE_ENABLE,
+  47:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_DATA_RATE,
+  48:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_ACCEPT_GENERAL_CALL,
+  49:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     };
+  50:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+  51:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     /*******************************************************************************
+  52:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     * Function Name: I2C_MPU6050_I2CInit
+  53:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     ****************************************************************************//**
+  54:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *
+  55:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *
+  56:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *  Configures the I2C_MPU6050 for I2C operation.
+  57:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *
+  58:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *  This function is intended specifically to be used when the I2C_MPU6050 
+  59:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *  configuration is set to “Unconfigured I2C_MPU6050” in the customizer. 
+  60:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *  After initializing the I2C_MPU6050 in I2C mode using this function, 
+  61:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *  the component can be enabled using the I2C_MPU6050_Start() or 
+  62:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     * I2C_MPU6050_Enable() function.
+  63:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *  This function uses a pointer to a structure that provides the configuration 
+  64:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *  settings. This structure contains the same information that would otherwise 
+  65:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *  be provided by the customizer settings.
+  66:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *
+  67:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *  \param config: pointer to a structure that contains the following list of 
+  68:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *   fields. These fields match the selections available in the customizer. 
+  69:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *   Refer to the customizer for further description of the settings.
+  70:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *
+  71:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *******************************************************************************/
+  72:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     void I2C_MPU6050_I2CInit(const I2C_MPU6050_I2C_INIT_STRUCT *config)
+  73:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     {
+  74:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         uint32 medianFilter;
+  75:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         uint32 locEnableWake;
+  76:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+  77:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         if(NULL == config)
+  78:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         {
+  79:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             CYASSERT(0u != 0u); /* Halt execution due to bad function parameter */
+  80:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         }
+  81:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         else
+  82:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         {
+  83:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Configure pins */
+  84:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_SetPins(I2C_MPU6050_SCB_MODE_I2C, I2C_MPU6050_DUMMY_PARAM,
+  85:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                                      I2C_MPU6050_DUMMY_PARAM);
+  86:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 3
+
+
+  87:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Store internal configuration */
+  88:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_scbMode       = (uint8) I2C_MPU6050_SCB_MODE_I2C;
+  89:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_scbEnableWake = (uint8) config->enableWake;
+  90:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_scbEnableIntr = (uint8) I2C_MPU6050_SCB_IRQ_INTERNAL;
+  91:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+  92:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_mode          = (uint8) config->mode;
+  93:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_acceptAddr    = (uint8) config->acceptAddr;
+  94:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+  95:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         #if (I2C_MPU6050_CY_SCBIP_V0)
+  96:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Adjust SDA filter settings. Ticket ID#150521 */
+  97:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_SET_I2C_CFG_SDA_FILT_TRIM(I2C_MPU6050_EC_AM_I2C_CFG_SDA_FILT_TRIM);
+  98:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         #endif /* (I2C_MPU6050_CY_SCBIP_V0) */
+  99:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 100:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Adjust AF and DF filter settings. Ticket ID#176179 */
+ 101:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             if (((I2C_MPU6050_I2C_MODE_SLAVE != config->mode) &&
+ 102:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                  (config->dataRate <= I2C_MPU6050_I2C_DATA_RATE_FS_MODE_MAX)) ||
+ 103:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                  (I2C_MPU6050_I2C_MODE_SLAVE == config->mode))
+ 104:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             {
+ 105:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                 /* AF = 1, DF = 0 */
+ 106:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                 I2C_MPU6050_I2C_CFG_ANALOG_FITER_ENABLE;
+ 107:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                 medianFilter = I2C_MPU6050_DIGITAL_FILTER_DISABLE;
+ 108:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             }
+ 109:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             else
+ 110:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             {
+ 111:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                 /* AF = 0, DF = 1 */
+ 112:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                 I2C_MPU6050_I2C_CFG_ANALOG_FITER_DISABLE;
+ 113:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                 medianFilter = I2C_MPU6050_DIGITAL_FILTER_ENABLE;
+ 114:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             }
+ 115:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 116:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         #if (!I2C_MPU6050_CY_SCBIP_V0)
+ 117:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             locEnableWake = (I2C_MPU6050_I2C_MULTI_MASTER_SLAVE) ? (0u) : (config->enableWake);
+ 118:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         #else
+ 119:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             locEnableWake = config->enableWake;
+ 120:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         #endif /* (!I2C_MPU6050_CY_SCBIP_V0) */
+ 121:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 122:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Configure I2C interface */
+ 123:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_CTRL_REG     = I2C_MPU6050_GET_CTRL_BYTE_MODE  (config->enableByteMode) |
+ 124:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                                             I2C_MPU6050_GET_CTRL_ADDR_ACCEPT(config->acceptAddr)   
+ 125:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                                             I2C_MPU6050_GET_CTRL_EC_AM_MODE (locEnableWake);
+ 126:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 127:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_I2C_CTRL_REG = I2C_MPU6050_GET_I2C_CTRL_HIGH_PHASE_OVS(config->oversampleHi
+ 128:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                     I2C_MPU6050_GET_I2C_CTRL_LOW_PHASE_OVS (config->oversampleLow)                 
+ 129:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                     I2C_MPU6050_GET_I2C_CTRL_S_GENERAL_IGNORE((uint32)(0u == config->acceptGeneralA
+ 130:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                     I2C_MPU6050_GET_I2C_CTRL_SL_MSTR_MODE  (config->mode);
+ 131:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 132:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Configure RX direction */
+ 133:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_RX_CTRL_REG      = I2C_MPU6050_GET_RX_CTRL_MEDIAN(medianFilter) |
+ 134:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                                                 I2C_MPU6050_I2C_RX_CTRL;
+ 135:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_RX_FIFO_CTRL_REG = I2C_MPU6050_CLEAR_REG;
+ 136:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 137:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Set default address and mask */
+ 138:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_RX_MATCH_REG    = ((I2C_MPU6050_I2C_SLAVE) ?
+ 139:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                                                 (I2C_MPU6050_GET_I2C_8BIT_ADDRESS(config->slaveAddr
+ 140:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                                                  I2C_MPU6050_GET_RX_MATCH_MASK(config->slaveAddrMas
+ 141:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                                                 (I2C_MPU6050_CLEAR_REG));
+ 142:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 143:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 4
+
+
+ 144:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Configure TX direction */
+ 145:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_TX_CTRL_REG      = I2C_MPU6050_I2C_TX_CTRL;
+ 146:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_TX_FIFO_CTRL_REG = I2C_MPU6050_CLEAR_REG;
+ 147:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 148:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Configure interrupt with I2C handler but do not enable it */
+ 149:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             CyIntDisable    (I2C_MPU6050_ISR_NUMBER);
+ 150:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             CyIntSetPriority(I2C_MPU6050_ISR_NUMBER, I2C_MPU6050_ISR_PRIORITY);
+ 151:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             (void) CyIntSetVector(I2C_MPU6050_ISR_NUMBER, &I2C_MPU6050_I2C_ISR);
+ 152:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 153:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Configure interrupt sources */
+ 154:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         #if(!I2C_MPU6050_CY_SCBIP_V1)
+ 155:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_INTR_SPI_EC_MASK_REG = I2C_MPU6050_NO_INTR_SOURCES;
+ 156:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         #endif /* (!I2C_MPU6050_CY_SCBIP_V1) */
+ 157:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 158:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_INTR_I2C_EC_MASK_REG = I2C_MPU6050_NO_INTR_SOURCES;
+ 159:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_INTR_RX_MASK_REG     = I2C_MPU6050_NO_INTR_SOURCES;
+ 160:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_INTR_TX_MASK_REG     = I2C_MPU6050_NO_INTR_SOURCES;
+ 161:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 162:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_INTR_SLAVE_MASK_REG  = ((I2C_MPU6050_I2C_SLAVE) ?
+ 163:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                             (I2C_MPU6050_GET_INTR_SLAVE_I2C_GENERAL(config->acceptGeneralAddr) |
+ 164:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****                              I2C_MPU6050_I2C_INTR_SLAVE_MASK) : (I2C_MPU6050_CLEAR_REG));
+ 165:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 166:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_INTR_MASTER_MASK_REG = I2C_MPU6050_NO_INTR_SOURCES;
+ 167:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 168:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Configure global variables */
+ 169:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_state = I2C_MPU6050_I2C_FSM_IDLE;
+ 170:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 171:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Internal slave variables */
+ 172:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_slStatus        = 0u;
+ 173:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_slRdBufIndex    = 0u;
+ 174:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_slWrBufIndex    = 0u;
+ 175:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_slOverFlowCount = 0u;
+ 176:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 177:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             /* Internal master variables */
+ 178:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_mstrStatus     = 0u;
+ 179:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_mstrRdBufIndex = 0u;
+ 180:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****             I2C_MPU6050_mstrWrBufIndex = 0u;
+ 181:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         }
+ 182:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     }
+ 183:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 184:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** #else
+ 185:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 186:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     /*******************************************************************************
+ 187:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     * Function Name: I2C_MPU6050_I2CInit
+ 188:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     ****************************************************************************//**
+ 189:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *
+ 190:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *  Configures the SCB for the I2C operation.
+ 191:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *
+ 192:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     *******************************************************************************/
+ 193:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     void I2C_MPU6050_I2CInit(void)
+ 194:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     {
+  29              		.loc 1 194 0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33 0000 80B5     		push	{r7, lr}
+  34              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 5
+
+
+  35              		.cfi_offset 7, -8
+  36              		.cfi_offset 14, -4
+  37 0002 00AF     		add	r7, sp, #0
+  38              		.cfi_def_cfa_register 7
+ 195:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     #if(I2C_MPU6050_CY_SCBIP_V0)
+ 196:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         /* Adjust SDA filter settings. Ticket ID#150521 */
+ 197:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_SET_I2C_CFG_SDA_FILT_TRIM(I2C_MPU6050_EC_AM_I2C_CFG_SDA_FILT_TRIM);
+  39              		.loc 1 197 0
+  40 0004 234B     		ldr	r3, .L2
+  41 0006 234A     		ldr	r2, .L2
+  42 0008 1268     		ldr	r2, [r2]
+  43 000a 0C21     		movs	r1, #12
+  44 000c 0A43     		orrs	r2, r1
+  45 000e 1A60     		str	r2, [r3]
+ 198:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     #endif /* (I2C_MPU6050_CY_SCBIP_V0) */
+ 199:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 200:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         /* Adjust AF and DF filter settings. Ticket ID#176179 */
+ 201:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_CFG_ANALOG_FITER_ENABLE_ADJ;
+ 202:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 203:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         /* Configure I2C interface */
+ 204:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_CTRL_REG     = I2C_MPU6050_I2C_DEFAULT_CTRL;
+  46              		.loc 1 204 0
+  47 0010 214B     		ldr	r3, .L2+4
+  48 0012 0022     		movs	r2, #0
+  49 0014 1A60     		str	r2, [r3]
+ 205:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_I2C_CTRL_REG = I2C_MPU6050_I2C_DEFAULT_I2C_CTRL;
+  50              		.loc 1 205 0
+  51 0016 214B     		ldr	r3, .L2+8
+  52 0018 214A     		ldr	r2, .L2+12
+  53 001a 1A60     		str	r2, [r3]
+ 206:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 207:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         /* Configure RX direction */
+ 208:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_RX_CTRL_REG      = I2C_MPU6050_I2C_DEFAULT_RX_CTRL;
+  54              		.loc 1 208 0
+  55 001c 214B     		ldr	r3, .L2+16
+  56 001e 224A     		ldr	r2, .L2+20
+  57 0020 1A60     		str	r2, [r3]
+ 209:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_RX_FIFO_CTRL_REG = I2C_MPU6050_I2C_DEFAULT_RX_FIFO_CTRL;
+  58              		.loc 1 209 0
+  59 0022 224B     		ldr	r3, .L2+24
+  60 0024 0022     		movs	r2, #0
+  61 0026 1A60     		str	r2, [r3]
+ 210:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 211:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         /* Set default address and mask */
+ 212:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_RX_MATCH_REG     = I2C_MPU6050_I2C_DEFAULT_RX_MATCH;
+  62              		.loc 1 212 0
+  63 0028 214B     		ldr	r3, .L2+28
+  64 002a 0022     		movs	r2, #0
+  65 002c 1A60     		str	r2, [r3]
+ 213:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 214:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         /* Configure TX direction */
+ 215:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_TX_CTRL_REG      = I2C_MPU6050_I2C_DEFAULT_TX_CTRL;
+  66              		.loc 1 215 0
+  67 002e 214B     		ldr	r3, .L2+32
+  68 0030 1D4A     		ldr	r2, .L2+20
+  69 0032 1A60     		str	r2, [r3]
+ 216:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_TX_FIFO_CTRL_REG = I2C_MPU6050_I2C_DEFAULT_TX_FIFO_CTRL;
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 6
+
+
+  70              		.loc 1 216 0
+  71 0034 204B     		ldr	r3, .L2+36
+  72 0036 0022     		movs	r2, #0
+  73 0038 1A60     		str	r2, [r3]
+ 217:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 218:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         /* Configure interrupt with I2C handler but do not enable it */
+ 219:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         CyIntDisable    (I2C_MPU6050_ISR_NUMBER);
+  74              		.loc 1 219 0
+  75 003a 0B20     		movs	r0, #11
+  76 003c FFF7FEFF 		bl	CyIntDisable
+ 220:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         CyIntSetPriority(I2C_MPU6050_ISR_NUMBER, I2C_MPU6050_ISR_PRIORITY);
+  77              		.loc 1 220 0
+  78 0040 0321     		movs	r1, #3
+  79 0042 0B20     		movs	r0, #11
+  80 0044 FFF7FEFF 		bl	CyIntSetPriority
+ 221:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     #if(!I2C_MPU6050_I2C_EXTERN_INTR_HANDLER)
+ 222:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         (void) CyIntSetVector(I2C_MPU6050_ISR_NUMBER, &I2C_MPU6050_I2C_ISR);
+  81              		.loc 1 222 0
+  82 0048 1C4B     		ldr	r3, .L2+40
+  83 004a 1900     		movs	r1, r3
+  84 004c 0B20     		movs	r0, #11
+  85 004e FFF7FEFF 		bl	CyIntSetVector
+ 223:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     #endif /* (I2C_MPU6050_I2C_EXTERN_INTR_HANDLER) */
+ 224:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 225:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         /* Configure interrupt sources */
+ 226:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     #if(!I2C_MPU6050_CY_SCBIP_V1)
+ 227:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_INTR_SPI_EC_MASK_REG = I2C_MPU6050_I2C_DEFAULT_INTR_SPI_EC_MASK;
+  86              		.loc 1 227 0
+  87 0052 1B4B     		ldr	r3, .L2+44
+  88 0054 0022     		movs	r2, #0
+  89 0056 1A60     		str	r2, [r3]
+ 228:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     #endif /* (!I2C_MPU6050_CY_SCBIP_V1) */
+ 229:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 230:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_INTR_I2C_EC_MASK_REG = I2C_MPU6050_I2C_DEFAULT_INTR_I2C_EC_MASK;
+  90              		.loc 1 230 0
+  91 0058 1A4B     		ldr	r3, .L2+48
+  92 005a 0022     		movs	r2, #0
+  93 005c 1A60     		str	r2, [r3]
+ 231:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_INTR_SLAVE_MASK_REG  = I2C_MPU6050_I2C_DEFAULT_INTR_SLAVE_MASK;
+  94              		.loc 1 231 0
+  95 005e 1A4B     		ldr	r3, .L2+52
+  96 0060 0022     		movs	r2, #0
+  97 0062 1A60     		str	r2, [r3]
+ 232:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_INTR_MASTER_MASK_REG = I2C_MPU6050_I2C_DEFAULT_INTR_MASTER_MASK;
+  98              		.loc 1 232 0
+  99 0064 194B     		ldr	r3, .L2+56
+ 100 0066 0022     		movs	r2, #0
+ 101 0068 1A60     		str	r2, [r3]
+ 233:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_INTR_RX_MASK_REG     = I2C_MPU6050_I2C_DEFAULT_INTR_RX_MASK;
+ 102              		.loc 1 233 0
+ 103 006a 194B     		ldr	r3, .L2+60
+ 104 006c 0022     		movs	r2, #0
+ 105 006e 1A60     		str	r2, [r3]
+ 234:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_INTR_TX_MASK_REG     = I2C_MPU6050_I2C_DEFAULT_INTR_TX_MASK;
+ 106              		.loc 1 234 0
+ 107 0070 184B     		ldr	r3, .L2+64
+ 108 0072 0022     		movs	r2, #0
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 7
+
+
+ 109 0074 1A60     		str	r2, [r3]
+ 235:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 236:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         /* Configure global variables */
+ 237:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_state = I2C_MPU6050_I2C_FSM_IDLE;
+ 110              		.loc 1 237 0
+ 111 0076 184B     		ldr	r3, .L2+68
+ 112 0078 1022     		movs	r2, #16
+ 113 007a 1A70     		strb	r2, [r3]
+ 238:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 239:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     #if(I2C_MPU6050_I2C_SLAVE)
+ 240:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         /* Internal slave variable */
+ 241:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_slStatus        = 0u;
+ 242:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_slRdBufIndex    = 0u;
+ 243:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_slWrBufIndex    = 0u;
+ 244:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_slOverFlowCount = 0u;
+ 245:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     #endif /* (I2C_MPU6050_I2C_SLAVE) */
+ 246:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 247:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     #if(I2C_MPU6050_I2C_MASTER)
+ 248:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     /* Internal master variable */
+ 249:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_mstrStatus     = 0u;
+ 114              		.loc 1 249 0
+ 115 007c 174B     		ldr	r3, .L2+72
+ 116 007e 0022     		movs	r2, #0
+ 117 0080 1A80     		strh	r2, [r3]
+ 250:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_mstrRdBufIndex = 0u;
+ 118              		.loc 1 250 0
+ 119 0082 174B     		ldr	r3, .L2+76
+ 120 0084 0022     		movs	r2, #0
+ 121 0086 1A60     		str	r2, [r3]
+ 251:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****         I2C_MPU6050_mstrWrBufIndex = 0u;
+ 122              		.loc 1 251 0
+ 123 0088 164B     		ldr	r3, .L2+80
+ 124 008a 0022     		movs	r2, #0
+ 125 008c 1A60     		str	r2, [r3]
+ 252:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     #endif /* (I2C_MPU6050_I2C_MASTER) */
+ 253:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     }
+ 126              		.loc 1 253 0
+ 127 008e C046     		nop
+ 128 0090 BD46     		mov	sp, r7
+ 129              		@ sp needed
+ 130 0092 80BD     		pop	{r7, pc}
+ 131              	.L3:
+ 132              		.align	2
+ 133              	.L2:
+ 134 0094 70000740 		.word	1074200688
+ 135 0098 00000740 		.word	1074200576
+ 136 009c 60000740 		.word	1074200672
+ 137 00a0 77080080 		.word	-2147481481
+ 138 00a4 00030740 		.word	1074201344
+ 139 00a8 07010080 		.word	-2147483385
+ 140 00ac 04030740 		.word	1074201348
+ 141 00b0 10030740 		.word	1074201360
+ 142 00b4 00020740 		.word	1074201088
+ 143 00b8 04020740 		.word	1074201092
+ 144 00bc 00000000 		.word	I2C_MPU6050_I2C_ISR
+ 145 00c0 C80E0740 		.word	1074204360
+ 146 00c4 880E0740 		.word	1074204296
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 8
+
+
+ 147 00c8 480F0740 		.word	1074204488
+ 148 00cc 080F0740 		.word	1074204424
+ 149 00d0 C80F0740 		.word	1074204616
+ 150 00d4 880F0740 		.word	1074204552
+ 151 00d8 00000000 		.word	I2C_MPU6050_state
+ 152 00dc 00000000 		.word	I2C_MPU6050_mstrStatus
+ 153 00e0 00000000 		.word	I2C_MPU6050_mstrRdBufIndex
+ 154 00e4 00000000 		.word	I2C_MPU6050_mstrWrBufIndex
+ 155              		.cfi_endproc
+ 156              	.LFE0:
+ 157              		.size	I2C_MPU6050_I2CInit, .-I2C_MPU6050_I2CInit
+ 158              		.section	.text.I2C_MPU6050_I2CStop,"ax",%progbits
+ 159              		.align	2
+ 160              		.global	I2C_MPU6050_I2CStop
+ 161              		.code	16
+ 162              		.thumb_func
+ 163              		.type	I2C_MPU6050_I2CStop, %function
+ 164              	I2C_MPU6050_I2CStop:
+ 165              	.LFB1:
+ 254:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** #endif /* (I2C_MPU6050_SCB_MODE_UNCONFIG_CONST_CFG) */
+ 255:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 256:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 257:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** /*******************************************************************************
+ 258:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * Function Name: I2C_MPU6050_I2CStop
+ 259:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** ****************************************************************************//**
+ 260:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *
+ 261:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *  Resets the I2C FSM into the default state.
+ 262:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *
+ 263:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *******************************************************************************/
+ 264:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** void I2C_MPU6050_I2CStop(void)
+ 265:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** {
+ 166              		.loc 1 265 0
+ 167              		.cfi_startproc
+ 168              		@ args = 0, pretend = 0, frame = 0
+ 169              		@ frame_needed = 1, uses_anonymous_args = 0
+ 170 0000 80B5     		push	{r7, lr}
+ 171              		.cfi_def_cfa_offset 8
+ 172              		.cfi_offset 7, -8
+ 173              		.cfi_offset 14, -4
+ 174 0002 00AF     		add	r7, sp, #0
+ 175              		.cfi_def_cfa_register 7
+ 266:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     /* Clear command registers because they keep assigned value after IP block was disabled */
+ 267:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_I2C_MASTER_CMD_REG = 0u;
+ 176              		.loc 1 267 0
+ 177 0004 054B     		ldr	r3, .L5
+ 178 0006 0022     		movs	r2, #0
+ 179 0008 1A60     		str	r2, [r3]
+ 268:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_I2C_SLAVE_CMD_REG  = 0u;
+ 180              		.loc 1 268 0
+ 181 000a 054B     		ldr	r3, .L5+4
+ 182 000c 0022     		movs	r2, #0
+ 183 000e 1A60     		str	r2, [r3]
+ 269:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     
+ 270:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_state = I2C_MPU6050_I2C_FSM_IDLE;
+ 184              		.loc 1 270 0
+ 185 0010 044B     		ldr	r3, .L5+8
+ 186 0012 1022     		movs	r2, #16
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 9
+
+
+ 187 0014 1A70     		strb	r2, [r3]
+ 271:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** }
+ 188              		.loc 1 271 0
+ 189 0016 C046     		nop
+ 190 0018 BD46     		mov	sp, r7
+ 191              		@ sp needed
+ 192 001a 80BD     		pop	{r7, pc}
+ 193              	.L6:
+ 194              		.align	2
+ 195              	.L5:
+ 196 001c 68000740 		.word	1074200680
+ 197 0020 6C000740 		.word	1074200684
+ 198 0024 00000000 		.word	I2C_MPU6050_state
+ 199              		.cfi_endproc
+ 200              	.LFE1:
+ 201              		.size	I2C_MPU6050_I2CStop, .-I2C_MPU6050_I2CStop
+ 202              		.section	.text.I2C_MPU6050_I2CFwBlockReset,"ax",%progbits
+ 203              		.align	2
+ 204              		.global	I2C_MPU6050_I2CFwBlockReset
+ 205              		.code	16
+ 206              		.thumb_func
+ 207              		.type	I2C_MPU6050_I2CFwBlockReset, %function
+ 208              	I2C_MPU6050_I2CFwBlockReset:
+ 209              	.LFB2:
+ 272:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 273:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 274:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** /*******************************************************************************
+ 275:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * Function Name: I2C_MPU6050_I2CFwBlockReset
+ 276:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** ****************************************************************************//**
+ 277:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *
+ 278:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** * Resets the scb IP block and I2C into the known state.
+ 279:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *
+ 280:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** *******************************************************************************/
+ 281:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** void I2C_MPU6050_I2CFwBlockReset(void)
+ 282:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** {
+ 210              		.loc 1 282 0
+ 211              		.cfi_startproc
+ 212              		@ args = 0, pretend = 0, frame = 0
+ 213              		@ frame_needed = 1, uses_anonymous_args = 0
+ 214 0000 80B5     		push	{r7, lr}
+ 215              		.cfi_def_cfa_offset 8
+ 216              		.cfi_offset 7, -8
+ 217              		.cfi_offset 14, -4
+ 218 0002 00AF     		add	r7, sp, #0
+ 219              		.cfi_def_cfa_register 7
+ 283:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     /* Disable scb IP: stop respond to I2C traffic */
+ 284:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_CTRL_REG &= (uint32) ~I2C_MPU6050_CTRL_ENABLED;
+ 220              		.loc 1 284 0
+ 221 0004 184B     		ldr	r3, .L8
+ 222 0006 184A     		ldr	r2, .L8
+ 223 0008 1268     		ldr	r2, [r2]
+ 224 000a 5200     		lsls	r2, r2, #1
+ 225 000c 5208     		lsrs	r2, r2, #1
+ 226 000e 1A60     		str	r2, [r3]
+ 285:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 286:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     /* Clear command registers they are not cleared after scb IP is disabled */
+ 287:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_I2C_MASTER_CMD_REG = 0u;
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 10
+
+
+ 227              		.loc 1 287 0
+ 228 0010 164B     		ldr	r3, .L8+4
+ 229 0012 0022     		movs	r2, #0
+ 230 0014 1A60     		str	r2, [r3]
+ 288:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_I2C_SLAVE_CMD_REG  = 0u;
+ 231              		.loc 1 288 0
+ 232 0016 164B     		ldr	r3, .L8+8
+ 233 0018 0022     		movs	r2, #0
+ 234 001a 1A60     		str	r2, [r3]
+ 289:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 290:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_DISABLE_AUTO_DATA;
+ 235              		.loc 1 290 0
+ 236 001c 154B     		ldr	r3, .L8+12
+ 237 001e 154A     		ldr	r2, .L8+12
+ 238 0020 1268     		ldr	r2, [r2]
+ 239 0022 1549     		ldr	r1, .L8+16
+ 240 0024 0A40     		ands	r2, r1
+ 241 0026 1A60     		str	r2, [r3]
+ 291:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 292:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_SetTxInterruptMode(I2C_MPU6050_NO_INTR_SOURCES);
+ 242              		.loc 1 292 0
+ 243 0028 144B     		ldr	r3, .L8+20
+ 244 002a 0022     		movs	r2, #0
+ 245 002c 1A60     		str	r2, [r3]
+ 293:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_SetRxInterruptMode(I2C_MPU6050_NO_INTR_SOURCES);
+ 246              		.loc 1 293 0
+ 247 002e 144B     		ldr	r3, .L8+24
+ 248 0030 0022     		movs	r2, #0
+ 249 0032 1A60     		str	r2, [r3]
+ 294:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     
+ 295:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** #if(I2C_MPU6050_CY_SCBIP_V0)
+ 296:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     /* Clear interrupt sources as they are not cleared after scb IP is disabled */
+ 297:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_ClearTxInterruptSource    (I2C_MPU6050_INTR_TX_ALL);
+ 250              		.loc 1 297 0
+ 251 0034 134B     		ldr	r3, .L8+28
+ 252 0036 144A     		ldr	r2, .L8+32
+ 253 0038 1A60     		str	r2, [r3]
+ 298:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_ClearRxInterruptSource    (I2C_MPU6050_INTR_RX_ALL);
+ 254              		.loc 1 298 0
+ 255 003a 144B     		ldr	r3, .L8+36
+ 256 003c 144A     		ldr	r2, .L8+40
+ 257 003e 1A60     		str	r2, [r3]
+ 299:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_ClearSlaveInterruptSource (I2C_MPU6050_INTR_SLAVE_ALL);
+ 258              		.loc 1 299 0
+ 259 0040 144B     		ldr	r3, .L8+44
+ 260 0042 154A     		ldr	r2, .L8+48
+ 261 0044 1A60     		str	r2, [r3]
+ 300:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_ClearMasterInterruptSource(I2C_MPU6050_INTR_MASTER_ALL);
+ 262              		.loc 1 300 0
+ 263 0046 154B     		ldr	r3, .L8+52
+ 264 0048 154A     		ldr	r2, .L8+56
+ 265 004a 1A60     		str	r2, [r3]
+ 301:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** #endif /* (I2C_MPU6050_CY_SCBIP_V0) */
+ 302:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 303:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_state = I2C_MPU6050_I2C_FSM_IDLE;
+ 266              		.loc 1 303 0
+ 267 004c 154B     		ldr	r3, .L8+60
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 11
+
+
+ 268 004e 1022     		movs	r2, #16
+ 269 0050 1A70     		strb	r2, [r3]
+ 304:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** 
+ 305:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     /* Enable scb IP: start respond to I2C traffic */
+ 306:Generated_Source\PSoC4/I2C_MPU6050_I2C.c ****     I2C_MPU6050_CTRL_REG |= (uint32) I2C_MPU6050_CTRL_ENABLED;
+ 270              		.loc 1 306 0
+ 271 0052 054B     		ldr	r3, .L8
+ 272 0054 044A     		ldr	r2, .L8
+ 273 0056 1268     		ldr	r2, [r2]
+ 274 0058 8021     		movs	r1, #128
+ 275 005a 0906     		lsls	r1, r1, #24
+ 276 005c 0A43     		orrs	r2, r1
+ 277 005e 1A60     		str	r2, [r3]
+ 307:Generated_Source\PSoC4/I2C_MPU6050_I2C.c **** }
+ 278              		.loc 1 307 0
+ 279 0060 C046     		nop
+ 280 0062 BD46     		mov	sp, r7
+ 281              		@ sp needed
+ 282 0064 80BD     		pop	{r7, pc}
+ 283              	.L9:
+ 284 0066 C046     		.align	2
+ 285              	.L8:
+ 286 0068 00000740 		.word	1074200576
+ 287 006c 68000740 		.word	1074200680
+ 288 0070 6C000740 		.word	1074200684
+ 289 0074 60000740 		.word	1074200672
+ 290 0078 FF5CFFFF 		.word	-41729
+ 291 007c 880F0740 		.word	1074204552
+ 292 0080 C80F0740 		.word	1074204616
+ 293 0084 800F0740 		.word	1074204544
+ 294 0088 F3070000 		.word	2035
+ 295 008c C00F0740 		.word	1074204608
+ 296 0090 ED0F0000 		.word	4077
+ 297 0094 400F0740 		.word	1074204480
+ 298 0098 FF0F0000 		.word	4095
+ 299 009c 000F0740 		.word	1074204416
+ 300 00a0 17030000 		.word	791
+ 301 00a4 00000000 		.word	I2C_MPU6050_state
+ 302              		.cfi_endproc
+ 303              	.LFE2:
+ 304              		.size	I2C_MPU6050_I2CFwBlockReset, .-I2C_MPU6050_I2CFwBlockReset
+ 305              		.text
+ 306              	.Letext0:
+ 307              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 308              		.file 3 "Generated_Source\\PSoC4\\I2C_MPU6050_I2C_PVT.h"
+ 309              		.section	.debug_info,"",%progbits
+ 310              	.Ldebug_info0:
+ 311 0000 31010000 		.4byte	0x131
+ 312 0004 0400     		.2byte	0x4
+ 313 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 314 000a 04       		.byte	0x4
+ 315 000b 01       		.uleb128 0x1
+ 316 000c 22000000 		.4byte	.LASF25
+ 317 0010 0C       		.byte	0xc
+ 318 0011 41010000 		.4byte	.LASF26
+ 319 0015 8E010000 		.4byte	.LASF27
+ 320 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 12
+
+
+ 321 001d 00000000 		.4byte	0
+ 322 0021 00000000 		.4byte	.Ldebug_line0
+ 323 0025 02       		.uleb128 0x2
+ 324 0026 01       		.byte	0x1
+ 325 0027 06       		.byte	0x6
+ 326 0028 FD010000 		.4byte	.LASF0
+ 327 002c 02       		.uleb128 0x2
+ 328 002d 01       		.byte	0x1
+ 329 002e 08       		.byte	0x8
+ 330 002f 2E010000 		.4byte	.LASF1
+ 331 0033 02       		.uleb128 0x2
+ 332 0034 02       		.byte	0x2
+ 333 0035 05       		.byte	0x5
+ 334 0036 29020000 		.4byte	.LASF2
+ 335 003a 02       		.uleb128 0x2
+ 336 003b 02       		.byte	0x2
+ 337 003c 07       		.byte	0x7
+ 338 003d EA010000 		.4byte	.LASF3
+ 339 0041 02       		.uleb128 0x2
+ 340 0042 04       		.byte	0x4
+ 341 0043 05       		.byte	0x5
+ 342 0044 6A010000 		.4byte	.LASF4
+ 343 0048 02       		.uleb128 0x2
+ 344 0049 04       		.byte	0x4
+ 345 004a 07       		.byte	0x7
+ 346 004b B6000000 		.4byte	.LASF5
+ 347 004f 02       		.uleb128 0x2
+ 348 0050 08       		.byte	0x8
+ 349 0051 05       		.byte	0x5
+ 350 0052 00000000 		.4byte	.LASF6
+ 351 0056 02       		.uleb128 0x2
+ 352 0057 08       		.byte	0x8
+ 353 0058 07       		.byte	0x7
+ 354 0059 C8000000 		.4byte	.LASF7
+ 355 005d 03       		.uleb128 0x3
+ 356 005e 04       		.byte	0x4
+ 357 005f 05       		.byte	0x5
+ 358 0060 696E7400 		.ascii	"int\000"
+ 359 0064 02       		.uleb128 0x2
+ 360 0065 04       		.byte	0x4
+ 361 0066 07       		.byte	0x7
+ 362 0067 15000000 		.4byte	.LASF8
+ 363 006b 04       		.uleb128 0x4
+ 364 006c B0000000 		.4byte	.LASF9
+ 365 0070 02       		.byte	0x2
+ 366 0071 D201     		.2byte	0x1d2
+ 367 0073 2C000000 		.4byte	0x2c
+ 368 0077 04       		.uleb128 0x4
+ 369 0078 33020000 		.4byte	.LASF10
+ 370 007c 02       		.byte	0x2
+ 371 007d D301     		.2byte	0x1d3
+ 372 007f 3A000000 		.4byte	0x3a
+ 373 0083 04       		.uleb128 0x4
+ 374 0084 0E000000 		.4byte	.LASF11
+ 375 0088 02       		.byte	0x2
+ 376 0089 D401     		.2byte	0x1d4
+ 377 008b 48000000 		.4byte	0x48
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 13
+
+
+ 378 008f 02       		.uleb128 0x2
+ 379 0090 04       		.byte	0x4
+ 380 0091 04       		.byte	0x4
+ 381 0092 F1000000 		.4byte	.LASF12
+ 382 0096 02       		.uleb128 0x2
+ 383 0097 08       		.byte	0x8
+ 384 0098 04       		.byte	0x4
+ 385 0099 C6010000 		.4byte	.LASF13
+ 386 009d 02       		.uleb128 0x2
+ 387 009e 01       		.byte	0x1
+ 388 009f 08       		.byte	0x8
+ 389 00a0 3C010000 		.4byte	.LASF14
+ 390 00a4 05       		.uleb128 0x5
+ 391 00a5 6B000000 		.4byte	0x6b
+ 392 00a9 05       		.uleb128 0x5
+ 393 00aa 77000000 		.4byte	0x77
+ 394 00ae 04       		.uleb128 0x4
+ 395 00af E4010000 		.4byte	.LASF15
+ 396 00b3 02       		.byte	0x2
+ 397 00b4 7E02     		.2byte	0x27e
+ 398 00b6 BA000000 		.4byte	0xba
+ 399 00ba 05       		.uleb128 0x5
+ 400 00bb 83000000 		.4byte	0x83
+ 401 00bf 02       		.uleb128 0x2
+ 402 00c0 08       		.byte	0x8
+ 403 00c1 04       		.byte	0x4
+ 404 00c2 1D020000 		.4byte	.LASF16
+ 405 00c6 02       		.uleb128 0x2
+ 406 00c7 04       		.byte	0x4
+ 407 00c8 07       		.byte	0x7
+ 408 00c9 3A020000 		.4byte	.LASF17
+ 409 00cd 06       		.uleb128 0x6
+ 410 00ce 43020000 		.4byte	.LASF18
+ 411 00d2 01       		.byte	0x1
+ 412 00d3 C1       		.byte	0xc1
+ 413 00d4 00000000 		.4byte	.LFB0
+ 414 00d8 E8000000 		.4byte	.LFE0-.LFB0
+ 415 00dc 01       		.uleb128 0x1
+ 416 00dd 9C       		.byte	0x9c
+ 417 00de 07       		.uleb128 0x7
+ 418 00df 09020000 		.4byte	.LASF19
+ 419 00e3 01       		.byte	0x1
+ 420 00e4 0801     		.2byte	0x108
+ 421 00e6 00000000 		.4byte	.LFB1
+ 422 00ea 28000000 		.4byte	.LFE1-.LFB1
+ 423 00ee 01       		.uleb128 0x1
+ 424 00ef 9C       		.byte	0x9c
+ 425 00f0 07       		.uleb128 0x7
+ 426 00f1 12010000 		.4byte	.LASF20
+ 427 00f5 01       		.byte	0x1
+ 428 00f6 1901     		.2byte	0x119
+ 429 00f8 00000000 		.4byte	.LFB2
+ 430 00fc A8000000 		.4byte	.LFE2-.LFB2
+ 431 0100 01       		.uleb128 0x1
+ 432 0101 9C       		.byte	0x9c
+ 433 0102 08       		.uleb128 0x8
+ 434 0103 DF000000 		.4byte	.LASF21
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 14
+
+
+ 435 0107 01       		.byte	0x1
+ 436 0108 1B       		.byte	0x1b
+ 437 0109 A4000000 		.4byte	0xa4
+ 438 010d 05       		.uleb128 0x5
+ 439 010e 03       		.byte	0x3
+ 440 010f 00000000 		.4byte	I2C_MPU6050_state
+ 441 0113 09       		.uleb128 0x9
+ 442 0114 CD010000 		.4byte	.LASF22
+ 443 0118 03       		.byte	0x3
+ 444 0119 31       		.byte	0x31
+ 445 011a A9000000 		.4byte	0xa9
+ 446 011e 09       		.uleb128 0x9
+ 447 011f 73010000 		.4byte	.LASF23
+ 448 0123 03       		.byte	0x3
+ 449 0124 37       		.byte	0x37
+ 450 0125 BA000000 		.4byte	0xba
+ 451 0129 09       		.uleb128 0x9
+ 452 012a F7000000 		.4byte	.LASF24
+ 453 012e 03       		.byte	0x3
+ 454 012f 3C       		.byte	0x3c
+ 455 0130 BA000000 		.4byte	0xba
+ 456 0134 00       		.byte	0
+ 457              		.section	.debug_abbrev,"",%progbits
+ 458              	.Ldebug_abbrev0:
+ 459 0000 01       		.uleb128 0x1
+ 460 0001 11       		.uleb128 0x11
+ 461 0002 01       		.byte	0x1
+ 462 0003 25       		.uleb128 0x25
+ 463 0004 0E       		.uleb128 0xe
+ 464 0005 13       		.uleb128 0x13
+ 465 0006 0B       		.uleb128 0xb
+ 466 0007 03       		.uleb128 0x3
+ 467 0008 0E       		.uleb128 0xe
+ 468 0009 1B       		.uleb128 0x1b
+ 469 000a 0E       		.uleb128 0xe
+ 470 000b 55       		.uleb128 0x55
+ 471 000c 17       		.uleb128 0x17
+ 472 000d 11       		.uleb128 0x11
+ 473 000e 01       		.uleb128 0x1
+ 474 000f 10       		.uleb128 0x10
+ 475 0010 17       		.uleb128 0x17
+ 476 0011 00       		.byte	0
+ 477 0012 00       		.byte	0
+ 478 0013 02       		.uleb128 0x2
+ 479 0014 24       		.uleb128 0x24
+ 480 0015 00       		.byte	0
+ 481 0016 0B       		.uleb128 0xb
+ 482 0017 0B       		.uleb128 0xb
+ 483 0018 3E       		.uleb128 0x3e
+ 484 0019 0B       		.uleb128 0xb
+ 485 001a 03       		.uleb128 0x3
+ 486 001b 0E       		.uleb128 0xe
+ 487 001c 00       		.byte	0
+ 488 001d 00       		.byte	0
+ 489 001e 03       		.uleb128 0x3
+ 490 001f 24       		.uleb128 0x24
+ 491 0020 00       		.byte	0
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 15
+
+
+ 492 0021 0B       		.uleb128 0xb
+ 493 0022 0B       		.uleb128 0xb
+ 494 0023 3E       		.uleb128 0x3e
+ 495 0024 0B       		.uleb128 0xb
+ 496 0025 03       		.uleb128 0x3
+ 497 0026 08       		.uleb128 0x8
+ 498 0027 00       		.byte	0
+ 499 0028 00       		.byte	0
+ 500 0029 04       		.uleb128 0x4
+ 501 002a 16       		.uleb128 0x16
+ 502 002b 00       		.byte	0
+ 503 002c 03       		.uleb128 0x3
+ 504 002d 0E       		.uleb128 0xe
+ 505 002e 3A       		.uleb128 0x3a
+ 506 002f 0B       		.uleb128 0xb
+ 507 0030 3B       		.uleb128 0x3b
+ 508 0031 05       		.uleb128 0x5
+ 509 0032 49       		.uleb128 0x49
+ 510 0033 13       		.uleb128 0x13
+ 511 0034 00       		.byte	0
+ 512 0035 00       		.byte	0
+ 513 0036 05       		.uleb128 0x5
+ 514 0037 35       		.uleb128 0x35
+ 515 0038 00       		.byte	0
+ 516 0039 49       		.uleb128 0x49
+ 517 003a 13       		.uleb128 0x13
+ 518 003b 00       		.byte	0
+ 519 003c 00       		.byte	0
+ 520 003d 06       		.uleb128 0x6
+ 521 003e 2E       		.uleb128 0x2e
+ 522 003f 00       		.byte	0
+ 523 0040 3F       		.uleb128 0x3f
+ 524 0041 19       		.uleb128 0x19
+ 525 0042 03       		.uleb128 0x3
+ 526 0043 0E       		.uleb128 0xe
+ 527 0044 3A       		.uleb128 0x3a
+ 528 0045 0B       		.uleb128 0xb
+ 529 0046 3B       		.uleb128 0x3b
+ 530 0047 0B       		.uleb128 0xb
+ 531 0048 27       		.uleb128 0x27
+ 532 0049 19       		.uleb128 0x19
+ 533 004a 11       		.uleb128 0x11
+ 534 004b 01       		.uleb128 0x1
+ 535 004c 12       		.uleb128 0x12
+ 536 004d 06       		.uleb128 0x6
+ 537 004e 40       		.uleb128 0x40
+ 538 004f 18       		.uleb128 0x18
+ 539 0050 9642     		.uleb128 0x2116
+ 540 0052 19       		.uleb128 0x19
+ 541 0053 00       		.byte	0
+ 542 0054 00       		.byte	0
+ 543 0055 07       		.uleb128 0x7
+ 544 0056 2E       		.uleb128 0x2e
+ 545 0057 00       		.byte	0
+ 546 0058 3F       		.uleb128 0x3f
+ 547 0059 19       		.uleb128 0x19
+ 548 005a 03       		.uleb128 0x3
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 16
+
+
+ 549 005b 0E       		.uleb128 0xe
+ 550 005c 3A       		.uleb128 0x3a
+ 551 005d 0B       		.uleb128 0xb
+ 552 005e 3B       		.uleb128 0x3b
+ 553 005f 05       		.uleb128 0x5
+ 554 0060 27       		.uleb128 0x27
+ 555 0061 19       		.uleb128 0x19
+ 556 0062 11       		.uleb128 0x11
+ 557 0063 01       		.uleb128 0x1
+ 558 0064 12       		.uleb128 0x12
+ 559 0065 06       		.uleb128 0x6
+ 560 0066 40       		.uleb128 0x40
+ 561 0067 18       		.uleb128 0x18
+ 562 0068 9742     		.uleb128 0x2117
+ 563 006a 19       		.uleb128 0x19
+ 564 006b 00       		.byte	0
+ 565 006c 00       		.byte	0
+ 566 006d 08       		.uleb128 0x8
+ 567 006e 34       		.uleb128 0x34
+ 568 006f 00       		.byte	0
+ 569 0070 03       		.uleb128 0x3
+ 570 0071 0E       		.uleb128 0xe
+ 571 0072 3A       		.uleb128 0x3a
+ 572 0073 0B       		.uleb128 0xb
+ 573 0074 3B       		.uleb128 0x3b
+ 574 0075 0B       		.uleb128 0xb
+ 575 0076 49       		.uleb128 0x49
+ 576 0077 13       		.uleb128 0x13
+ 577 0078 3F       		.uleb128 0x3f
+ 578 0079 19       		.uleb128 0x19
+ 579 007a 02       		.uleb128 0x2
+ 580 007b 18       		.uleb128 0x18
+ 581 007c 00       		.byte	0
+ 582 007d 00       		.byte	0
+ 583 007e 09       		.uleb128 0x9
+ 584 007f 34       		.uleb128 0x34
+ 585 0080 00       		.byte	0
+ 586 0081 03       		.uleb128 0x3
+ 587 0082 0E       		.uleb128 0xe
+ 588 0083 3A       		.uleb128 0x3a
+ 589 0084 0B       		.uleb128 0xb
+ 590 0085 3B       		.uleb128 0x3b
+ 591 0086 0B       		.uleb128 0xb
+ 592 0087 49       		.uleb128 0x49
+ 593 0088 13       		.uleb128 0x13
+ 594 0089 3F       		.uleb128 0x3f
+ 595 008a 19       		.uleb128 0x19
+ 596 008b 3C       		.uleb128 0x3c
+ 597 008c 19       		.uleb128 0x19
+ 598 008d 00       		.byte	0
+ 599 008e 00       		.byte	0
+ 600 008f 00       		.byte	0
+ 601              		.section	.debug_aranges,"",%progbits
+ 602 0000 2C000000 		.4byte	0x2c
+ 603 0004 0200     		.2byte	0x2
+ 604 0006 00000000 		.4byte	.Ldebug_info0
+ 605 000a 04       		.byte	0x4
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 17
+
+
+ 606 000b 00       		.byte	0
+ 607 000c 0000     		.2byte	0
+ 608 000e 0000     		.2byte	0
+ 609 0010 00000000 		.4byte	.LFB0
+ 610 0014 E8000000 		.4byte	.LFE0-.LFB0
+ 611 0018 00000000 		.4byte	.LFB1
+ 612 001c 28000000 		.4byte	.LFE1-.LFB1
+ 613 0020 00000000 		.4byte	.LFB2
+ 614 0024 A8000000 		.4byte	.LFE2-.LFB2
+ 615 0028 00000000 		.4byte	0
+ 616 002c 00000000 		.4byte	0
+ 617              		.section	.debug_ranges,"",%progbits
+ 618              	.Ldebug_ranges0:
+ 619 0000 00000000 		.4byte	.LFB0
+ 620 0004 E8000000 		.4byte	.LFE0
+ 621 0008 00000000 		.4byte	.LFB1
+ 622 000c 28000000 		.4byte	.LFE1
+ 623 0010 00000000 		.4byte	.LFB2
+ 624 0014 A8000000 		.4byte	.LFE2
+ 625 0018 00000000 		.4byte	0
+ 626 001c 00000000 		.4byte	0
+ 627              		.section	.debug_line,"",%progbits
+ 628              	.Ldebug_line0:
+ 629 0000 C4000000 		.section	.debug_str,"MS",%progbits,1
+ 629      02006500 
+ 629      00000201 
+ 629      FB0E0D00 
+ 629      01010101 
+ 630              	.LASF6:
+ 631 0000 6C6F6E67 		.ascii	"long long int\000"
+ 631      206C6F6E 
+ 631      6720696E 
+ 631      7400
+ 632              	.LASF11:
+ 633 000e 75696E74 		.ascii	"uint32\000"
+ 633      333200
+ 634              	.LASF8:
+ 635 0015 756E7369 		.ascii	"unsigned int\000"
+ 635      676E6564 
+ 635      20696E74 
+ 635      00
+ 636              	.LASF25:
+ 637 0022 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 637      43313120 
+ 637      352E342E 
+ 637      31203230 
+ 637      31363036 
+ 638 0055 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 638      20726576 
+ 638      6973696F 
+ 638      6E203233 
+ 638      37373135 
+ 639 0088 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 639      66756E63 
+ 639      74696F6E 
+ 639      2D736563 
+ 639      74696F6E 
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 18
+
+
+ 640              	.LASF9:
+ 641 00b0 75696E74 		.ascii	"uint8\000"
+ 641      3800
+ 642              	.LASF5:
+ 643 00b6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 643      20756E73 
+ 643      69676E65 
+ 643      6420696E 
+ 643      7400
+ 644              	.LASF7:
+ 645 00c8 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 645      206C6F6E 
+ 645      6720756E 
+ 645      7369676E 
+ 645      65642069 
+ 646              	.LASF21:
+ 647 00df 4932435F 		.ascii	"I2C_MPU6050_state\000"
+ 647      4D505536 
+ 647      3035305F 
+ 647      73746174 
+ 647      6500
+ 648              	.LASF12:
+ 649 00f1 666C6F61 		.ascii	"float\000"
+ 649      7400
+ 650              	.LASF24:
+ 651 00f7 4932435F 		.ascii	"I2C_MPU6050_mstrWrBufIndex\000"
+ 651      4D505536 
+ 651      3035305F 
+ 651      6D737472 
+ 651      57724275 
+ 652              	.LASF20:
+ 653 0112 4932435F 		.ascii	"I2C_MPU6050_I2CFwBlockReset\000"
+ 653      4D505536 
+ 653      3035305F 
+ 653      49324346 
+ 653      77426C6F 
+ 654              	.LASF1:
+ 655 012e 756E7369 		.ascii	"unsigned char\000"
+ 655      676E6564 
+ 655      20636861 
+ 655      7200
+ 656              	.LASF14:
+ 657 013c 63686172 		.ascii	"char\000"
+ 657      00
+ 658              	.LASF26:
+ 659 0141 47656E65 		.ascii	"Generated_Source\\PSoC4\\I2C_MPU6050_I2C.c\000"
+ 659      72617465 
+ 659      645F536F 
+ 659      75726365 
+ 659      5C50536F 
+ 660              	.LASF4:
+ 661 016a 6C6F6E67 		.ascii	"long int\000"
+ 661      20696E74 
+ 661      00
+ 662              	.LASF23:
+ 663 0173 4932435F 		.ascii	"I2C_MPU6050_mstrRdBufIndex\000"
+ 663      4D505536 
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 19
+
+
+ 663      3035305F 
+ 663      6D737472 
+ 663      52644275 
+ 664              	.LASF27:
+ 665 018e 433A5C55 		.ascii	"C:\\Users\\Sebas\\Desktop\\Drone_Sensor_juistewaard"
+ 665      73657273 
+ 665      5C536562 
+ 665      61735C44 
+ 665      65736B74 
+ 666 01bd 656E2E63 		.ascii	"en.cydsn\000"
+ 666      7964736E 
+ 666      00
+ 667              	.LASF13:
+ 668 01c6 646F7562 		.ascii	"double\000"
+ 668      6C6500
+ 669              	.LASF22:
+ 670 01cd 4932435F 		.ascii	"I2C_MPU6050_mstrStatus\000"
+ 670      4D505536 
+ 670      3035305F 
+ 670      6D737472 
+ 670      53746174 
+ 671              	.LASF15:
+ 672 01e4 72656733 		.ascii	"reg32\000"
+ 672      3200
+ 673              	.LASF3:
+ 674 01ea 73686F72 		.ascii	"short unsigned int\000"
+ 674      7420756E 
+ 674      7369676E 
+ 674      65642069 
+ 674      6E7400
+ 675              	.LASF0:
+ 676 01fd 7369676E 		.ascii	"signed char\000"
+ 676      65642063 
+ 676      68617200 
+ 677              	.LASF19:
+ 678 0209 4932435F 		.ascii	"I2C_MPU6050_I2CStop\000"
+ 678      4D505536 
+ 678      3035305F 
+ 678      49324353 
+ 678      746F7000 
+ 679              	.LASF16:
+ 680 021d 6C6F6E67 		.ascii	"long double\000"
+ 680      20646F75 
+ 680      626C6500 
+ 681              	.LASF2:
+ 682 0229 73686F72 		.ascii	"short int\000"
+ 682      7420696E 
+ 682      7400
+ 683              	.LASF10:
+ 684 0233 75696E74 		.ascii	"uint16\000"
+ 684      313600
+ 685              	.LASF17:
+ 686 023a 73697A65 		.ascii	"sizetype\000"
+ 686      74797065 
+ 686      00
+ 687              	.LASF18:
+ 688 0243 4932435F 		.ascii	"I2C_MPU6050_I2CInit\000"
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\cczadDIj.s 			page 20
+
+
+ 688      4D505536 
+ 688      3035305F 
+ 688      49324349 
+ 688      6E697400 
+ 689              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

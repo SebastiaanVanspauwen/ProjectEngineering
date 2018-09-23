@@ -1,0 +1,1745 @@
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m0
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.comm	devAddr,1,1
+  20              		.comm	buffer,22,4
+  21              		.section	.rodata
+  22              		.align	2
+  23              	.LC0:
+  24 0000 55415254 		.ascii	"UART STARTED \012 \015\000"
+  24      20535441 
+  24      52544544 
+  24      200A200D 
+  24      00
+  25 0011 000000   		.align	2
+  26              	.LC2:
+  27 0014 4D505520 		.ascii	"MPU ADRESS SET \012 \015\000"
+  27      41445245 
+  27      53532053 
+  27      4554200A 
+  27      200D00
+  28 0027 00       		.align	2
+  29              	.LC4:
+  30 0028 4D505520 		.ascii	"MPU INITIALIZED \012 \015\000"
+  30      494E4954 
+  30      49414C49 
+  30      5A454420 
+  30      0A200D00 
+  31              		.align	2
+  32              	.LC6:
+  33 003c 54455354 		.ascii	"TESTING CONNECTION.... \012 \015\000"
+  33      494E4720 
+  33      434F4E4E 
+  33      45435449 
+  33      4F4E2E2E 
+  34 0057 00       		.align	2
+  35              	.LC8:
+  36 0058 4D505536 		.ascii	"MPU6050 connection successful\012\015\000"
+  36      30353020 
+  36      636F6E6E 
+  36      65637469 
+  36      6F6E2073 
+  37              		.align	2
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 2
+
+
+  38              	.LC10:
+  39 0078 4D505536 		.ascii	"MPU6050 connection failed\012\012\015\000"
+  39      30353020 
+  39      636F6E6E 
+  39      65637469 
+  39      6F6E2066 
+  40 0095 000000   		.align	2
+  41              	.LC12:
+  42 0098 52617720 		.ascii	"Raw values from gyroscope..\012\015\000"
+  42      76616C75 
+  42      65732066 
+  42      726F6D20 
+  42      6779726F 
+  43              		.global	__aeabi_i2f
+  44              		.global	__aeabi_fadd
+  45 00b6 0000     		.align	2
+  46              	.LC14:
+  47 00b8 41636365 		.ascii	"Acceleration X:%d Y:%d Z:%d \011 Gyro: X:%d Y:%d Z:"
+  47      6C657261 
+  47      74696F6E 
+  47      20583A25 
+  47      6420593A 
+  48 00e8 25642009 		.ascii	"%d \011\000"
+  48      00
+  49 00ed 000000   		.align	2
+  50              	.LC16:
+  51 00f0 0A0D00   		.ascii	"\012\015\000"
+  52              		.global	__aeabi_fdiv
+  53 00f3 00       		.align	2
+  54              	.LC18:
+  55 00f4 0A0A5465 		.ascii	"\012\012Test finished, offset values are shown belo"
+  55      73742066 
+  55      696E6973 
+  55      6865642C 
+  55      206F6666 
+  56 0121 770A0A0D 		.ascii	"w\012\012\015\000"
+  56      00
+  57              		.global	__aeabi_f2iz
+  58 0126 0000     		.align	2
+  59              	.LC20:
+  60 0128 41636365 		.ascii	"Acceleration OFFSET X:%d Y:%d Z:%d \011 Gyro: X:%d "
+  60      6C657261 
+  60      74696F6E 
+  60      204F4646 
+  60      53455420 
+  61 0158 593A2564 		.ascii	"Y:%d Z:%d \011\000"
+  61      205A3A25 
+  61      64200900 
+  62              		.align	2
+  63              	.LC22:
+  64 0164 0D0A0A43 		.ascii	"\015\012\012Converting Values to G's\012\012\015\000"
+  64      6F6E7665 
+  64      7274696E 
+  64      67205661 
+  64      6C756573 
+  65              		.global	__aeabi_fsub
+  66              		.global	__aeabi_f2d
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 3
+
+
+  67              		.global	__aeabi_ddiv
+  68              		.global	__aeabi_d2f
+  69 0183 00       		.align	2
+  70              	.LC24:
+  71 0184 41583A25 		.ascii	"AX:%f \011 AY:%f \011 AZ:%f \011 GX:%f \011 GY:%f \011"
+  71      66200920 
+  71      41593A25 
+  71      66200920 
+  71      415A3A25 
+  72 01ab 20475A3A 		.ascii	" GZ:%f \011 \012 \015\000"
+  72      25662009 
+  72      200A200D 
+  72      00
+  73              		.section	.text.main,"ax",%progbits
+  74              		.align	2
+  75              		.global	main
+  76              		.code	16
+  77              		.thumb_func
+  78              		.type	main, %function
+  79              	main:
+  80              	.LFB33:
+  81              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright Samuel Walsh, 2014
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF Samuel Walsh.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include <project.h>
+  13:main.c        **** #include <mpu6050.h>
+  14:main.c        **** #include <stdio.h>
+  15:main.c        **** 
+  16:main.c        **** int main()
+  17:main.c        **** {
+  82              		.loc 1 17 0
+  83              		.cfi_startproc
+  84              		@ args = 0, pretend = 0, frame = 152
+  85              		@ frame_needed = 1, uses_anonymous_args = 0
+  86 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+  87              		.cfi_def_cfa_offset 20
+  88              		.cfi_offset 4, -20
+  89              		.cfi_offset 5, -16
+  90              		.cfi_offset 6, -12
+  91              		.cfi_offset 7, -8
+  92              		.cfi_offset 14, -4
+  93 0002 4746     		mov	r7, r8
+  94 0004 80B4     		push	{r7}
+  95              		.cfi_def_cfa_offset 24
+  96              		.cfi_offset 8, -24
+  97 0006 B0B0     		sub	sp, sp, #192
+  98              		.cfi_def_cfa_offset 216
+  99 0008 0AAF     		add	r7, sp, #40
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 4
+
+
+ 100              		.cfi_def_cfa 7, 176
+  18:main.c        ****     int numberofTests = 250;
+ 101              		.loc 1 18 0
+ 102 000a FA23     		movs	r3, #250
+ 103 000c BB67     		str	r3, [r7, #120]
+  19:main.c        ****     char buf[50]; //just to hold text values in for writing to UART
+  20:main.c        ****     int i = 0;
+ 104              		.loc 1 20 0
+ 105 000e 0023     		movs	r3, #0
+ 106 0010 9422     		movs	r2, #148
+ 107 0012 BA18     		adds	r2, r7, r2
+ 108 0014 1360     		str	r3, [r2]
+  21:main.c        ****     
+  22:main.c        ****     //RAW VALUES
+  23:main.c        ****     int16_t accelX,accelY,accelZ;
+  24:main.c        ****     int16_t gyroX,gyroY,gyroZ;
+  25:main.c        ****     //OFFSET VALUES
+  26:main.c        ****     float accelXOFF,accelYOFF,accelZOFF;
+  27:main.c        ****     float gyroXOFF,gyroYOFF,gyroZOFF;
+  28:main.c        ****     //REAL VALUES
+  29:main.c        ****     float   AX, AY, AZ; //acceleration floats
+  30:main.c        ****     float   GX, GY, GZ; //gyroscope floats
+  31:main.c        ****     
+  32:main.c        ****     uint8 devId;
+  33:main.c        **** 	I2C_MPU6050_Start();
+ 109              		.loc 1 33 0
+ 110 0016 FFF7FEFF 		bl	I2C_MPU6050_Start
+  34:main.c        **** 	SERIAL_Start();
+ 111              		.loc 1 34 0
+ 112 001a FFF7FEFF 		bl	SERIAL_Start
+  35:main.c        ****     
+  36:main.c        ****     SERIAL_UartPutString("UART STARTED \n \r");
+ 113              		.loc 1 36 0
+ 114 001e 144B     		ldr	r3, .L7
+ 115 0020 1800     		movs	r0, r3
+ 116 0022 FFF7FEFF 		bl	SERIAL_UartPutString
+  37:main.c        ****     CyGlobalIntEnable;
+ 117              		.loc 1 37 0
+ 118              		.syntax divided
+ 119              	@ 37 "main.c" 1
+ 120 0026 62B6     		CPSIE   i
+ 121              	@ 0 "" 2
+  38:main.c        **** 	MPU6050_init();
+ 122              		.loc 1 38 0
+ 123              		.thumb
+ 124              		.syntax unified
+ 125 0028 FFF7FEFF 		bl	MPU6050_init
+  39:main.c        ****     SERIAL_UartPutString("MPU ADRESS SET \n \r");
+ 126              		.loc 1 39 0
+ 127 002c 114B     		ldr	r3, .L7+4
+ 128 002e 1800     		movs	r0, r3
+ 129 0030 FFF7FEFF 		bl	SERIAL_UartPutString
+  40:main.c        **** 	MPU6050_initialize();
+ 130              		.loc 1 40 0
+ 131 0034 FFF7FEFF 		bl	MPU6050_initialize
+  41:main.c        ****     SERIAL_UartPutString("MPU INITIALIZED \n \r");
+ 132              		.loc 1 41 0
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 5
+
+
+ 133 0038 0F4B     		ldr	r3, .L7+8
+ 134 003a 1800     		movs	r0, r3
+ 135 003c FFF7FEFF 		bl	SERIAL_UartPutString
+  42:main.c        ****     SERIAL_UartPutString("TESTING CONNECTION.... \n \r");
+ 136              		.loc 1 42 0
+ 137 0040 0E4B     		ldr	r3, .L7+12
+ 138 0042 1800     		movs	r0, r3
+ 139 0044 FFF7FEFF 		bl	SERIAL_UartPutString
+  43:main.c        **** 	SERIAL_UartPutString(MPU6050_testConnection() ? "MPU6050 connection successful\n\r" : "MPU6050 con
+ 140              		.loc 1 43 0
+ 141 0048 FFF7FEFF 		bl	MPU6050_testConnection
+ 142 004c 031E     		subs	r3, r0, #0
+ 143 004e 01D0     		beq	.L2
+ 144              		.loc 1 43 0 is_stmt 0 discriminator 1
+ 145 0050 0B4B     		ldr	r3, .L7+16
+ 146 0052 00E0     		b	.L3
+ 147              	.L2:
+ 148              		.loc 1 43 0 discriminator 2
+ 149 0054 0B4B     		ldr	r3, .L7+20
+ 150              	.L3:
+ 151              		.loc 1 43 0 discriminator 4
+ 152 0056 1800     		movs	r0, r3
+ 153 0058 FFF7FEFF 		bl	SERIAL_UartPutString
+  44:main.c        ****     SERIAL_UartPutString("Raw values from gyroscope..\n\r");
+ 154              		.loc 1 44 0 is_stmt 1 discriminator 4
+ 155 005c 0A4B     		ldr	r3, .L7+24
+ 156 005e 1800     		movs	r0, r3
+ 157 0060 FFF7FEFF 		bl	SERIAL_UartPutString
+  45:main.c        ****         
+  46:main.c        ****     for(i=0; i<100; i++)
+ 158              		.loc 1 46 0 discriminator 4
+ 159 0064 0023     		movs	r3, #0
+ 160 0066 9422     		movs	r2, #148
+ 161 0068 BA18     		adds	r2, r7, r2
+ 162 006a 1360     		str	r3, [r2]
+ 163 006c 03E1     		b	.L4
+ 164              	.L8:
+ 165 006e C046     		.align	2
+ 166              	.L7:
+ 167 0070 00000000 		.word	.LC0
+ 168 0074 14000000 		.word	.LC2
+ 169 0078 28000000 		.word	.LC4
+ 170 007c 3C000000 		.word	.LC6
+ 171 0080 58000000 		.word	.LC8
+ 172 0084 78000000 		.word	.LC10
+ 173 0088 98000000 		.word	.LC12
+ 174              	.L5:
+  47:main.c        ****     { 
+  48:main.c        ****       accelX = MPU6050_getAccelerationX();
+ 175              		.loc 1 48 0 discriminator 3
+ 176 008c 5623     		movs	r3, #86
+ 177 008e 2022     		movs	r2, #32
+ 178 0090 BA18     		adds	r2, r7, r2
+ 179 0092 D418     		adds	r4, r2, r3
+ 180 0094 FFF7FEFF 		bl	MPU6050_getAccelerationX
+ 181 0098 0300     		movs	r3, r0
+ 182 009a 2380     		strh	r3, [r4]
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 6
+
+
+  49:main.c        ****       accelY = MPU6050_getAccelerationY();
+ 183              		.loc 1 49 0 discriminator 3
+ 184 009c 5423     		movs	r3, #84
+ 185 009e 2022     		movs	r2, #32
+ 186 00a0 BA18     		adds	r2, r7, r2
+ 187 00a2 D418     		adds	r4, r2, r3
+ 188 00a4 FFF7FEFF 		bl	MPU6050_getAccelerationY
+ 189 00a8 0300     		movs	r3, r0
+ 190 00aa 2380     		strh	r3, [r4]
+  50:main.c        ****       accelZ = MPU6050_getAccelerationZ();   
+ 191              		.loc 1 50 0 discriminator 3
+ 192 00ac 5223     		movs	r3, #82
+ 193 00ae 2022     		movs	r2, #32
+ 194 00b0 BA18     		adds	r2, r7, r2
+ 195 00b2 D418     		adds	r4, r2, r3
+ 196 00b4 FFF7FEFF 		bl	MPU6050_getAccelerationZ
+ 197 00b8 0300     		movs	r3, r0
+ 198 00ba 2380     		strh	r3, [r4]
+  51:main.c        ****       gyroX = MPU6050_getRotationX();
+ 199              		.loc 1 51 0 discriminator 3
+ 200 00bc 5023     		movs	r3, #80
+ 201 00be 2022     		movs	r2, #32
+ 202 00c0 BA18     		adds	r2, r7, r2
+ 203 00c2 D418     		adds	r4, r2, r3
+ 204 00c4 FFF7FEFF 		bl	MPU6050_getRotationX
+ 205 00c8 0300     		movs	r3, r0
+ 206 00ca 2380     		strh	r3, [r4]
+  52:main.c        ****       gyroY = MPU6050_getRotationY();
+ 207              		.loc 1 52 0 discriminator 3
+ 208 00cc 4E23     		movs	r3, #78
+ 209 00ce 2022     		movs	r2, #32
+ 210 00d0 BA18     		adds	r2, r7, r2
+ 211 00d2 D418     		adds	r4, r2, r3
+ 212 00d4 FFF7FEFF 		bl	MPU6050_getRotationY
+ 213 00d8 0300     		movs	r3, r0
+ 214 00da 2380     		strh	r3, [r4]
+  53:main.c        ****       gyroZ = MPU6050_getRotationZ();
+ 215              		.loc 1 53 0 discriminator 3
+ 216 00dc 4C23     		movs	r3, #76
+ 217 00de 2022     		movs	r2, #32
+ 218 00e0 BA18     		adds	r2, r7, r2
+ 219 00e2 D418     		adds	r4, r2, r3
+ 220 00e4 FFF7FEFF 		bl	MPU6050_getRotationZ
+ 221 00e8 0300     		movs	r3, r0
+ 222 00ea 2380     		strh	r3, [r4]
+  54:main.c        ****     
+  55:main.c        ****       accelXOFF += accelX;
+ 223              		.loc 1 55 0 discriminator 3
+ 224 00ec 5623     		movs	r3, #86
+ 225 00ee 2022     		movs	r2, #32
+ 226 00f0 9446     		mov	ip, r2
+ 227 00f2 BC44     		add	ip, ip, r7
+ 228 00f4 6344     		add	r3, r3, ip
+ 229 00f6 0022     		movs	r2, #0
+ 230 00f8 9B5E     		ldrsh	r3, [r3, r2]
+ 231 00fa 1800     		movs	r0, r3
+ 232 00fc FFF7FEFF 		bl	__aeabi_i2f
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 7
+
+
+ 233 0100 031C     		adds	r3, r0, #0
+ 234 0102 191C     		adds	r1, r3, #0
+ 235 0104 9023     		movs	r3, #144
+ 236 0106 FB18     		adds	r3, r7, r3
+ 237 0108 1868     		ldr	r0, [r3]
+ 238 010a FFF7FEFF 		bl	__aeabi_fadd
+ 239 010e 031C     		adds	r3, r0, #0
+ 240 0110 9022     		movs	r2, #144
+ 241 0112 BA18     		adds	r2, r7, r2
+ 242 0114 1360     		str	r3, [r2]
+  56:main.c        ****       accelYOFF += accelY;
+ 243              		.loc 1 56 0 discriminator 3
+ 244 0116 5423     		movs	r3, #84
+ 245 0118 2022     		movs	r2, #32
+ 246 011a 9446     		mov	ip, r2
+ 247 011c BC44     		add	ip, ip, r7
+ 248 011e 6344     		add	r3, r3, ip
+ 249 0120 0022     		movs	r2, #0
+ 250 0122 9B5E     		ldrsh	r3, [r3, r2]
+ 251 0124 1800     		movs	r0, r3
+ 252 0126 FFF7FEFF 		bl	__aeabi_i2f
+ 253 012a 031C     		adds	r3, r0, #0
+ 254 012c 191C     		adds	r1, r3, #0
+ 255 012e 8C23     		movs	r3, #140
+ 256 0130 FB18     		adds	r3, r7, r3
+ 257 0132 1868     		ldr	r0, [r3]
+ 258 0134 FFF7FEFF 		bl	__aeabi_fadd
+ 259 0138 031C     		adds	r3, r0, #0
+ 260 013a 8C22     		movs	r2, #140
+ 261 013c BA18     		adds	r2, r7, r2
+ 262 013e 1360     		str	r3, [r2]
+  57:main.c        ****       accelZOFF += accelZ;
+ 263              		.loc 1 57 0 discriminator 3
+ 264 0140 5223     		movs	r3, #82
+ 265 0142 2022     		movs	r2, #32
+ 266 0144 9446     		mov	ip, r2
+ 267 0146 BC44     		add	ip, ip, r7
+ 268 0148 6344     		add	r3, r3, ip
+ 269 014a 0022     		movs	r2, #0
+ 270 014c 9B5E     		ldrsh	r3, [r3, r2]
+ 271 014e 1800     		movs	r0, r3
+ 272 0150 FFF7FEFF 		bl	__aeabi_i2f
+ 273 0154 031C     		adds	r3, r0, #0
+ 274 0156 191C     		adds	r1, r3, #0
+ 275 0158 8823     		movs	r3, #136
+ 276 015a FB18     		adds	r3, r7, r3
+ 277 015c 1868     		ldr	r0, [r3]
+ 278 015e FFF7FEFF 		bl	__aeabi_fadd
+ 279 0162 031C     		adds	r3, r0, #0
+ 280 0164 8822     		movs	r2, #136
+ 281 0166 BA18     		adds	r2, r7, r2
+ 282 0168 1360     		str	r3, [r2]
+  58:main.c        ****     
+  59:main.c        ****       gyroXOFF += gyroX;
+ 283              		.loc 1 59 0 discriminator 3
+ 284 016a 5023     		movs	r3, #80
+ 285 016c 2022     		movs	r2, #32
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 8
+
+
+ 286 016e 9446     		mov	ip, r2
+ 287 0170 BC44     		add	ip, ip, r7
+ 288 0172 6344     		add	r3, r3, ip
+ 289 0174 0022     		movs	r2, #0
+ 290 0176 9B5E     		ldrsh	r3, [r3, r2]
+ 291 0178 1800     		movs	r0, r3
+ 292 017a FFF7FEFF 		bl	__aeabi_i2f
+ 293 017e 031C     		adds	r3, r0, #0
+ 294 0180 191C     		adds	r1, r3, #0
+ 295 0182 8423     		movs	r3, #132
+ 296 0184 FB18     		adds	r3, r7, r3
+ 297 0186 1868     		ldr	r0, [r3]
+ 298 0188 FFF7FEFF 		bl	__aeabi_fadd
+ 299 018c 031C     		adds	r3, r0, #0
+ 300 018e 8422     		movs	r2, #132
+ 301 0190 BA18     		adds	r2, r7, r2
+ 302 0192 1360     		str	r3, [r2]
+  60:main.c        ****       gyroYOFF += gyroY;
+ 303              		.loc 1 60 0 discriminator 3
+ 304 0194 4E23     		movs	r3, #78
+ 305 0196 2022     		movs	r2, #32
+ 306 0198 9446     		mov	ip, r2
+ 307 019a BC44     		add	ip, ip, r7
+ 308 019c 6344     		add	r3, r3, ip
+ 309 019e 0022     		movs	r2, #0
+ 310 01a0 9B5E     		ldrsh	r3, [r3, r2]
+ 311 01a2 1800     		movs	r0, r3
+ 312 01a4 FFF7FEFF 		bl	__aeabi_i2f
+ 313 01a8 031C     		adds	r3, r0, #0
+ 314 01aa 191C     		adds	r1, r3, #0
+ 315 01ac 8023     		movs	r3, #128
+ 316 01ae FB18     		adds	r3, r7, r3
+ 317 01b0 1868     		ldr	r0, [r3]
+ 318 01b2 FFF7FEFF 		bl	__aeabi_fadd
+ 319 01b6 031C     		adds	r3, r0, #0
+ 320 01b8 8022     		movs	r2, #128
+ 321 01ba BA18     		adds	r2, r7, r2
+ 322 01bc 1360     		str	r3, [r2]
+  61:main.c        ****       gyroZOFF += gyroZ;    
+ 323              		.loc 1 61 0 discriminator 3
+ 324 01be 4C23     		movs	r3, #76
+ 325 01c0 2022     		movs	r2, #32
+ 326 01c2 9446     		mov	ip, r2
+ 327 01c4 BC44     		add	ip, ip, r7
+ 328 01c6 6344     		add	r3, r3, ip
+ 329 01c8 0022     		movs	r2, #0
+ 330 01ca 9B5E     		ldrsh	r3, [r3, r2]
+ 331 01cc 1800     		movs	r0, r3
+ 332 01ce FFF7FEFF 		bl	__aeabi_i2f
+ 333 01d2 031C     		adds	r3, r0, #0
+ 334 01d4 191C     		adds	r1, r3, #0
+ 335 01d6 F86F     		ldr	r0, [r7, #124]
+ 336 01d8 FFF7FEFF 		bl	__aeabi_fadd
+ 337 01dc 031C     		adds	r3, r0, #0
+ 338 01de FB67     		str	r3, [r7, #124]
+  62:main.c        ****     
+  63:main.c        ****       sprintf(buf, "Acceleration X:%d Y:%d Z:%d \t Gyro: X:%d Y:%d Z:%d \t", accelX,accelY,accelZ,g
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 9
+
+
+ 339              		.loc 1 63 0 discriminator 3
+ 340 01e0 5623     		movs	r3, #86
+ 341 01e2 2022     		movs	r2, #32
+ 342 01e4 9446     		mov	ip, r2
+ 343 01e6 BC44     		add	ip, ip, r7
+ 344 01e8 6344     		add	r3, r3, ip
+ 345 01ea 0026     		movs	r6, #0
+ 346 01ec 9E5F     		ldrsh	r6, [r3, r6]
+ 347 01ee 5423     		movs	r3, #84
+ 348 01f0 2022     		movs	r2, #32
+ 349 01f2 9446     		mov	ip, r2
+ 350 01f4 BC44     		add	ip, ip, r7
+ 351 01f6 6344     		add	r3, r3, ip
+ 352 01f8 0022     		movs	r2, #0
+ 353 01fa 9B5E     		ldrsh	r3, [r3, r2]
+ 354 01fc 9C46     		mov	ip, r3
+ 355 01fe 5223     		movs	r3, #82
+ 356 0200 2022     		movs	r2, #32
+ 357 0202 9046     		mov	r8, r2
+ 358 0204 B844     		add	r8, r8, r7
+ 359 0206 4344     		add	r3, r3, r8
+ 360 0208 0022     		movs	r2, #0
+ 361 020a 9B5E     		ldrsh	r3, [r3, r2]
+ 362 020c 5022     		movs	r2, #80
+ 363 020e 2021     		movs	r1, #32
+ 364 0210 8846     		mov	r8, r1
+ 365 0212 B844     		add	r8, r8, r7
+ 366 0214 4244     		add	r2, r2, r8
+ 367 0216 0021     		movs	r1, #0
+ 368 0218 525E     		ldrsh	r2, [r2, r1]
+ 369 021a 4E21     		movs	r1, #78
+ 370 021c 2020     		movs	r0, #32
+ 371 021e 8046     		mov	r8, r0
+ 372 0220 B844     		add	r8, r8, r7
+ 373 0222 4144     		add	r1, r1, r8
+ 374 0224 0020     		movs	r0, #0
+ 375 0226 095E     		ldrsh	r1, [r1, r0]
+ 376 0228 4C20     		movs	r0, #76
+ 377 022a 2024     		movs	r4, #32
+ 378 022c A046     		mov	r8, r4
+ 379 022e B844     		add	r8, r8, r7
+ 380 0230 4044     		add	r0, r0, r8
+ 381 0232 0024     		movs	r4, #0
+ 382 0234 005F     		ldrsh	r0, [r0, r4]
+ 383 0236 DC4D     		ldr	r5, .L9
+ 384 0238 2024     		movs	r4, #32
+ 385 023a 3C19     		adds	r4, r7, r4
+ 386 023c 0390     		str	r0, [sp, #12]
+ 387 023e 0291     		str	r1, [sp, #8]
+ 388 0240 0192     		str	r2, [sp, #4]
+ 389 0242 0093     		str	r3, [sp]
+ 390 0244 6346     		mov	r3, ip
+ 391 0246 3200     		movs	r2, r6
+ 392 0248 2900     		movs	r1, r5
+ 393 024a 2000     		movs	r0, r4
+ 394 024c FFF7FEFF 		bl	sprintf
+  64:main.c        ****       SERIAL_UartPutString(buf);
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 10
+
+
+ 395              		.loc 1 64 0 discriminator 3
+ 396 0250 2023     		movs	r3, #32
+ 397 0252 FB18     		adds	r3, r7, r3
+ 398 0254 1800     		movs	r0, r3
+ 399 0256 FFF7FEFF 		bl	SERIAL_UartPutString
+  65:main.c        ****       SERIAL_UartPutString("\n\r");
+ 400              		.loc 1 65 0 discriminator 3
+ 401 025a D44B     		ldr	r3, .L9+4
+ 402 025c 1800     		movs	r0, r3
+ 403 025e FFF7FEFF 		bl	SERIAL_UartPutString
+  66:main.c        ****       CyDelay(5);
+ 404              		.loc 1 66 0 discriminator 3
+ 405 0262 0520     		movs	r0, #5
+ 406 0264 FFF7FEFF 		bl	CyDelay
+  46:main.c        ****     { 
+ 407              		.loc 1 46 0 discriminator 3
+ 408 0268 9423     		movs	r3, #148
+ 409 026a FB18     		adds	r3, r7, r3
+ 410 026c 1B68     		ldr	r3, [r3]
+ 411 026e 0133     		adds	r3, r3, #1
+ 412 0270 9422     		movs	r2, #148
+ 413 0272 BA18     		adds	r2, r7, r2
+ 414 0274 1360     		str	r3, [r2]
+ 415              	.L4:
+  46:main.c        ****     { 
+ 416              		.loc 1 46 0 is_stmt 0 discriminator 1
+ 417 0276 9423     		movs	r3, #148
+ 418 0278 FB18     		adds	r3, r7, r3
+ 419 027a 1B68     		ldr	r3, [r3]
+ 420 027c 632B     		cmp	r3, #99
+ 421 027e 00DC     		bgt	.LCB296
+ 422 0280 04E7     		b	.L5	@long jump
+ 423              	.LCB296:
+  67:main.c        ****     }
+  68:main.c        ****       accelXOFF = accelXOFF/100;
+ 424              		.loc 1 68 0 is_stmt 1
+ 425 0282 CB49     		ldr	r1, .L9+8
+ 426 0284 9023     		movs	r3, #144
+ 427 0286 FB18     		adds	r3, r7, r3
+ 428 0288 1868     		ldr	r0, [r3]
+ 429 028a FFF7FEFF 		bl	__aeabi_fdiv
+ 430 028e 031C     		adds	r3, r0, #0
+ 431 0290 9022     		movs	r2, #144
+ 432 0292 BA18     		adds	r2, r7, r2
+ 433 0294 1360     		str	r3, [r2]
+  69:main.c        ****       accelYOFF = accelYOFF/100;
+ 434              		.loc 1 69 0
+ 435 0296 C649     		ldr	r1, .L9+8
+ 436 0298 8C23     		movs	r3, #140
+ 437 029a FB18     		adds	r3, r7, r3
+ 438 029c 1868     		ldr	r0, [r3]
+ 439 029e FFF7FEFF 		bl	__aeabi_fdiv
+ 440 02a2 031C     		adds	r3, r0, #0
+ 441 02a4 8C22     		movs	r2, #140
+ 442 02a6 BA18     		adds	r2, r7, r2
+ 443 02a8 1360     		str	r3, [r2]
+  70:main.c        ****       accelZOFF = accelZOFF/100;
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 11
+
+
+ 444              		.loc 1 70 0
+ 445 02aa C149     		ldr	r1, .L9+8
+ 446 02ac 8823     		movs	r3, #136
+ 447 02ae FB18     		adds	r3, r7, r3
+ 448 02b0 1868     		ldr	r0, [r3]
+ 449 02b2 FFF7FEFF 		bl	__aeabi_fdiv
+ 450 02b6 031C     		adds	r3, r0, #0
+ 451 02b8 8822     		movs	r2, #136
+ 452 02ba BA18     		adds	r2, r7, r2
+ 453 02bc 1360     		str	r3, [r2]
+  71:main.c        ****     
+  72:main.c        ****       gyroXOFF = gyroXOFF/100;
+ 454              		.loc 1 72 0
+ 455 02be BC49     		ldr	r1, .L9+8
+ 456 02c0 8423     		movs	r3, #132
+ 457 02c2 FB18     		adds	r3, r7, r3
+ 458 02c4 1868     		ldr	r0, [r3]
+ 459 02c6 FFF7FEFF 		bl	__aeabi_fdiv
+ 460 02ca 031C     		adds	r3, r0, #0
+ 461 02cc 8422     		movs	r2, #132
+ 462 02ce BA18     		adds	r2, r7, r2
+ 463 02d0 1360     		str	r3, [r2]
+  73:main.c        ****       gyroYOFF = gyroYOFF/100;
+ 464              		.loc 1 73 0
+ 465 02d2 B749     		ldr	r1, .L9+8
+ 466 02d4 8023     		movs	r3, #128
+ 467 02d6 FB18     		adds	r3, r7, r3
+ 468 02d8 1868     		ldr	r0, [r3]
+ 469 02da FFF7FEFF 		bl	__aeabi_fdiv
+ 470 02de 031C     		adds	r3, r0, #0
+ 471 02e0 8022     		movs	r2, #128
+ 472 02e2 BA18     		adds	r2, r7, r2
+ 473 02e4 1360     		str	r3, [r2]
+  74:main.c        ****       gyroZOFF = gyroZOFF/100;
+ 474              		.loc 1 74 0
+ 475 02e6 B249     		ldr	r1, .L9+8
+ 476 02e8 F86F     		ldr	r0, [r7, #124]
+ 477 02ea FFF7FEFF 		bl	__aeabi_fdiv
+ 478 02ee 031C     		adds	r3, r0, #0
+ 479 02f0 FB67     		str	r3, [r7, #124]
+  75:main.c        ****       SERIAL_UartPutString("\n\nTest finished, offset values are shown below\n\n\r");
+ 480              		.loc 1 75 0
+ 481 02f2 B04B     		ldr	r3, .L9+12
+ 482 02f4 1800     		movs	r0, r3
+ 483 02f6 FFF7FEFF 		bl	SERIAL_UartPutString
+  76:main.c        ****       sprintf(buf, "Acceleration OFFSET X:%d Y:%d Z:%d \t Gyro: X:%d Y:%d Z:%d \t", (int)accelXOFF,
+ 484              		.loc 1 76 0
+ 485 02fa 9023     		movs	r3, #144
+ 486 02fc FB18     		adds	r3, r7, r3
+ 487 02fe 1868     		ldr	r0, [r3]
+ 488 0300 FFF7FEFF 		bl	__aeabi_f2iz
+ 489 0304 B861     		str	r0, [r7, #24]
+ 490 0306 8C23     		movs	r3, #140
+ 491 0308 FB18     		adds	r3, r7, r3
+ 492 030a 1868     		ldr	r0, [r3]
+ 493 030c FFF7FEFF 		bl	__aeabi_f2iz
+ 494 0310 3861     		str	r0, [r7, #16]
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 12
+
+
+ 495 0312 8823     		movs	r3, #136
+ 496 0314 FB18     		adds	r3, r7, r3
+ 497 0316 1868     		ldr	r0, [r3]
+ 498 0318 FFF7FEFF 		bl	__aeabi_f2iz
+ 499 031c 0400     		movs	r4, r0
+ 500 031e 8423     		movs	r3, #132
+ 501 0320 FB18     		adds	r3, r7, r3
+ 502 0322 1868     		ldr	r0, [r3]
+ 503 0324 FFF7FEFF 		bl	__aeabi_f2iz
+ 504 0328 0500     		movs	r5, r0
+ 505 032a 8023     		movs	r3, #128
+ 506 032c FB18     		adds	r3, r7, r3
+ 507 032e 1868     		ldr	r0, [r3]
+ 508 0330 FFF7FEFF 		bl	__aeabi_f2iz
+ 509 0334 0600     		movs	r6, r0
+ 510 0336 F86F     		ldr	r0, [r7, #124]
+ 511 0338 FFF7FEFF 		bl	__aeabi_f2iz
+ 512 033c 0300     		movs	r3, r0
+ 513 033e 9E49     		ldr	r1, .L9+16
+ 514 0340 2022     		movs	r2, #32
+ 515 0342 B818     		adds	r0, r7, r2
+ 516 0344 0393     		str	r3, [sp, #12]
+ 517 0346 0296     		str	r6, [sp, #8]
+ 518 0348 0195     		str	r5, [sp, #4]
+ 519 034a 0094     		str	r4, [sp]
+ 520 034c 3B69     		ldr	r3, [r7, #16]
+ 521 034e BA69     		ldr	r2, [r7, #24]
+ 522 0350 FFF7FEFF 		bl	sprintf
+  77:main.c        ****       SERIAL_UartPutString(buf);
+ 523              		.loc 1 77 0
+ 524 0354 2023     		movs	r3, #32
+ 525 0356 FB18     		adds	r3, r7, r3
+ 526 0358 1800     		movs	r0, r3
+ 527 035a FFF7FEFF 		bl	SERIAL_UartPutString
+  78:main.c        ****       SERIAL_UartPutString("\r\n\nConverting Values to G\'s\n\n\r");  
+ 528              		.loc 1 78 0
+ 529 035e 974B     		ldr	r3, .L9+20
+ 530 0360 1800     		movs	r0, r3
+ 531 0362 FFF7FEFF 		bl	SERIAL_UartPutString
+ 532              	.L6:
+  79:main.c        ****       while(1)
+  80:main.c        ****       {
+  81:main.c        ****       //Convert values to G's
+  82:main.c        ****       accelX = MPU6050_getAccelerationX();
+ 533              		.loc 1 82 0 discriminator 1
+ 534 0366 5623     		movs	r3, #86
+ 535 0368 2022     		movs	r2, #32
+ 536 036a BA18     		adds	r2, r7, r2
+ 537 036c D418     		adds	r4, r2, r3
+ 538 036e FFF7FEFF 		bl	MPU6050_getAccelerationX
+ 539 0372 0300     		movs	r3, r0
+ 540 0374 2380     		strh	r3, [r4]
+  83:main.c        ****       accelY = MPU6050_getAccelerationY();
+ 541              		.loc 1 83 0 discriminator 1
+ 542 0376 5423     		movs	r3, #84
+ 543 0378 2022     		movs	r2, #32
+ 544 037a BA18     		adds	r2, r7, r2
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 13
+
+
+ 545 037c D418     		adds	r4, r2, r3
+ 546 037e FFF7FEFF 		bl	MPU6050_getAccelerationY
+ 547 0382 0300     		movs	r3, r0
+ 548 0384 2380     		strh	r3, [r4]
+  84:main.c        ****       accelZ = MPU6050_getAccelerationZ();   
+ 549              		.loc 1 84 0 discriminator 1
+ 550 0386 5223     		movs	r3, #82
+ 551 0388 2022     		movs	r2, #32
+ 552 038a BA18     		adds	r2, r7, r2
+ 553 038c D418     		adds	r4, r2, r3
+ 554 038e FFF7FEFF 		bl	MPU6050_getAccelerationZ
+ 555 0392 0300     		movs	r3, r0
+ 556 0394 2380     		strh	r3, [r4]
+  85:main.c        ****       gyroX = MPU6050_getRotationX();
+ 557              		.loc 1 85 0 discriminator 1
+ 558 0396 5023     		movs	r3, #80
+ 559 0398 2022     		movs	r2, #32
+ 560 039a BA18     		adds	r2, r7, r2
+ 561 039c D418     		adds	r4, r2, r3
+ 562 039e FFF7FEFF 		bl	MPU6050_getRotationX
+ 563 03a2 0300     		movs	r3, r0
+ 564 03a4 2380     		strh	r3, [r4]
+  86:main.c        ****       gyroY = MPU6050_getRotationY();
+ 565              		.loc 1 86 0 discriminator 1
+ 566 03a6 4E23     		movs	r3, #78
+ 567 03a8 2022     		movs	r2, #32
+ 568 03aa BA18     		adds	r2, r7, r2
+ 569 03ac D418     		adds	r4, r2, r3
+ 570 03ae FFF7FEFF 		bl	MPU6050_getRotationY
+ 571 03b2 0300     		movs	r3, r0
+ 572 03b4 2380     		strh	r3, [r4]
+  87:main.c        ****       gyroZ = MPU6050_getRotationZ();
+ 573              		.loc 1 87 0 discriminator 1
+ 574 03b6 4C23     		movs	r3, #76
+ 575 03b8 2022     		movs	r2, #32
+ 576 03ba BA18     		adds	r2, r7, r2
+ 577 03bc D418     		adds	r4, r2, r3
+ 578 03be FFF7FEFF 		bl	MPU6050_getRotationZ
+ 579 03c2 0300     		movs	r3, r0
+ 580 03c4 2380     		strh	r3, [r4]
+  88:main.c        ****     
+  89:main.c        ****       AX = (float)((accelX-accelXOFF)/16384.00);
+ 581              		.loc 1 89 0 discriminator 1
+ 582 03c6 5623     		movs	r3, #86
+ 583 03c8 2022     		movs	r2, #32
+ 584 03ca 9446     		mov	ip, r2
+ 585 03cc BC44     		add	ip, ip, r7
+ 586 03ce 6344     		add	r3, r3, ip
+ 587 03d0 0022     		movs	r2, #0
+ 588 03d2 9B5E     		ldrsh	r3, [r3, r2]
+ 589 03d4 1800     		movs	r0, r3
+ 590 03d6 FFF7FEFF 		bl	__aeabi_i2f
+ 591 03da 031C     		adds	r3, r0, #0
+ 592 03dc 9022     		movs	r2, #144
+ 593 03de BA18     		adds	r2, r7, r2
+ 594 03e0 1168     		ldr	r1, [r2]
+ 595 03e2 181C     		adds	r0, r3, #0
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 14
+
+
+ 596 03e4 FFF7FEFF 		bl	__aeabi_fsub
+ 597 03e8 031C     		adds	r3, r0, #0
+ 598 03ea 8D21     		movs	r1, #141
+ 599 03ec C905     		lsls	r1, r1, #23
+ 600 03ee 181C     		adds	r0, r3, #0
+ 601 03f0 FFF7FEFF 		bl	__aeabi_fdiv
+ 602 03f4 031C     		adds	r3, r0, #0
+ 603 03f6 BB66     		str	r3, [r7, #104]
+  90:main.c        ****       AY = ((float)accelY-accelYOFF)/16384.00; //16384 is just 32768/2 to get our 1G value
+ 604              		.loc 1 90 0 discriminator 1
+ 605 03f8 5423     		movs	r3, #84
+ 606 03fa 2022     		movs	r2, #32
+ 607 03fc 9446     		mov	ip, r2
+ 608 03fe BC44     		add	ip, ip, r7
+ 609 0400 6344     		add	r3, r3, ip
+ 610 0402 0022     		movs	r2, #0
+ 611 0404 9B5E     		ldrsh	r3, [r3, r2]
+ 612 0406 1800     		movs	r0, r3
+ 613 0408 FFF7FEFF 		bl	__aeabi_i2f
+ 614 040c 031C     		adds	r3, r0, #0
+ 615 040e 8C22     		movs	r2, #140
+ 616 0410 BA18     		adds	r2, r7, r2
+ 617 0412 1168     		ldr	r1, [r2]
+ 618 0414 181C     		adds	r0, r3, #0
+ 619 0416 FFF7FEFF 		bl	__aeabi_fsub
+ 620 041a 031C     		adds	r3, r0, #0
+ 621 041c 8D21     		movs	r1, #141
+ 622 041e C905     		lsls	r1, r1, #23
+ 623 0420 181C     		adds	r0, r3, #0
+ 624 0422 FFF7FEFF 		bl	__aeabi_fdiv
+ 625 0426 031C     		adds	r3, r0, #0
+ 626 0428 7B66     		str	r3, [r7, #100]
+  91:main.c        ****       AZ = ((float)accelZ-(accelZOFF-16384))/16384.00; //remove 1G before dividing
+ 627              		.loc 1 91 0 discriminator 1
+ 628 042a 5223     		movs	r3, #82
+ 629 042c 2022     		movs	r2, #32
+ 630 042e 9446     		mov	ip, r2
+ 631 0430 BC44     		add	ip, ip, r7
+ 632 0432 6344     		add	r3, r3, ip
+ 633 0434 0022     		movs	r2, #0
+ 634 0436 9B5E     		ldrsh	r3, [r3, r2]
+ 635 0438 1800     		movs	r0, r3
+ 636 043a FFF7FEFF 		bl	__aeabi_i2f
+ 637 043e 041C     		adds	r4, r0, #0
+ 638 0440 8D21     		movs	r1, #141
+ 639 0442 C905     		lsls	r1, r1, #23
+ 640 0444 8823     		movs	r3, #136
+ 641 0446 FB18     		adds	r3, r7, r3
+ 642 0448 1868     		ldr	r0, [r3]
+ 643 044a FFF7FEFF 		bl	__aeabi_fsub
+ 644 044e 031C     		adds	r3, r0, #0
+ 645 0450 191C     		adds	r1, r3, #0
+ 646 0452 201C     		adds	r0, r4, #0
+ 647 0454 FFF7FEFF 		bl	__aeabi_fsub
+ 648 0458 031C     		adds	r3, r0, #0
+ 649 045a 8D21     		movs	r1, #141
+ 650 045c C905     		lsls	r1, r1, #23
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 15
+
+
+ 651 045e 181C     		adds	r0, r3, #0
+ 652 0460 FFF7FEFF 		bl	__aeabi_fdiv
+ 653 0464 031C     		adds	r3, r0, #0
+ 654 0466 3B66     		str	r3, [r7, #96]
+  92:main.c        ****     
+  93:main.c        ****       GX = ((float)gyroX-gyroXOFF)/131.07; //131.07 is just 32768/250 to get us our 1deg/sec value
+ 655              		.loc 1 93 0 discriminator 1
+ 656 0468 5023     		movs	r3, #80
+ 657 046a 2022     		movs	r2, #32
+ 658 046c 9446     		mov	ip, r2
+ 659 046e BC44     		add	ip, ip, r7
+ 660 0470 6344     		add	r3, r3, ip
+ 661 0472 0022     		movs	r2, #0
+ 662 0474 9B5E     		ldrsh	r3, [r3, r2]
+ 663 0476 1800     		movs	r0, r3
+ 664 0478 FFF7FEFF 		bl	__aeabi_i2f
+ 665 047c 031C     		adds	r3, r0, #0
+ 666 047e 8422     		movs	r2, #132
+ 667 0480 BA18     		adds	r2, r7, r2
+ 668 0482 1168     		ldr	r1, [r2]
+ 669 0484 181C     		adds	r0, r3, #0
+ 670 0486 FFF7FEFF 		bl	__aeabi_fsub
+ 671 048a 031C     		adds	r3, r0, #0
+ 672 048c 181C     		adds	r0, r3, #0
+ 673 048e FFF7FEFF 		bl	__aeabi_f2d
+ 674 0492 4B4A     		ldr	r2, .L9+24
+ 675 0494 4B4B     		ldr	r3, .L9+28
+ 676 0496 FFF7FEFF 		bl	__aeabi_ddiv
+ 677 049a 0300     		movs	r3, r0
+ 678 049c 0C00     		movs	r4, r1
+ 679 049e 1800     		movs	r0, r3
+ 680 04a0 2100     		movs	r1, r4
+ 681 04a2 FFF7FEFF 		bl	__aeabi_d2f
+ 682 04a6 031C     		adds	r3, r0, #0
+ 683 04a8 FB65     		str	r3, [r7, #92]
+  94:main.c        ****       GY = ((float)gyroY-gyroYOFF)/131.07;
+ 684              		.loc 1 94 0 discriminator 1
+ 685 04aa 4E23     		movs	r3, #78
+ 686 04ac 2022     		movs	r2, #32
+ 687 04ae 9446     		mov	ip, r2
+ 688 04b0 BC44     		add	ip, ip, r7
+ 689 04b2 6344     		add	r3, r3, ip
+ 690 04b4 0022     		movs	r2, #0
+ 691 04b6 9B5E     		ldrsh	r3, [r3, r2]
+ 692 04b8 1800     		movs	r0, r3
+ 693 04ba FFF7FEFF 		bl	__aeabi_i2f
+ 694 04be 031C     		adds	r3, r0, #0
+ 695 04c0 8022     		movs	r2, #128
+ 696 04c2 BA18     		adds	r2, r7, r2
+ 697 04c4 1168     		ldr	r1, [r2]
+ 698 04c6 181C     		adds	r0, r3, #0
+ 699 04c8 FFF7FEFF 		bl	__aeabi_fsub
+ 700 04cc 031C     		adds	r3, r0, #0
+ 701 04ce 181C     		adds	r0, r3, #0
+ 702 04d0 FFF7FEFF 		bl	__aeabi_f2d
+ 703 04d4 3A4A     		ldr	r2, .L9+24
+ 704 04d6 3B4B     		ldr	r3, .L9+28
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 16
+
+
+ 705 04d8 FFF7FEFF 		bl	__aeabi_ddiv
+ 706 04dc 0300     		movs	r3, r0
+ 707 04de 0C00     		movs	r4, r1
+ 708 04e0 1800     		movs	r0, r3
+ 709 04e2 2100     		movs	r1, r4
+ 710 04e4 FFF7FEFF 		bl	__aeabi_d2f
+ 711 04e8 031C     		adds	r3, r0, #0
+ 712 04ea BB65     		str	r3, [r7, #88]
+  95:main.c        ****       GZ = ((float)gyroZ-gyroZOFF)/131.07; 
+ 713              		.loc 1 95 0 discriminator 1
+ 714 04ec 4C23     		movs	r3, #76
+ 715 04ee 2022     		movs	r2, #32
+ 716 04f0 9446     		mov	ip, r2
+ 717 04f2 BC44     		add	ip, ip, r7
+ 718 04f4 6344     		add	r3, r3, ip
+ 719 04f6 0022     		movs	r2, #0
+ 720 04f8 9B5E     		ldrsh	r3, [r3, r2]
+ 721 04fa 1800     		movs	r0, r3
+ 722 04fc FFF7FEFF 		bl	__aeabi_i2f
+ 723 0500 031C     		adds	r3, r0, #0
+ 724 0502 F96F     		ldr	r1, [r7, #124]
+ 725 0504 181C     		adds	r0, r3, #0
+ 726 0506 FFF7FEFF 		bl	__aeabi_fsub
+ 727 050a 031C     		adds	r3, r0, #0
+ 728 050c 181C     		adds	r0, r3, #0
+ 729 050e FFF7FEFF 		bl	__aeabi_f2d
+ 730 0512 2B4A     		ldr	r2, .L9+24
+ 731 0514 2B4B     		ldr	r3, .L9+28
+ 732 0516 FFF7FEFF 		bl	__aeabi_ddiv
+ 733 051a 0300     		movs	r3, r0
+ 734 051c 0C00     		movs	r4, r1
+ 735 051e 1800     		movs	r0, r3
+ 736 0520 2100     		movs	r1, r4
+ 737 0522 FFF7FEFF 		bl	__aeabi_d2f
+ 738 0526 031C     		adds	r3, r0, #0
+ 739 0528 7B65     		str	r3, [r7, #84]
+  96:main.c        ****     
+  97:main.c        ****       sprintf(buf, "AX:%f \t AY:%f \t AZ:%f \t GX:%f \t GY:%f \t GZ:%f \t \n \r",AX,AY,AZ,GX,GY,GZ)
+ 740              		.loc 1 97 0 discriminator 1
+ 741 052a B86E     		ldr	r0, [r7, #104]
+ 742 052c FFF7FEFF 		bl	__aeabi_f2d
+ 743 0530 B861     		str	r0, [r7, #24]
+ 744 0532 F961     		str	r1, [r7, #28]
+ 745 0534 786E     		ldr	r0, [r7, #100]
+ 746 0536 FFF7FEFF 		bl	__aeabi_f2d
+ 747 053a 0500     		movs	r5, r0
+ 748 053c 0E00     		movs	r6, r1
+ 749 053e 386E     		ldr	r0, [r7, #96]
+ 750 0540 FFF7FEFF 		bl	__aeabi_f2d
+ 751 0544 3861     		str	r0, [r7, #16]
+ 752 0546 7961     		str	r1, [r7, #20]
+ 753 0548 F86D     		ldr	r0, [r7, #92]
+ 754 054a FFF7FEFF 		bl	__aeabi_f2d
+ 755 054e B860     		str	r0, [r7, #8]
+ 756 0550 F960     		str	r1, [r7, #12]
+ 757 0552 B86D     		ldr	r0, [r7, #88]
+ 758 0554 FFF7FEFF 		bl	__aeabi_f2d
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 17
+
+
+ 759 0558 3860     		str	r0, [r7]
+ 760 055a 7960     		str	r1, [r7, #4]
+ 761 055c 786D     		ldr	r0, [r7, #84]
+ 762 055e FFF7FEFF 		bl	__aeabi_f2d
+ 763 0562 0300     		movs	r3, r0
+ 764 0564 0C00     		movs	r4, r1
+ 765 0566 1849     		ldr	r1, .L9+32
+ 766 0568 2022     		movs	r2, #32
+ 767 056a B818     		adds	r0, r7, r2
+ 768 056c 0893     		str	r3, [sp, #32]
+ 769 056e 0994     		str	r4, [sp, #36]
+ 770 0570 3B68     		ldr	r3, [r7]
+ 771 0572 7C68     		ldr	r4, [r7, #4]
+ 772 0574 0693     		str	r3, [sp, #24]
+ 773 0576 0794     		str	r4, [sp, #28]
+ 774 0578 BB68     		ldr	r3, [r7, #8]
+ 775 057a FC68     		ldr	r4, [r7, #12]
+ 776 057c 0493     		str	r3, [sp, #16]
+ 777 057e 0594     		str	r4, [sp, #20]
+ 778 0580 3B69     		ldr	r3, [r7, #16]
+ 779 0582 7C69     		ldr	r4, [r7, #20]
+ 780 0584 0293     		str	r3, [sp, #8]
+ 781 0586 0394     		str	r4, [sp, #12]
+ 782 0588 0095     		str	r5, [sp]
+ 783 058a 0196     		str	r6, [sp, #4]
+ 784 058c BA69     		ldr	r2, [r7, #24]
+ 785 058e FB69     		ldr	r3, [r7, #28]
+ 786 0590 FFF7FEFF 		bl	sprintf
+  98:main.c        ****       SERIAL_UartPutString(buf);
+ 787              		.loc 1 98 0 discriminator 1
+ 788 0594 2023     		movs	r3, #32
+ 789 0596 FB18     		adds	r3, r7, r3
+ 790 0598 1800     		movs	r0, r3
+ 791 059a FFF7FEFF 		bl	SERIAL_UartPutString
+  99:main.c        ****     
+ 100:main.c        ****       CyDelay(15);
+ 792              		.loc 1 100 0 discriminator 1
+ 793 059e 0F20     		movs	r0, #15
+ 794 05a0 FFF7FEFF 		bl	CyDelay
+ 101:main.c        ****         
+ 102:main.c        ****     }
+ 795              		.loc 1 102 0 discriminator 1
+ 796 05a4 DFE6     		b	.L6
+ 797              	.L10:
+ 798 05a6 C046     		.align	2
+ 799              	.L9:
+ 800 05a8 B8000000 		.word	.LC14
+ 801 05ac F0000000 		.word	.LC16
+ 802 05b0 0000C842 		.word	1120403456
+ 803 05b4 F4000000 		.word	.LC18
+ 804 05b8 28010000 		.word	.LC20
+ 805 05bc 64010000 		.word	.LC22
+ 806 05c0 0AD7A370 		.word	1889785610
+ 807 05c4 3D626040 		.word	1080058429
+ 808 05c8 84010000 		.word	.LC24
+ 809              		.cfi_endproc
+ 810              	.LFE33:
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 18
+
+
+ 811              		.size	main, .-main
+ 812              		.text
+ 813              	.Letext0:
+ 814              		.file 2 "d:\\psoc\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-eabi\\includ
+ 815              		.file 3 "d:\\psoc\\psoc creator\\4.1\\psoc creator\\import\\gnu\\arm\\5.4.1\\arm-none-eabi\\includ
+ 816              		.file 4 "Generated_Source\\PSoC4/cytypes.h"
+ 817              		.file 5 "./mpu6050.h"
+ 818              		.section	.debug_info,"",%progbits
+ 819              	.Ldebug_info0:
+ 820 0000 53020000 		.4byte	0x253
+ 821 0004 0400     		.2byte	0x4
+ 822 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 823 000a 04       		.byte	0x4
+ 824 000b 01       		.uleb128 0x1
+ 825 000c 7C000000 		.4byte	.LASF34
+ 826 0010 0C       		.byte	0xc
+ 827 0011 99010000 		.4byte	.LASF35
+ 828 0015 E3010000 		.4byte	.LASF36
+ 829 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 830 001d 00000000 		.4byte	0
+ 831 0021 00000000 		.4byte	.Ldebug_line0
+ 832 0025 02       		.uleb128 0x2
+ 833 0026 01       		.byte	0x1
+ 834 0027 06       		.byte	0x6
+ 835 0028 6F010000 		.4byte	.LASF0
+ 836 002c 03       		.uleb128 0x3
+ 837 002d 0E000000 		.4byte	.LASF2
+ 838 0031 02       		.byte	0x2
+ 839 0032 1D       		.byte	0x1d
+ 840 0033 37000000 		.4byte	0x37
+ 841 0037 02       		.uleb128 0x2
+ 842 0038 01       		.byte	0x1
+ 843 0039 08       		.byte	0x8
+ 844 003a 32000000 		.4byte	.LASF1
+ 845 003e 03       		.uleb128 0x3
+ 846 003f 18000000 		.4byte	.LASF3
+ 847 0043 02       		.byte	0x2
+ 848 0044 29       		.byte	0x29
+ 849 0045 49000000 		.4byte	0x49
+ 850 0049 02       		.uleb128 0x2
+ 851 004a 02       		.byte	0x2
+ 852 004b 05       		.byte	0x5
+ 853 004c AF010000 		.4byte	.LASF4
+ 854 0050 02       		.uleb128 0x2
+ 855 0051 02       		.byte	0x2
+ 856 0052 07       		.byte	0x7
+ 857 0053 69000000 		.4byte	.LASF5
+ 858 0057 02       		.uleb128 0x2
+ 859 0058 04       		.byte	0x4
+ 860 0059 05       		.byte	0x5
+ 861 005a CE010000 		.4byte	.LASF6
+ 862 005e 02       		.uleb128 0x2
+ 863 005f 04       		.byte	0x4
+ 864 0060 07       		.byte	0x7
+ 865 0061 4E000000 		.4byte	.LASF7
+ 866 0065 02       		.uleb128 0x2
+ 867 0066 08       		.byte	0x8
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 19
+
+
+ 868 0067 05       		.byte	0x5
+ 869 0068 00000000 		.4byte	.LASF8
+ 870 006c 02       		.uleb128 0x2
+ 871 006d 08       		.byte	0x8
+ 872 006e 07       		.byte	0x7
+ 873 006f 48010000 		.4byte	.LASF9
+ 874 0073 04       		.uleb128 0x4
+ 875 0074 04       		.byte	0x4
+ 876 0075 05       		.byte	0x5
+ 877 0076 696E7400 		.ascii	"int\000"
+ 878 007a 02       		.uleb128 0x2
+ 879 007b 04       		.byte	0x4
+ 880 007c 07       		.byte	0x7
+ 881 007d 32010000 		.4byte	.LASF10
+ 882 0081 03       		.uleb128 0x3
+ 883 0082 5F010000 		.4byte	.LASF11
+ 884 0086 03       		.byte	0x3
+ 885 0087 18       		.byte	0x18
+ 886 0088 2C000000 		.4byte	0x2c
+ 887 008c 03       		.uleb128 0x3
+ 888 008d 67010000 		.4byte	.LASF12
+ 889 0091 03       		.byte	0x3
+ 890 0092 20       		.byte	0x20
+ 891 0093 3E000000 		.4byte	0x3e
+ 892 0097 05       		.uleb128 0x5
+ 893 0098 C8010000 		.4byte	.LASF13
+ 894 009c 04       		.byte	0x4
+ 895 009d D201     		.2byte	0x1d2
+ 896 009f 37000000 		.4byte	0x37
+ 897 00a3 02       		.uleb128 0x2
+ 898 00a4 04       		.byte	0x4
+ 899 00a5 04       		.byte	0x4
+ 900 00a6 2C000000 		.4byte	.LASF14
+ 901 00aa 02       		.uleb128 0x2
+ 902 00ab 08       		.byte	0x8
+ 903 00ac 04       		.byte	0x4
+ 904 00ad 14010000 		.4byte	.LASF15
+ 905 00b1 02       		.uleb128 0x2
+ 906 00b2 01       		.byte	0x1
+ 907 00b3 08       		.byte	0x8
+ 908 00b4 A0010000 		.4byte	.LASF16
+ 909 00b8 02       		.uleb128 0x2
+ 910 00b9 08       		.byte	0x8
+ 911 00ba 04       		.byte	0x4
+ 912 00bb D7010000 		.4byte	.LASF17
+ 913 00bf 02       		.uleb128 0x2
+ 914 00c0 04       		.byte	0x4
+ 915 00c1 07       		.byte	0x7
+ 916 00c2 7B010000 		.4byte	.LASF18
+ 917 00c6 06       		.uleb128 0x6
+ 918 00c7 2D010000 		.4byte	.LASF37
+ 919 00cb 01       		.byte	0x1
+ 920 00cc 10       		.byte	0x10
+ 921 00cd 73000000 		.4byte	0x73
+ 922 00d1 00000000 		.4byte	.LFB33
+ 923 00d5 CC050000 		.4byte	.LFE33-.LFB33
+ 924 00d9 01       		.uleb128 0x1
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 20
+
+
+ 925 00da 9C       		.byte	0x9c
+ 926 00db 12020000 		.4byte	0x212
+ 927 00df 07       		.uleb128 0x7
+ 928 00e0 40000000 		.4byte	.LASF19
+ 929 00e4 01       		.byte	0x1
+ 930 00e5 12       		.byte	0x12
+ 931 00e6 73000000 		.4byte	0x73
+ 932 00ea 02       		.uleb128 0x2
+ 933 00eb 91       		.byte	0x91
+ 934 00ec 48       		.sleb128 -56
+ 935 00ed 08       		.uleb128 0x8
+ 936 00ee 62756600 		.ascii	"buf\000"
+ 937 00f2 01       		.byte	0x1
+ 938 00f3 13       		.byte	0x13
+ 939 00f4 12020000 		.4byte	0x212
+ 940 00f8 03       		.uleb128 0x3
+ 941 00f9 91       		.byte	0x91
+ 942 00fa F07E     		.sleb128 -144
+ 943 00fc 08       		.uleb128 0x8
+ 944 00fd 6900     		.ascii	"i\000"
+ 945 00ff 01       		.byte	0x1
+ 946 0100 14       		.byte	0x14
+ 947 0101 73000000 		.4byte	0x73
+ 948 0105 02       		.uleb128 0x2
+ 949 0106 91       		.byte	0x91
+ 950 0107 64       		.sleb128 -28
+ 951 0108 07       		.uleb128 0x7
+ 952 0109 84010000 		.4byte	.LASF20
+ 953 010d 01       		.byte	0x1
+ 954 010e 17       		.byte	0x17
+ 955 010f 8C000000 		.4byte	0x8c
+ 956 0113 02       		.uleb128 0x2
+ 957 0114 91       		.byte	0x91
+ 958 0115 46       		.sleb128 -58
+ 959 0116 07       		.uleb128 0x7
+ 960 0117 8B010000 		.4byte	.LASF21
+ 961 011b 01       		.byte	0x1
+ 962 011c 17       		.byte	0x17
+ 963 011d 8C000000 		.4byte	0x8c
+ 964 0121 02       		.uleb128 0x2
+ 965 0122 91       		.byte	0x91
+ 966 0123 44       		.sleb128 -60
+ 967 0124 07       		.uleb128 0x7
+ 968 0125 92010000 		.4byte	.LASF22
+ 969 0129 01       		.byte	0x1
+ 970 012a 17       		.byte	0x17
+ 971 012b 8C000000 		.4byte	0x8c
+ 972 012f 02       		.uleb128 0x2
+ 973 0130 91       		.byte	0x91
+ 974 0131 42       		.sleb128 -62
+ 975 0132 07       		.uleb128 0x7
+ 976 0133 1B010000 		.4byte	.LASF23
+ 977 0137 01       		.byte	0x1
+ 978 0138 18       		.byte	0x18
+ 979 0139 8C000000 		.4byte	0x8c
+ 980 013d 02       		.uleb128 0x2
+ 981 013e 91       		.byte	0x91
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 21
+
+
+ 982 013f 40       		.sleb128 -64
+ 983 0140 07       		.uleb128 0x7
+ 984 0141 21010000 		.4byte	.LASF24
+ 985 0145 01       		.byte	0x1
+ 986 0146 18       		.byte	0x18
+ 987 0147 8C000000 		.4byte	0x8c
+ 988 014b 03       		.uleb128 0x3
+ 989 014c 91       		.byte	0x91
+ 990 014d BE7F     		.sleb128 -66
+ 991 014f 07       		.uleb128 0x7
+ 992 0150 27010000 		.4byte	.LASF25
+ 993 0154 01       		.byte	0x1
+ 994 0155 18       		.byte	0x18
+ 995 0156 8C000000 		.4byte	0x8c
+ 996 015a 03       		.uleb128 0x3
+ 997 015b 91       		.byte	0x91
+ 998 015c BC7F     		.sleb128 -68
+ 999 015e 07       		.uleb128 0x7
+ 1000 015f 22000000 		.4byte	.LASF26
+ 1001 0163 01       		.byte	0x1
+ 1002 0164 1A       		.byte	0x1a
+ 1003 0165 A3000000 		.4byte	0xa3
+ 1004 0169 02       		.uleb128 0x2
+ 1005 016a 91       		.byte	0x91
+ 1006 016b 60       		.sleb128 -32
+ 1007 016c 07       		.uleb128 0x7
+ 1008 016d 0A010000 		.4byte	.LASF27
+ 1009 0171 01       		.byte	0x1
+ 1010 0172 1A       		.byte	0x1a
+ 1011 0173 A3000000 		.4byte	0xa3
+ 1012 0177 02       		.uleb128 0x2
+ 1013 0178 91       		.byte	0x91
+ 1014 0179 5C       		.sleb128 -36
+ 1015 017a 07       		.uleb128 0x7
+ 1016 017b A5010000 		.4byte	.LASF28
+ 1017 017f 01       		.byte	0x1
+ 1018 0180 1A       		.byte	0x1a
+ 1019 0181 A3000000 		.4byte	0xa3
+ 1020 0185 02       		.uleb128 0x2
+ 1021 0186 91       		.byte	0x91
+ 1022 0187 58       		.sleb128 -40
+ 1023 0188 07       		.uleb128 0x7
+ 1024 0189 60000000 		.4byte	.LASF29
+ 1025 018d 01       		.byte	0x1
+ 1026 018e 1B       		.byte	0x1b
+ 1027 018f A3000000 		.4byte	0xa3
+ 1028 0193 02       		.uleb128 0x2
+ 1029 0194 91       		.byte	0x91
+ 1030 0195 54       		.sleb128 -44
+ 1031 0196 07       		.uleb128 0x7
+ 1032 0197 3F010000 		.4byte	.LASF30
+ 1033 019b 01       		.byte	0x1
+ 1034 019c 1B       		.byte	0x1b
+ 1035 019d A3000000 		.4byte	0xa3
+ 1036 01a1 02       		.uleb128 0x2
+ 1037 01a2 91       		.byte	0x91
+ 1038 01a3 50       		.sleb128 -48
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 22
+
+
+ 1039 01a4 07       		.uleb128 0x7
+ 1040 01a5 1B020000 		.4byte	.LASF31
+ 1041 01a9 01       		.byte	0x1
+ 1042 01aa 1B       		.byte	0x1b
+ 1043 01ab A3000000 		.4byte	0xa3
+ 1044 01af 02       		.uleb128 0x2
+ 1045 01b0 91       		.byte	0x91
+ 1046 01b1 4C       		.sleb128 -52
+ 1047 01b2 08       		.uleb128 0x8
+ 1048 01b3 415800   		.ascii	"AX\000"
+ 1049 01b6 01       		.byte	0x1
+ 1050 01b7 1D       		.byte	0x1d
+ 1051 01b8 A3000000 		.4byte	0xa3
+ 1052 01bc 03       		.uleb128 0x3
+ 1053 01bd 91       		.byte	0x91
+ 1054 01be B87F     		.sleb128 -72
+ 1055 01c0 08       		.uleb128 0x8
+ 1056 01c1 415900   		.ascii	"AY\000"
+ 1057 01c4 01       		.byte	0x1
+ 1058 01c5 1D       		.byte	0x1d
+ 1059 01c6 A3000000 		.4byte	0xa3
+ 1060 01ca 03       		.uleb128 0x3
+ 1061 01cb 91       		.byte	0x91
+ 1062 01cc B47F     		.sleb128 -76
+ 1063 01ce 08       		.uleb128 0x8
+ 1064 01cf 415A00   		.ascii	"AZ\000"
+ 1065 01d2 01       		.byte	0x1
+ 1066 01d3 1D       		.byte	0x1d
+ 1067 01d4 A3000000 		.4byte	0xa3
+ 1068 01d8 03       		.uleb128 0x3
+ 1069 01d9 91       		.byte	0x91
+ 1070 01da B07F     		.sleb128 -80
+ 1071 01dc 08       		.uleb128 0x8
+ 1072 01dd 475800   		.ascii	"GX\000"
+ 1073 01e0 01       		.byte	0x1
+ 1074 01e1 1E       		.byte	0x1e
+ 1075 01e2 A3000000 		.4byte	0xa3
+ 1076 01e6 03       		.uleb128 0x3
+ 1077 01e7 91       		.byte	0x91
+ 1078 01e8 AC7F     		.sleb128 -84
+ 1079 01ea 08       		.uleb128 0x8
+ 1080 01eb 475900   		.ascii	"GY\000"
+ 1081 01ee 01       		.byte	0x1
+ 1082 01ef 1E       		.byte	0x1e
+ 1083 01f0 A3000000 		.4byte	0xa3
+ 1084 01f4 03       		.uleb128 0x3
+ 1085 01f5 91       		.byte	0x91
+ 1086 01f6 A87F     		.sleb128 -88
+ 1087 01f8 08       		.uleb128 0x8
+ 1088 01f9 475A00   		.ascii	"GZ\000"
+ 1089 01fc 01       		.byte	0x1
+ 1090 01fd 1E       		.byte	0x1e
+ 1091 01fe A3000000 		.4byte	0xa3
+ 1092 0202 03       		.uleb128 0x3
+ 1093 0203 91       		.byte	0x91
+ 1094 0204 A47F     		.sleb128 -92
+ 1095 0206 09       		.uleb128 0x9
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 23
+
+
+ 1096 0207 24020000 		.4byte	.LASF38
+ 1097 020b 01       		.byte	0x1
+ 1098 020c 20       		.byte	0x20
+ 1099 020d 97000000 		.4byte	0x97
+ 1100 0211 00       		.byte	0
+ 1101 0212 0A       		.uleb128 0xa
+ 1102 0213 B1000000 		.4byte	0xb1
+ 1103 0217 22020000 		.4byte	0x222
+ 1104 021b 0B       		.uleb128 0xb
+ 1105 021c BF000000 		.4byte	0xbf
+ 1106 0220 31       		.byte	0x31
+ 1107 0221 00       		.byte	0
+ 1108 0222 0C       		.uleb128 0xc
+ 1109 0223 B9010000 		.4byte	.LASF32
+ 1110 0227 05       		.byte	0x5
+ 1111 0228 9101     		.2byte	0x191
+ 1112 022a 81000000 		.4byte	0x81
+ 1113 022e 05       		.uleb128 0x5
+ 1114 022f 03       		.byte	0x3
+ 1115 0230 00000000 		.4byte	devAddr
+ 1116 0234 0A       		.uleb128 0xa
+ 1117 0235 81000000 		.4byte	0x81
+ 1118 0239 44020000 		.4byte	0x244
+ 1119 023d 0B       		.uleb128 0xb
+ 1120 023e BF000000 		.4byte	0xbf
+ 1121 0242 15       		.byte	0x15
+ 1122 0243 00       		.byte	0
+ 1123 0244 0C       		.uleb128 0xc
+ 1124 0245 C1010000 		.4byte	.LASF33
+ 1125 0249 05       		.byte	0x5
+ 1126 024a 9201     		.2byte	0x192
+ 1127 024c 34020000 		.4byte	0x234
+ 1128 0250 05       		.uleb128 0x5
+ 1129 0251 03       		.byte	0x3
+ 1130 0252 00000000 		.4byte	buffer
+ 1131 0256 00       		.byte	0
+ 1132              		.section	.debug_abbrev,"",%progbits
+ 1133              	.Ldebug_abbrev0:
+ 1134 0000 01       		.uleb128 0x1
+ 1135 0001 11       		.uleb128 0x11
+ 1136 0002 01       		.byte	0x1
+ 1137 0003 25       		.uleb128 0x25
+ 1138 0004 0E       		.uleb128 0xe
+ 1139 0005 13       		.uleb128 0x13
+ 1140 0006 0B       		.uleb128 0xb
+ 1141 0007 03       		.uleb128 0x3
+ 1142 0008 0E       		.uleb128 0xe
+ 1143 0009 1B       		.uleb128 0x1b
+ 1144 000a 0E       		.uleb128 0xe
+ 1145 000b 55       		.uleb128 0x55
+ 1146 000c 17       		.uleb128 0x17
+ 1147 000d 11       		.uleb128 0x11
+ 1148 000e 01       		.uleb128 0x1
+ 1149 000f 10       		.uleb128 0x10
+ 1150 0010 17       		.uleb128 0x17
+ 1151 0011 00       		.byte	0
+ 1152 0012 00       		.byte	0
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 24
+
+
+ 1153 0013 02       		.uleb128 0x2
+ 1154 0014 24       		.uleb128 0x24
+ 1155 0015 00       		.byte	0
+ 1156 0016 0B       		.uleb128 0xb
+ 1157 0017 0B       		.uleb128 0xb
+ 1158 0018 3E       		.uleb128 0x3e
+ 1159 0019 0B       		.uleb128 0xb
+ 1160 001a 03       		.uleb128 0x3
+ 1161 001b 0E       		.uleb128 0xe
+ 1162 001c 00       		.byte	0
+ 1163 001d 00       		.byte	0
+ 1164 001e 03       		.uleb128 0x3
+ 1165 001f 16       		.uleb128 0x16
+ 1166 0020 00       		.byte	0
+ 1167 0021 03       		.uleb128 0x3
+ 1168 0022 0E       		.uleb128 0xe
+ 1169 0023 3A       		.uleb128 0x3a
+ 1170 0024 0B       		.uleb128 0xb
+ 1171 0025 3B       		.uleb128 0x3b
+ 1172 0026 0B       		.uleb128 0xb
+ 1173 0027 49       		.uleb128 0x49
+ 1174 0028 13       		.uleb128 0x13
+ 1175 0029 00       		.byte	0
+ 1176 002a 00       		.byte	0
+ 1177 002b 04       		.uleb128 0x4
+ 1178 002c 24       		.uleb128 0x24
+ 1179 002d 00       		.byte	0
+ 1180 002e 0B       		.uleb128 0xb
+ 1181 002f 0B       		.uleb128 0xb
+ 1182 0030 3E       		.uleb128 0x3e
+ 1183 0031 0B       		.uleb128 0xb
+ 1184 0032 03       		.uleb128 0x3
+ 1185 0033 08       		.uleb128 0x8
+ 1186 0034 00       		.byte	0
+ 1187 0035 00       		.byte	0
+ 1188 0036 05       		.uleb128 0x5
+ 1189 0037 16       		.uleb128 0x16
+ 1190 0038 00       		.byte	0
+ 1191 0039 03       		.uleb128 0x3
+ 1192 003a 0E       		.uleb128 0xe
+ 1193 003b 3A       		.uleb128 0x3a
+ 1194 003c 0B       		.uleb128 0xb
+ 1195 003d 3B       		.uleb128 0x3b
+ 1196 003e 05       		.uleb128 0x5
+ 1197 003f 49       		.uleb128 0x49
+ 1198 0040 13       		.uleb128 0x13
+ 1199 0041 00       		.byte	0
+ 1200 0042 00       		.byte	0
+ 1201 0043 06       		.uleb128 0x6
+ 1202 0044 2E       		.uleb128 0x2e
+ 1203 0045 01       		.byte	0x1
+ 1204 0046 3F       		.uleb128 0x3f
+ 1205 0047 19       		.uleb128 0x19
+ 1206 0048 03       		.uleb128 0x3
+ 1207 0049 0E       		.uleb128 0xe
+ 1208 004a 3A       		.uleb128 0x3a
+ 1209 004b 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 25
+
+
+ 1210 004c 3B       		.uleb128 0x3b
+ 1211 004d 0B       		.uleb128 0xb
+ 1212 004e 49       		.uleb128 0x49
+ 1213 004f 13       		.uleb128 0x13
+ 1214 0050 11       		.uleb128 0x11
+ 1215 0051 01       		.uleb128 0x1
+ 1216 0052 12       		.uleb128 0x12
+ 1217 0053 06       		.uleb128 0x6
+ 1218 0054 40       		.uleb128 0x40
+ 1219 0055 18       		.uleb128 0x18
+ 1220 0056 9642     		.uleb128 0x2116
+ 1221 0058 19       		.uleb128 0x19
+ 1222 0059 01       		.uleb128 0x1
+ 1223 005a 13       		.uleb128 0x13
+ 1224 005b 00       		.byte	0
+ 1225 005c 00       		.byte	0
+ 1226 005d 07       		.uleb128 0x7
+ 1227 005e 34       		.uleb128 0x34
+ 1228 005f 00       		.byte	0
+ 1229 0060 03       		.uleb128 0x3
+ 1230 0061 0E       		.uleb128 0xe
+ 1231 0062 3A       		.uleb128 0x3a
+ 1232 0063 0B       		.uleb128 0xb
+ 1233 0064 3B       		.uleb128 0x3b
+ 1234 0065 0B       		.uleb128 0xb
+ 1235 0066 49       		.uleb128 0x49
+ 1236 0067 13       		.uleb128 0x13
+ 1237 0068 02       		.uleb128 0x2
+ 1238 0069 18       		.uleb128 0x18
+ 1239 006a 00       		.byte	0
+ 1240 006b 00       		.byte	0
+ 1241 006c 08       		.uleb128 0x8
+ 1242 006d 34       		.uleb128 0x34
+ 1243 006e 00       		.byte	0
+ 1244 006f 03       		.uleb128 0x3
+ 1245 0070 08       		.uleb128 0x8
+ 1246 0071 3A       		.uleb128 0x3a
+ 1247 0072 0B       		.uleb128 0xb
+ 1248 0073 3B       		.uleb128 0x3b
+ 1249 0074 0B       		.uleb128 0xb
+ 1250 0075 49       		.uleb128 0x49
+ 1251 0076 13       		.uleb128 0x13
+ 1252 0077 02       		.uleb128 0x2
+ 1253 0078 18       		.uleb128 0x18
+ 1254 0079 00       		.byte	0
+ 1255 007a 00       		.byte	0
+ 1256 007b 09       		.uleb128 0x9
+ 1257 007c 34       		.uleb128 0x34
+ 1258 007d 00       		.byte	0
+ 1259 007e 03       		.uleb128 0x3
+ 1260 007f 0E       		.uleb128 0xe
+ 1261 0080 3A       		.uleb128 0x3a
+ 1262 0081 0B       		.uleb128 0xb
+ 1263 0082 3B       		.uleb128 0x3b
+ 1264 0083 0B       		.uleb128 0xb
+ 1265 0084 49       		.uleb128 0x49
+ 1266 0085 13       		.uleb128 0x13
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 26
+
+
+ 1267 0086 00       		.byte	0
+ 1268 0087 00       		.byte	0
+ 1269 0088 0A       		.uleb128 0xa
+ 1270 0089 01       		.uleb128 0x1
+ 1271 008a 01       		.byte	0x1
+ 1272 008b 49       		.uleb128 0x49
+ 1273 008c 13       		.uleb128 0x13
+ 1274 008d 01       		.uleb128 0x1
+ 1275 008e 13       		.uleb128 0x13
+ 1276 008f 00       		.byte	0
+ 1277 0090 00       		.byte	0
+ 1278 0091 0B       		.uleb128 0xb
+ 1279 0092 21       		.uleb128 0x21
+ 1280 0093 00       		.byte	0
+ 1281 0094 49       		.uleb128 0x49
+ 1282 0095 13       		.uleb128 0x13
+ 1283 0096 2F       		.uleb128 0x2f
+ 1284 0097 0B       		.uleb128 0xb
+ 1285 0098 00       		.byte	0
+ 1286 0099 00       		.byte	0
+ 1287 009a 0C       		.uleb128 0xc
+ 1288 009b 34       		.uleb128 0x34
+ 1289 009c 00       		.byte	0
+ 1290 009d 03       		.uleb128 0x3
+ 1291 009e 0E       		.uleb128 0xe
+ 1292 009f 3A       		.uleb128 0x3a
+ 1293 00a0 0B       		.uleb128 0xb
+ 1294 00a1 3B       		.uleb128 0x3b
+ 1295 00a2 05       		.uleb128 0x5
+ 1296 00a3 49       		.uleb128 0x49
+ 1297 00a4 13       		.uleb128 0x13
+ 1298 00a5 3F       		.uleb128 0x3f
+ 1299 00a6 19       		.uleb128 0x19
+ 1300 00a7 02       		.uleb128 0x2
+ 1301 00a8 18       		.uleb128 0x18
+ 1302 00a9 00       		.byte	0
+ 1303 00aa 00       		.byte	0
+ 1304 00ab 00       		.byte	0
+ 1305              		.section	.debug_aranges,"",%progbits
+ 1306 0000 1C000000 		.4byte	0x1c
+ 1307 0004 0200     		.2byte	0x2
+ 1308 0006 00000000 		.4byte	.Ldebug_info0
+ 1309 000a 04       		.byte	0x4
+ 1310 000b 00       		.byte	0
+ 1311 000c 0000     		.2byte	0
+ 1312 000e 0000     		.2byte	0
+ 1313 0010 00000000 		.4byte	.LFB33
+ 1314 0014 CC050000 		.4byte	.LFE33-.LFB33
+ 1315 0018 00000000 		.4byte	0
+ 1316 001c 00000000 		.4byte	0
+ 1317              		.section	.debug_ranges,"",%progbits
+ 1318              	.Ldebug_ranges0:
+ 1319 0000 00000000 		.4byte	.LFB33
+ 1320 0004 CC050000 		.4byte	.LFE33
+ 1321 0008 00000000 		.4byte	0
+ 1322 000c 00000000 		.4byte	0
+ 1323              		.section	.debug_line,"",%progbits
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 27
+
+
+ 1324              	.Ldebug_line0:
+ 1325 0000 2A020000 		.section	.debug_str,"MS",%progbits,1
+ 1325      02001F01 
+ 1325      00000201 
+ 1325      FB0E0D00 
+ 1325      01010101 
+ 1326              	.LASF8:
+ 1327 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1327      206C6F6E 
+ 1327      6720696E 
+ 1327      7400
+ 1328              	.LASF2:
+ 1329 000e 5F5F7569 		.ascii	"__uint8_t\000"
+ 1329      6E74385F 
+ 1329      7400
+ 1330              	.LASF3:
+ 1331 0018 5F5F696E 		.ascii	"__int16_t\000"
+ 1331      7431365F 
+ 1331      7400
+ 1332              	.LASF26:
+ 1333 0022 61636365 		.ascii	"accelXOFF\000"
+ 1333      6C584F46 
+ 1333      4600
+ 1334              	.LASF14:
+ 1335 002c 666C6F61 		.ascii	"float\000"
+ 1335      7400
+ 1336              	.LASF1:
+ 1337 0032 756E7369 		.ascii	"unsigned char\000"
+ 1337      676E6564 
+ 1337      20636861 
+ 1337      7200
+ 1338              	.LASF19:
+ 1339 0040 6E756D62 		.ascii	"numberofTests\000"
+ 1339      65726F66 
+ 1339      54657374 
+ 1339      7300
+ 1340              	.LASF7:
+ 1341 004e 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1341      20756E73 
+ 1341      69676E65 
+ 1341      6420696E 
+ 1341      7400
+ 1342              	.LASF29:
+ 1343 0060 6779726F 		.ascii	"gyroXOFF\000"
+ 1343      584F4646 
+ 1343      00
+ 1344              	.LASF5:
+ 1345 0069 73686F72 		.ascii	"short unsigned int\000"
+ 1345      7420756E 
+ 1345      7369676E 
+ 1345      65642069 
+ 1345      6E7400
+ 1346              	.LASF34:
+ 1347 007c 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1347      43313120 
+ 1347      352E342E 
+ 1347      31203230 
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 28
+
+
+ 1347      31363036 
+ 1348 00af 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m0 -mthumb -g -O"
+ 1348      20726576 
+ 1348      6973696F 
+ 1348      6E203233 
+ 1348      37373135 
+ 1349 00e2 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1349      66756E63 
+ 1349      74696F6E 
+ 1349      2D736563 
+ 1349      74696F6E 
+ 1350              	.LASF27:
+ 1351 010a 61636365 		.ascii	"accelYOFF\000"
+ 1351      6C594F46 
+ 1351      4600
+ 1352              	.LASF15:
+ 1353 0114 646F7562 		.ascii	"double\000"
+ 1353      6C6500
+ 1354              	.LASF23:
+ 1355 011b 6779726F 		.ascii	"gyroX\000"
+ 1355      5800
+ 1356              	.LASF24:
+ 1357 0121 6779726F 		.ascii	"gyroY\000"
+ 1357      5900
+ 1358              	.LASF25:
+ 1359 0127 6779726F 		.ascii	"gyroZ\000"
+ 1359      5A00
+ 1360              	.LASF37:
+ 1361 012d 6D61696E 		.ascii	"main\000"
+ 1361      00
+ 1362              	.LASF10:
+ 1363 0132 756E7369 		.ascii	"unsigned int\000"
+ 1363      676E6564 
+ 1363      20696E74 
+ 1363      00
+ 1364              	.LASF30:
+ 1365 013f 6779726F 		.ascii	"gyroYOFF\000"
+ 1365      594F4646 
+ 1365      00
+ 1366              	.LASF9:
+ 1367 0148 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1367      206C6F6E 
+ 1367      6720756E 
+ 1367      7369676E 
+ 1367      65642069 
+ 1368              	.LASF11:
+ 1369 015f 75696E74 		.ascii	"uint8_t\000"
+ 1369      385F7400 
+ 1370              	.LASF12:
+ 1371 0167 696E7431 		.ascii	"int16_t\000"
+ 1371      365F7400 
+ 1372              	.LASF0:
+ 1373 016f 7369676E 		.ascii	"signed char\000"
+ 1373      65642063 
+ 1373      68617200 
+ 1374              	.LASF18:
+ 1375 017b 73697A65 		.ascii	"sizetype\000"
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 29
+
+
+ 1375      74797065 
+ 1375      00
+ 1376              	.LASF20:
+ 1377 0184 61636365 		.ascii	"accelX\000"
+ 1377      6C5800
+ 1378              	.LASF21:
+ 1379 018b 61636365 		.ascii	"accelY\000"
+ 1379      6C5900
+ 1380              	.LASF22:
+ 1381 0192 61636365 		.ascii	"accelZ\000"
+ 1381      6C5A00
+ 1382              	.LASF35:
+ 1383 0199 6D61696E 		.ascii	"main.c\000"
+ 1383      2E6300
+ 1384              	.LASF16:
+ 1385 01a0 63686172 		.ascii	"char\000"
+ 1385      00
+ 1386              	.LASF28:
+ 1387 01a5 61636365 		.ascii	"accelZOFF\000"
+ 1387      6C5A4F46 
+ 1387      4600
+ 1388              	.LASF4:
+ 1389 01af 73686F72 		.ascii	"short int\000"
+ 1389      7420696E 
+ 1389      7400
+ 1390              	.LASF32:
+ 1391 01b9 64657641 		.ascii	"devAddr\000"
+ 1391      64647200 
+ 1392              	.LASF33:
+ 1393 01c1 62756666 		.ascii	"buffer\000"
+ 1393      657200
+ 1394              	.LASF13:
+ 1395 01c8 75696E74 		.ascii	"uint8\000"
+ 1395      3800
+ 1396              	.LASF6:
+ 1397 01ce 6C6F6E67 		.ascii	"long int\000"
+ 1397      20696E74 
+ 1397      00
+ 1398              	.LASF17:
+ 1399 01d7 6C6F6E67 		.ascii	"long double\000"
+ 1399      20646F75 
+ 1399      626C6500 
+ 1400              	.LASF36:
+ 1401 01e3 433A5C55 		.ascii	"C:\\Users\\Sebas\\Desktop\\Drone_Sensor_juistewaard"
+ 1401      73657273 
+ 1401      5C536562 
+ 1401      61735C44 
+ 1401      65736B74 
+ 1402 0212 656E2E63 		.ascii	"en.cydsn\000"
+ 1402      7964736E 
+ 1402      00
+ 1403              	.LASF31:
+ 1404 021b 6779726F 		.ascii	"gyroZOFF\000"
+ 1404      5A4F4646 
+ 1404      00
+ 1405              	.LASF38:
+ 1406 0224 64657649 		.ascii	"devId\000"
+ARM GAS  C:\Users\Sebas\AppData\Local\Temp\ccTiRhMh.s 			page 30
+
+
+ 1406      6400
+ 1407              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
